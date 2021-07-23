@@ -1,0 +1,157 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["react-hooks", "testing-library", "jest-dom"],
+    "extends": [
+        "airbnb",
+        "prettier",
+        "plugin:jest/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended"
+    ],
+    "rules": {
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": ["error", 4],
+        "max-len": ["warn", 140],
+        "react/prefer-stateless-function": "off",
+        "react/no-multi-comp": "off",
+        "react/prop-types": "warn",
+        "react/forbid-prop-types": "warn",
+        "react/require-default-props": "off",
+        "react/no-string-refs": "warn",
+        "react/no-array-index-key": "warn",
+        "jsx-a11y/label-has-for": "off",
+        "arrow-parens": "off",
+        "arrow-body-style": "warn",
+        "indent": "off",
+        "no-lonely-if": "warn",
+        "react/no-unused-prop-types": "off",
+        "class-methods-use-this": "off",
+        "no-plusplus": "off",
+        "no-nested-ternary": "off",
+        "no-console": [
+            "error",
+            {
+                "allow": ["warn", "error"]
+            }
+        ],
+        "import/extensions": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".jsx", ".tsx"]
+            }
+        ],
+        "no-param-reassign": "off",
+        "yoda": "off",
+        "radix": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "**/*.test.*",
+                    "**/*test-utils.*",
+                    "**/Test/**/*",
+                    "**/*.stories.*",
+                    "**/*story-utils.*"
+                ]
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/destructuring-assignment": "off", // 1078 occurences
+        "react/jsx-one-expression-per-line": "off", // 146 occurences
+        "react/jsx-props-no-spreading": "off", // 141 occurences
+        "prefer-destructuring": "off", // 126 occurences
+        "prefer-object-spread": "off", // 73 occurences
+        "react/jsx-curly-brace-presence": "off", // 69 occurences
+        "import/no-useless-path-segments": "off", // 64 occurences
+        // "react/default-props-match-prop-types": "off", // 60 occurences
+        "react/jsx-fragments": "off", // 53 occurences
+        "react/jsx-curly-newline": "off", // 38 occurences
+        "react/button-has-type": "off", // 35 occurences
+        "react/no-access-state-in-setstate": "off", // 28 occurences
+        "jsx-a11y/label-has-associated-control": "off", // 23 occurences
+        "react/no-unused-state": "off", // 21 occurences
+        "react/static-property-placement": "off", // 18 occurences
+        "no-unused-vars": "off", // 17 occurences
+        "jsx-a11y/click-events-have-key-events": "off", // 13 occurences
+        "no-else-return": "off", // 12 occurences
+        "react/state-in-constructor": "off", // 10 occurences
+        "react/sort-comp": "off", // 10 occurences
+        "react/jsx-wrap-multilines": "off", // 10 occurences
+        "import/no-cycle": "off", // 8 occurences
+        "no-restricted-globals": "off", // 5 occurences
+        "jsx-a11y/anchor-is-valid": "off", // 5 occurences
+        "lines-between-class-members": "off", // 4 occurences
+        "react/jsx-no-target-blank": "off", // 4 occurences
+        "import/named": "off", // 2 occurences
+        "max-classes-per-file": "off", // 2 occurences
+        "react/jsx-no-bind": "off", // 2 occurences
+        "import/order": "off", // 2 occurences
+        "jsx-a11y/mouse-events-have-key-events": "off", // 1 occurences
+        "consistent-return": "off", // 1 occurences
+        "no-useless-return": "off", // 1 occurences
+        "import/prefer-default-export": "off", // 1 occurences
+        "prefer-promise-reject-errors": "off", // 1 occurences
+        "no-shadow": "off", // 1 occurences
+        "react/no-this-in-sfc": "off", // 1 occurences
+        "no-useless-catch": "off", // 1 occurences
+        "@typescript-eslint/camelcase": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "react/no-deprecated": "off",
+        "react/no-unescaped-entities": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "no-useless-constructor": "off",
+        "no-empty-function": "off",
+        "jsx-a11y/no-noninteractive-tabindex": [
+            "error",
+            {
+                "tags": [],
+                "roles": ["tabpanel", "dialog", "document"]
+            }
+        ]
+    },
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "env": true
+    },
+    "settings": {
+        "import/resolver": "webpack"
+    },
+    "overrides": [
+        {
+            "files": ["**/*.ts", "**/*.tsx"],
+            "parser": "@typescript-eslint/parser",
+            "plugins": ["@typescript-eslint"]
+        },
+        {
+            "files": ["**/*.test.js", "**/*.test.jsx", "**/*.test.ts", "**/*.test.tsx"],
+            "plugins": ["jest"],
+            "env": {
+                "jest": true
+            },
+            "rules": {
+                "no-unused-expressions": "off",
+                "no-unused-vars": "warn",
+                "react/jsx-filename-extension": "off",
+                "jsx-a11y/no-static-element-interactions": "warn",
+                "max-len": ["warn", 140],
+                "func-names": "off",
+                "jest/expect-expect": "off",
+                "jest/valid-expect": "off",
+                "jest/no-try-expect": "off",
+                "no-await-in-loop": "off"
+            }
+        },
+        {
+            "files": ["**/*.stories.[jt]sx"],
+            "rules": {
+                "no-underscore-dangle": "off",
+                "react-hooks/rules-of-hooks": "off"
+            }
+        }
+    ]
+}
