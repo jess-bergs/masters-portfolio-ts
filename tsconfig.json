@@ -5,12 +5,9 @@
         "module": "commonjs",
         "sourceMap": false,
         "moduleResolution": "node",
-        "lib": [
-            "es2017",
-            "dom",
-            "esnext.asynciterable"
-          ],        // Process & infer types from .js files.
+        "lib": ["es2017", "dom", "esnext.asynciterable"], // Process & infer types from .js files.
         "allowJs": true,
+        "resolveJsonModule": true,
         // Don't emit; allow Babel to transform files.
         "noEmit": true,
         // Allow Babel to transform JSX to React.createElement calls.
@@ -23,10 +20,8 @@
         "esModuleInterop": true,
         // // Skip type checking of all declaration files.
         // "skipLibCheck": true,
-        "noErrorTruncation": true,
+        "noErrorTruncation": true
     },
-    "include": [
-        "src/**/*"
-      ],
+    "include": ["src/**/*"],
     "exclude": ["node_modules", "dist"]
 }
