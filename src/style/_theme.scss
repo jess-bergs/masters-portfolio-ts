@@ -1,4 +1,21 @@
 $hero-image-height: 360px;
 $background-colour: black;
-$spacer-small: 30px;
-$spacer-large: 1.5 * $spacer-small;
+$text-colour: white;
+$text-colour-muted: #aaa;
+$spacer-small: 15px;
+$spacer-medium: 2 * $spacer-small;
+$spacer-large: 1.5 * $spacer-medium;
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Quicksand Regular'), local('Quicksand-Regular'),
+        url('../../assets/fonts/Quicksand-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: $background-colour;
+    color: $text-colour;
+    font-family: 'Quicksand', 'sans-serif';
+}
