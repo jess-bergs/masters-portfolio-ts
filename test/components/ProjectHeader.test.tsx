@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ProjectHeader, {
     ProjectHeaderProps,
-} from '../../../src/components/ProjectHeader/ProjectHeader';
+} from '../../src/components/ProjectHeader/ProjectHeader';
 
 const testProject: ProjectHeaderProps = {
     title: 'a title',
