@@ -13,7 +13,7 @@ const ProjectPage = ({ heroImageSrc, contentText }: ProjectPageProps) => (
             data-testid="hero-image"
             style={{ backgroundImage: `url(${heroImageSrc})` }}
         />
-        <div className="project-page__text-content">{contentText}</div>
+        <div className="project-page__content">{contentText}</div>
     </div>
 );
 

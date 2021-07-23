@@ -1,14 +1,11 @@
-$hero-image-height: 360px;
-$background-colour: black;
-$spacer-small: 30px;
-$spacer-large: 1.5 * $spacer-small;
+@import '../../style/theme';
 
 body {
     background-color: $background-colour;
 }
 
 .project-page {
-    &__text-content {
+    &__content {
         max-width: 75%;
         margin: $spacer-large auto;
     }
