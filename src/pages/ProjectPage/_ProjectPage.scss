@@ -1,3 +1,20 @@
+$hero-image-height: 360px;
+$background-colour: black;
+$spacer-small: 30px;
+$spacer-large: 1.5 * $spacer-small;
+
+body {
+    background-color: $background-colour;
+}
+
 .project-page {
-    color: #ffa;
+    &__text-content {
+        max-width: 75%;
+        margin: $spacer-large auto;
+    }
+    &__hero-image {
+        background-position: 50% 0;
+        background-size: auto $hero-image-height;
+        height: $hero-image-height;
+    }
 }

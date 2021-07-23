@@ -8,7 +8,11 @@ export interface ProjectPageProps {
 
 const ProjectPage = ({ heroImageSrc, contentText }: ProjectPageProps) => (
     <div className="project-page__container">
-        <img src={heroImageSrc} alt="project hero" />
+        <div
+            className="project-page__hero-image"
+            data-testid="hero-image"
+            style={{ backgroundImage: `url(${heroImageSrc})` }}
+        />
         <div className="project-page__text-content">{contentText}</div>
     </div>
 );

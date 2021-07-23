@@ -14,9 +14,9 @@ const renderComponent = () => {
 
 describe('the Project page', () => {
     it('renders the passed hero image', () => {
-        const { getByAltText } = renderComponent();
-        const imageElement = getByAltText('project hero');
-        expect(imageElement).toHaveAttribute('src', 'anImage.jpg');
+        const { getByTestId } = renderComponent();
+        const imageElement = getByTestId('hero-image');
+        expect(imageElement).toHaveStyle(`background-image: url(${projectPage.heroImageSrc})`);
     });
 
     it('renders the passed content text', () => {
