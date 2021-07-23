@@ -9,7 +9,7 @@ const projectPage: ProjectPageProps = {
 
 export default {
     component: ProjectPage,
-    title: 'Components/ProjectPage',
+    title: 'Pages/ProjectPage',
 };
 
 export const Default = () => <ProjectPage {...projectPage} />;
