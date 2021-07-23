@@ -1,0 +1,25 @@
+@import '../../style/theme';
+
+.project-header {
+    &__container > * {
+        text-transform: uppercase;
+        font-family: 'Quicksand', 'sans-serif';
+    }
+
+    &__title {
+        font-size: 3.4375em;
+        margin-bottom: $spacer-small;
+    }
+
+    &__subtitle {
+        font-size: 1.5625em;
+        margin-bottom: $spacer-small;
+    }
+
+    &__tags {
+        color: $text-colour-muted;
+        font-size: 0.90625em;
+        font-style: italic;
+        margin-top: $spacer-small;
+    }
+}
