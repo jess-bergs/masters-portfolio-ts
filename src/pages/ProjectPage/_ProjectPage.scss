@@ -5,15 +5,26 @@
         @include theme();
         background-color: $background-colour;
         height: 100%;
-        padding-bottom: $spacer-large;
+        padding-bottom: $spacer-large * 2;
     }
     &__content {
-        max-width: 75%;
         margin: $spacer-large auto 0 auto;
+        max-width: 75%;
     }
     &__hero-image {
         background-position: 50% 0;
         background-size: auto $hero-image-height;
         height: $hero-image-height;
+    }
+    &__footer {
+        color: $text-colour-muted;
+        float: right;
+        font-size: 0.7em;
+        padding: $spacer-medium $spacer-large 0 0;
+        .footer__logo {
+            height: 0.9em;
+            padding-right: $spacer-tiny * 0.5;
+            width: 0.9em;
+        }
     }
 }
