@@ -10,8 +10,8 @@ const Slide = ({ caption, content }: SlideProps) => (
     <div className="slide__container">
         <div className="slide__content">{content} </div>
         {caption && (
-            <div className="slide__caption-box" data-testId="caption-box">
-                <div className="slide_caption-text">{caption}</div>
+            <div className="slide__caption-box" data-testId="captionBox">
+                <div className="slide__caption-text">{caption}</div>
             </div>
         )}
     </div>

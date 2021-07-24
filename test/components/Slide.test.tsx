@@ -14,7 +14,7 @@ describe('the Slide component', () => {
     describe('when a caption is passed', () => {
         it('includes the caption box and text', () => {
             const { getByText, getByTestId } = renderComponent();
-            expect(getByTestId('caption-box')).toBeInTheDocument();
+            expect(getByTestId('captionBox')).toBeInTheDocument();
             expect(getByText('a caption')).toBeInTheDocument();
         });
     });
