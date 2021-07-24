@@ -9,16 +9,31 @@ interface NavigationLink {
     url: string;
 }
 
+interface Navigation {
+    left: NavigationLink;
+    right: NavigationLink;
+}
+
 export interface ProjectPageProps {
     heroImageSrc: string;
-    navigationLinks?: {
-        left: NavigationLink;
-        right: NavigationLink;
-    };
+    navigationLinks?: Navigation;
     textContent: string;
     headerContent: ProjectHeaderProps;
     specsContent: ProjectSpecsProps;
 }
+
+const Navigation = (navigationLinks: Navigation) => (
+    <span className="nav">
+        <span className="nav--left">
+            &lsaquo; &nbsp;
+            <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
+        </span>
+        <span className="nav--right">
+            <a href={navigationLinks.right.url}>{navigationLinks.right.name}</a>
+            &nbsp; &rsaquo;
+        </span>
+    </span>
+);
 
 const ProjectPage = ({
     heroImageSrc,
@@ -34,16 +49,7 @@ const ProjectPage = ({
             style={{ backgroundImage: `url(${heroImageSrc})` }}
         />
         <div className="project-page__prt">
-            <span className="nav">
-                <span className="nav--left">
-                    &lsaquo; &nbsp;
-                    <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
-                </span>
-                <span className="nav--right">
-                    <a href={navigationLinks.right.url}>{navigationLinks.right.name}</a>
-                    &nbsp; &rsaquo;
-                </span>
-            </span>
+            <Navigation {...navigationLinks} />
             <div className="project-page__contents">
                 <ProjectHeader {...headerContent} />
                 <div className="project-page__text-content">{textContent}</div>
