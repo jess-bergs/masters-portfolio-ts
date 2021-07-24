@@ -1,0 +1,18 @@
+.embedded-media {
+    &__container {
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
+        position: relative;
+    }
+
+    &__iframe {
+        &--169 {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
