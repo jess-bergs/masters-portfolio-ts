@@ -12,7 +12,7 @@ interface Entry {
     contents: Content[];
 }
 
-interface ProjectSpecsProps {
+export interface ProjectSpecsProps {
     entries: Entry[];
 }
 

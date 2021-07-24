@@ -7,9 +7,13 @@
         height: 100%;
         padding-bottom: $spacer-large * 2;
     }
-    &__content {
+
+    &__contents {
         margin: $spacer-large auto 0 auto;
         max-width: 75%;
+        & > * {
+            padding-bottom: $spacer-large;
+        }
     }
     &__hero-image {
         background-position: 50% 0;
@@ -20,7 +24,7 @@
         color: $text-colour-muted;
         float: right;
         font-size: 0.7em;
-        padding: $spacer-medium $spacer-large 0 0;
+        padding-right: $spacer-large;
         .footer__logo {
             height: 0.9em;
             padding-right: $spacer-tiny * 0.5;

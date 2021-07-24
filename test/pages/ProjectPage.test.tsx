@@ -5,7 +5,20 @@ import ProjectPage, { ProjectPageProps } from '../../src/pages/ProjectPage/Proje
 
 const projectPage: ProjectPageProps = {
     heroImageSrc: 'anImage.jpg',
-    contentText: 'some sample text',
+    headerContent: {
+        title: 'a title',
+        subtitle: 'a subline',
+        tags: ['mockTag1', 'mockTag2', 'mockTag3'],
+    },
+    textContent: 'some sample text',
+    specsContent: {
+        entries: [
+            {
+                title: 'title1',
+                contents: [{ text: 'ref_with_link1', link: 'url1' }, { text: 'ref_without_link1' }],
+            },
+        ],
+    },
 };
 
 const renderComponent = () => {
