@@ -1,9 +1,14 @@
 @import '../../style/theme';
 
 .project-page {
+    &__container {
+        background-color: $background-colour;
+        height: 100%;
+        padding-bottom: $spacer-large;
+    }
     &__content {
         max-width: 75%;
-        margin: $spacer-large auto;
+        margin: $spacer-large auto 0 auto;
     }
     &__hero-image {
         background-position: 50% 0;
