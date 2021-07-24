@@ -7,7 +7,7 @@ module.exports = {
         pretendToBeVisual: true,
     },
     moduleNameMapper: {
-        '^.+\\.(css|scss)$': '<rootDir>/test/mocks/stylemock.js',
+        '^.+\\.(css|scss|svg)$': '<rootDir>/test/mocks/mockFileImport.js',
     },
     coverageDirectory: './coverage',
 };
