@@ -2,6 +2,7 @@ import React from 'react';
 
 import Slideshow, { SlideshowProps } from './Slideshow';
 import Slide, { SlideProps } from '../Slide/Slide';
+import Video from '../Video/Video';
 
 export default {
     component: Slideshow,
@@ -35,8 +36,24 @@ const iframeSlideWithCaption: SlideProps = {
     content: iFrameContent,
 };
 
+const videoContent = (
+    <Video
+        url="https://www.jbergs.eu/res/video/labsquare/lab2_boardupdate.mp4"
+        posterImageUrl="https://www.jbergs.eu/res/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg"
+    />
+);
+
+const videoSlideWithCaption: SlideProps = {
+    content: videoContent,
+    caption: 'a caption',
+};
+
 const slideShowItems: SlideshowProps = {
-    slides: [<Slide {...imageSlideWithCaption} />, <Slide {...iframeSlideWithCaption} />],
+    slides: [
+        <Slide {...imageSlideWithCaption} />,
+        <Slide {...iframeSlideWithCaption} />,
+        <Slide {...videoSlideWithCaption} />,
+    ],
 };
 
 export const TwoSlides = () => <Slideshow {...slideShowItems} />;
