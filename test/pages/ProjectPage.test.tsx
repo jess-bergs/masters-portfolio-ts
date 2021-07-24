@@ -5,6 +5,10 @@ import ProjectPage, { ProjectPageProps } from '../../src/pages/ProjectPage/Proje
 
 const projectPage: ProjectPageProps = {
     heroImageSrc: 'anImage.jpg',
+    navigationLinks: {
+        left: { name: 'navNameLeft', url: 'navLinkLeft' },
+        right: { name: 'navNameRight', url: 'navLinkRight' },
+    },
     headerContent: {
         title: 'a title',
         subtitle: 'a subline',
@@ -36,5 +40,13 @@ describe('the Project page', () => {
         const { getByText } = renderComponent();
         const textElement = getByText('some sample text');
         expect(textElement).toBeInTheDocument();
+    });
+
+    it('renders the passed navigation links', () => {
+        const { getByText } = renderComponent();
+        expect(getByText(/navNameLeft/)).toBeInTheDocument();
+        expect(getByText(/navNameRight/)).toBeInTheDocument();
+        expect(getByText(/navNameLeft/).closest('a')).toHaveAttribute('href', 'navLinkLeft');
+        expect(getByText(/navNameRight/).closest('a')).toHaveAttribute('href', 'navLinkRight');
     });
 });

@@ -4,6 +4,10 @@ import placeholderTexts from '../../../.storybook/storybook-helpers/placeholderT
 
 const projectPage: ProjectPageProps = {
     heroImageSrc: 'https://www.jbergs.eu/res/images/goma/goma_header_SM.jpg',
+    navigationLinks: {
+        left: { name: 'Spartathlon', url: 'navLinkLeft' },
+        right: { name: 'Goma', url: 'navLinkRight' },
+    },
     textContent: placeholderTexts['1000words'],
     headerContent: {
         title: 'MOCK PROJECT',

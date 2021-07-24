@@ -5,12 +5,46 @@
         @include theme();
         background-color: $background-colour;
         height: 100%;
-        padding-bottom: $spacer-large * 2;
+        padding-bottom: $spacer-large * 1.5;
+    }
+
+    &__prt {
+        .nav {
+            font-size: 0.9em;
+            height: 0px;
+
+            & > * {
+                padding-top: 1em;
+            }
+
+            &--left {
+                float: left;
+                padding-left: $spacer-medium;
+            }
+
+            &--right {
+                float: right;
+                padding-right: $spacer-medium;
+            }
+
+            a {
+                color: $text-colour;
+                &:visited {
+                    color: $text-colour-muted;
+                }
+                &:hover {
+                    color: $text-colour;
+                }
+                &:active {
+                    color: $text-colour;
+                }
+            }
+        }
     }
 
     &__contents {
-        margin: $spacer-large auto 0 auto;
-        max-width: 75%;
+        margin: $spacer-medium * 1.25 auto 0 auto;
+        max-width: 52%;
         & > * {
             padding-bottom: $spacer-large;
         }
