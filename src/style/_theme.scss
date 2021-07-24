@@ -19,3 +19,18 @@ $spacer-large: 1.5 * $spacer-medium;
     color: $text-colour;
     font-family: 'Quicksand', 'sans-serif';
 }
+
+@mixin link() {
+    a {
+        color: $text-colour;
+        &:visited {
+            color: $text-colour-muted;
+        }
+        &:hover {
+            color: $text-colour;
+        }
+        &:active {
+            color: $text-colour;
+        }
+    }
+}

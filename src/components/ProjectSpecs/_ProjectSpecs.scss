@@ -18,18 +18,7 @@
                 text-transform: uppercase;
             }
             &__content {
-                a {
-                    color: $text-colour;
-                    &:visited {
-                        color: $text-colour-muted;
-                    }
-                    &:hover {
-                        color: $text-colour-muted;
-                    }
-                    &:active {
-                        color: $text-colour;
-                    }
-                }
+                @include link;
             }
         }
     }

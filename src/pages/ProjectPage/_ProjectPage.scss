@@ -27,18 +27,7 @@
                 padding-right: $spacer-medium;
             }
 
-            a {
-                color: $text-colour;
-                &:visited {
-                    color: $text-colour-muted;
-                }
-                &:hover {
-                    color: $text-colour;
-                }
-                &:active {
-                    color: $text-colour;
-                }
-            }
+            @include link;
         }
     }
 
