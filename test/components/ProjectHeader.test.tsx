@@ -11,7 +11,8 @@ const testProject: ProjectHeaderProps = {
     tags: ['mockTag1', 'mockTag2', 'mockTag3'],
 };
 
-const renderComponent = (props?) => render(<ProjectHeader {...(props || testProject)} />);
+const renderComponent = (customProps?) =>
+    render(<ProjectHeader {...(customProps || testProject)} />);
 
 describe('the Project Header component', () => {
     it('includes the title', () => {
