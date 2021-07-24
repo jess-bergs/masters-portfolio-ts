@@ -5,16 +5,16 @@ import '../../../node_modules/react-multi-carousel/lib/styles.css';
 
 const carouselResponsiveBreakpoints = {
     superLargeDesktop: {
-        breakpoint: { max: 4000, min: 3000 },
-        items: 5,
+        breakpoint: { max: 2048, min: 350 },
+        items: 1,
     },
     desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 3,
+        breakpoint: { max: 1920, min: 350 },
+        items: 1,
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 2,
+        items: 1,
     },
     mobile: {
         breakpoint: { max: 464, min: 0 },
@@ -22,10 +22,8 @@ const carouselResponsiveBreakpoints = {
     },
 };
 
-export type Slide = string | JSX.Element;
-
-interface SlideshowProps {
-    slides: Slide[];
+export interface SlideshowProps {
+    slides: JSX.Element[];
 }
 
 const Slideshow = ({ slides }: SlideshowProps) => (
@@ -35,8 +33,8 @@ const Slideshow = ({ slides }: SlideshowProps) => (
             showDots
             swipeable
             draggable
+            autoPlay
             infinite
-            autoPlay={false}
             autoPlaySpeed={10000}
             transitionDuration={4000}
             dotListClass="custom-dot-list-style"
@@ -46,7 +44,6 @@ const Slideshow = ({ slides }: SlideshowProps) => (
                 <div>{slide}</div>
             ))}
         </Carousel>
-        ;
     </div>
 );
 

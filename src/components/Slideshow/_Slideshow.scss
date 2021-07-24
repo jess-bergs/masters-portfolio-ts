@@ -1,9 +1,21 @@
+@import '../../style/theme';
+
 .slideshow {
     &__container {
+        .react-multiple-carousel__arrow {
+            background-color: rgba($color: $background-colour, $alpha: 0);
+            min-height: 15em;
+            min-width: 6em;
+            border-radius: 100px;
+            &::before {
+                font-size: 4em;
+                text-shadow: 0px 0px 5px $background-colour;
+            }
+        }
         .custom-dot-list-style .react-multi-carousel-dot {
             &--active {
                 button {
-                    background-color: aqua;
+                    background-color: $text-colour-muted;
                 }
             }
             button {

@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Slideshow, { SlideshowProps } from './Slideshow';
-import Slide, { SlideProps } from '../Slide/Slide';
+import Slide, { SlideProps } from './Slide';
 
 export default {
-    component: Slideshow,
-    title: 'Components/Slideshow',
+    component: Slide,
+    title: 'Components/Slide',
 };
 
 const iFrameContent = (
@@ -30,13 +29,10 @@ const imageSlideWithCaption: SlideProps = {
     content: imageContent,
 };
 
-const iframeSlideWithCaption: SlideProps = {
-    caption: 'a caption',
+const iframeSlideWithoutCaption: SlideProps = {
     content: iFrameContent,
+    caption: 'a caption',
 };
 
-const slideShowItems: SlideshowProps = {
-    slides: [<Slide {...imageSlideWithCaption} />, <Slide {...iframeSlideWithCaption} />],
-};
-
-export const TwoSlides = () => <Slideshow {...slideShowItems} />;
+export const ImageWithCaption = () => <Slide {...imageSlideWithCaption} />;
+export const IFrameWithoutCaption = () => <Slide {...iframeSlideWithoutCaption} />;
