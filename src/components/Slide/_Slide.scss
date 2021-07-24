@@ -3,30 +3,17 @@
 .slide {
     &__container {
         @include theme();
-        width: 100%;
     }
 
     &__content > * {
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        right: 0;
-        top: 0;
+        display: block; // removes unwanted gap between image and caption div
+        font-size: 0; // removes unwanted gap between video and caption div
         width: 100%;
     }
 
     &__caption-box {
         background-color: $background-colour;
-        bottom: 0;
-        left: 0;
-        opacity: 0.8;
         padding: $spacer-small $spacer-medium $spacer-small * 1.25 $spacer-medium;
         pointer-events: none;
-        position: absolute;
-        width: 100%;
-    }
-
-    &__caption-text {
-        opacity: 1;
     }
 }
