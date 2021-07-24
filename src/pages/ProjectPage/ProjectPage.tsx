@@ -1,8 +1,8 @@
 import React from 'react';
 import ProjectHeader, { ProjectHeaderProps } from '../../components/ProjectHeader/ProjectHeader';
 import ProjectSpecs, { ProjectSpecsProps } from '../../components/ProjectSpecs/ProjectSpecs';
-import './_ProjectPage.scss';
 import iconLinkedIn from '../../assets/images/icons/icon_linkedin_neg.svg';
+import './_ProjectPage.scss';
 
 interface NavigationLink {
     name: string;
@@ -35,6 +35,13 @@ const Navigation = (navigationLinks: Navigation) => (
     </span>
 );
 
+const Logo = () => (
+    <a href="/" className="logo__container">
+        <div className="logo__h1"> Jessica Bergs</div>
+        <div className="logo__h2">Master's portfolio </div>
+    </a>
+);
+
 const ProjectPage = ({
     heroImageSrc,
     navigationLinks,
@@ -47,7 +54,9 @@ const ProjectPage = ({
             className="project-page__hero-image"
             data-testid="hero-image"
             style={{ backgroundImage: `url(${heroImageSrc})` }}
-        />
+        >
+            <Logo />
+        </div>
         <div className="project-page__prt">
             <Navigation {...navigationLinks} />
             <div className="project-page__contents">
