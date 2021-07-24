@@ -1,0 +1,33 @@
+@import '../../style/theme';
+
+.project-specs {
+    &__title {
+        font-size: 1.5625em;
+        text-transform: uppercase;
+        margin-bottom: $spacer-small;
+    }
+    &__container {
+        .entry {
+            &__container {
+                padding-bottom: $spacer-tiny;
+            }
+            &__title {
+                text-transform: uppercase;
+            }
+            &__content {
+                a {
+                    color: $text-colour;
+                    &:visited {
+                        color: $text-colour-muted;
+                    }
+                    &:hover {
+                        color: $text-colour-muted;
+                    }
+                    &:active {
+                        color: $text-colour;
+                    }
+                }
+            }
+        }
+    }
+}
