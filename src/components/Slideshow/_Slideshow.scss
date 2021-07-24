@@ -1,0 +1,14 @@
+.slideshow {
+    &__container {
+        .custom-dot-list-style .react-multi-carousel-dot {
+            &--active {
+                button {
+                    background-color: aqua;
+                }
+            }
+            button {
+                border: none;
+            }
+        }
+    }
+}
