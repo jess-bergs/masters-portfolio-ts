@@ -2,6 +2,7 @@
 
 .project-page {
     &__container {
+        @include theme();
         background-color: $background-colour;
         height: 100%;
         padding-bottom: $spacer-large;

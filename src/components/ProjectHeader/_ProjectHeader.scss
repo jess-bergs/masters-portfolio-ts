@@ -2,6 +2,7 @@
 
 .project-header {
     &__container > * {
+        @include theme();
         text-transform: uppercase;
     }
 

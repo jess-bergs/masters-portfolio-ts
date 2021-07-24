@@ -15,7 +15,7 @@ $spacer-large: 1.5 * $spacer-medium;
         url('../../assets/fonts/Quicksand-Regular.ttf') format('truetype');
 }
 
-body {
+@mixin theme() {
     color: $text-colour;
     font-family: 'Quicksand', 'sans-serif';
 }
