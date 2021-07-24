@@ -4,7 +4,7 @@ import EmbdeddedMedia from './EmbeddedMedia';
 
 export default {
     component: EmbdeddedMedia,
-    title: 'Components/EmbdeddedMedia',
+    title: 'Components/EmbeddedMedia',
 };
 
 export const YouTube = () => <EmbdeddedMedia url="https://www.youtube.com/embed/5h5-iIPu7bM" />;
