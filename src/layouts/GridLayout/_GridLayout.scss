@@ -1,0 +1,15 @@
+@import '../../style/theme';
+
+@mixin grid($grid-columns: 1fr 1fr 1fr, $grid-gap: 20px) {
+    .grid {
+        display: grid;
+        grid-gap: $grid-gap;
+        grid-template-columns: $grid-columns;
+
+        .grid-item {
+            position: relative;
+        }
+    }
+}
+
+@include grid($grid-gap: $spacer-medium);
