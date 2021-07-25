@@ -11,12 +11,7 @@ export default {
 
 const imageSlideWithCaption: SlideProps = {
     caption: 'a caption',
-    content: (
-        <img
-            alt="img content"
-            src="https://www.jbergs.eu/res/images/goma/workflow/goma_workflow__0006_Ebene%201.jpg"
-        />
-    ),
+    content: <img alt="img content" src="./exampleSlideImage.jpg" />,
 };
 
 const embeddedMediaWithCaption: SlideProps = {
@@ -27,12 +22,7 @@ const embeddedMediaWithCaption: SlideProps = {
 };
 
 const videoSlideWithCaption: SlideProps = {
-    content: (
-        <Video
-            url="https://www.jbergs.eu/res/video/labsquare/lab2_boardupdate.mp4"
-            posterImageUrl="https://www.jbergs.eu/res/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg"
-        />
-    ),
+    content: <Video url="./exampleVideo.mp4" posterImageUrl="./exampleVideoPosterImage.jpg" />,
     caption: 'a caption',
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './_EmbeddedMedia.scss';
 
-interface EmbeddedMediaProps {
+export interface EmbeddedMediaProps {
     url: string;
 }
 

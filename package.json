@@ -11,7 +11,7 @@
     "test:watch": "jest --watch /*.test.ts",
     "lint": "node -v && npm run check-types && node_modules/.bin/eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
     "check-types": "tsc",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001  -s ./.storybook/story-assets -c .storybook"
   },
   "dependencies": {
     "@babel/register": "^7.6.2",

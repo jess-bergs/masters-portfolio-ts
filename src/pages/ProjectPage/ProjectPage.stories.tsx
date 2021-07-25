@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectPage, { ProjectPageProps } from './ProjectPage';
-import placeholderTexts from '../../../.storybook/storybook-helpers/placeholderTexts.json';
+import placeholderTexts from '../../../.storybook/story-assets/placeholderTexts.json';
 
 const projectPage: ProjectPageProps = {
-    heroImageSrc: 'https://www.jbergs.eu/res/images/goma/goma_header_SM.jpg',
+    heroImageSrc: './exampleHeroImage.jpg',
     navigationLinks: {
         left: { name: 'Spartathlon', url: 'navLinkLeft' },
         right: { name: 'Goma', url: 'navLinkRight' },
