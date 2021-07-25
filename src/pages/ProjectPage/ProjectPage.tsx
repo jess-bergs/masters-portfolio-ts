@@ -1,4 +1,5 @@
 import React from 'react';
+import { useYScrollingPosition } from './hooks';
 import ProjectHeader, { ProjectHeaderProps } from '../../components/ProjectHeader/ProjectHeader';
 import ProjectSpecs, { ProjectSpecsProps } from '../../components/ProjectSpecs/ProjectSpecs';
 import iconLinkedIn from '../../assets/images/icons/icon_linkedin_neg.svg';
@@ -22,21 +23,27 @@ export interface ProjectPageProps {
     specsContent: ProjectSpecsProps;
 }
 
-const Navigation = (navigationLinks: Navigation) => (
-    <span className="nav">
-        <span className="nav--left">
-            &lsaquo; &nbsp;
-            <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
+const Navigation = (navigationLinks: Navigation) => {
+    const NAV_Y_OFFSET = 320;
+    const curYOffset = useYScrollingPosition();
+    const topOffset = curYOffset > NAV_Y_OFFSET && curYOffset - NAV_Y_OFFSET + 10;
+
+    return (
+        <span className="nav">
+            <span className="nav--left" style={{ paddingTop: topOffset }}>
+                &lsaquo; &nbsp;
+                <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
+            </span>
+            <span className="nav--right" style={{ paddingTop: topOffset }}>
+                <a href={navigationLinks.right.url}>{navigationLinks.right.name}</a>
+                &nbsp; &rsaquo;
+            </span>
         </span>
-        <span className="nav--right">
-            <a href={navigationLinks.right.url}>{navigationLinks.right.name}</a>
-            &nbsp; &rsaquo;
-        </span>
-    </span>
-);
+    );
+};
 
 const Logo = () => (
-    <a href="/" className="logo__container">
+    <a href="/" className="logo__container" style={{ top: useYScrollingPosition() }}>
         <div className="logo__h1"> Jessica Bergs</div>
         <div className="logo__h2">Master's portfolio </div>
     </a>
