@@ -68,7 +68,7 @@ const Logo = () => (
 const Footer = () => (
     <div className="footer__container">
         <a href="https://uk.linkedin.com/in/jbergs">
-            <img className="footer__logo" src={iconLinkedIn} alt="LinkedIn logo" />
+            <img className="footer__icon" src={iconLinkedIn} alt="LinkedIn logo" />
         </a>
         Jessica Bergs {new Date().getFullYear()} All rights reserved.
     </div>
