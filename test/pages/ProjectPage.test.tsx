@@ -9,13 +9,13 @@ const projectPage: ProjectPageProps = {
         left: { name: 'navNameLeft', url: 'navLinkLeft' },
         right: { name: 'navNameRight', url: 'navLinkRight' },
     },
-    headerContent: {
+    headerContents: {
         title: 'a title',
         subtitle: 'a subline',
         tags: ['mockTag1', 'mockTag2', 'mockTag3'],
     },
     textContent: 'some sample text',
-    specsContent: {
+    specsContents: {
         entries: [
             {
                 title: 'title1',

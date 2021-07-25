@@ -8,9 +8,9 @@ import './_ProjectPage.scss';
 export interface ProjectPageProps {
     navigationLinks?: NavigationProps;
     textContent: string;
-    headerContent: ProjectHeaderProps;
-    specsContent: ProjectSpecsProps;
-    heroImageSrc: string;
+    headerContents: ProjectHeaderProps;
+    specsContents: ProjectSpecsProps;
+    heroImageSrc: HeroImageSource;
 }
 
 interface NavigationLink {
@@ -22,6 +22,22 @@ interface NavigationProps {
     left: NavigationLink;
     right: NavigationLink;
 }
+
+interface HeroProps {
+    heroImageSrc: HeroImageSource;
+}
+
+type HeroImageSource = string;
+
+const Hero = ({ heroImageSrc }: HeroProps) => (
+    <div
+        className="hero__image"
+        data-testid="hero-image"
+        style={{ backgroundImage: `url(${heroImageSrc})` }}
+    >
+        <Logo />
+    </div>
+);
 
 const Navigation = (navigationLinks: NavigationProps) => {
     const NAV_Y_OFFSET = 320;
@@ -49,20 +65,6 @@ const Logo = () => (
     </a>
 );
 
-interface HeroProps {
-    imageSrc: string;
-}
-
-const Hero = ({ imageSrc }: HeroProps) => (
-    <div
-        className="hero__image"
-        data-testid="hero-image"
-        style={{ backgroundImage: `url(${imageSrc})` }}
-    >
-        <Logo />
-    </div>
-);
-
 const Footer = () => (
     <div className="footer__container">
         <a href="https://uk.linkedin.com/in/jbergs">
@@ -75,20 +77,20 @@ const Footer = () => (
 const ProjectPage = ({
     heroImageSrc,
     navigationLinks,
-    headerContent,
+    headerContents,
     textContent,
-    specsContent,
+    specsContents,
 }: ProjectPageProps) => (
     <div className="project-page__container">
         <section className="project-page__hero">
-            <Hero imageSrc={heroImageSrc} />
+            <Hero heroImageSrc={heroImageSrc} />
         </section>
         <section className="project-page__project-content">
             <Navigation {...navigationLinks} />
             <div className="project-page__contents">
-                <ProjectHeader {...headerContent} />
+                <ProjectHeader {...headerContents} />
                 <div className="project-page__text-content">{textContent}</div>
-                <ProjectSpecs {...specsContent} />
+                <ProjectSpecs {...specsContents} />
             </div>
             <Footer />
         </section>

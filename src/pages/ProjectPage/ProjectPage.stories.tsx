@@ -9,12 +9,12 @@ const projectPage: ProjectPageProps = {
         right: { name: 'Goma', url: 'navLinkRight' },
     },
     textContent: placeholderTexts['1000words'],
-    headerContent: {
+    headerContents: {
         title: 'MOCK PROJECT',
         subtitle: 'mock project subline',
         tags: ['a mockTag', 'another mockTag', 'additional mockTag'],
     },
-    specsContent: {
+    specsContents: {
         entries: [
             {
                 title: 'Maecenas',
