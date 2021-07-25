@@ -6,9 +6,11 @@
     }
     &__projects-section {
         background-color: $background-colour;
+        padding: $spacer-medium 0 $spacer-large 0;
     }
     &__about-section {
         background-color: $text-colour;
+        padding: $spacer-medium 0 $spacer-medium 0;
     }
 }
 
@@ -38,10 +40,6 @@
         width: auto;
         float: left;
     }
-}
-
-section > * {
-    padding: $spacer-medium 0 $spacer-large 0;
 }
 
 .projects {

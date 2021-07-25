@@ -35,11 +35,11 @@ const Hero = () => (
 
 const Homepage = () => (
     <div className="homepage__container">
-        <section className="homepage__hero">
+        <section className="homepage__hero ">
             <Hero />
         </section>
 
-        <section className="homepage__projects-section">
+        <section className="homepage__projects-section ">
             <div className="projects__container centered-layout">
                 <div className="projects__title h2"> key projects</div>
 
