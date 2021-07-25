@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Video from '../../src/components/Video/Video';
+import Video, { VideoProps } from '../../src/components/Video/Video';
 
-const videoContent = {
+const videoContent: VideoProps = {
     url: 'a video url',
     posterImageUrl: 'a poster image url',
 };

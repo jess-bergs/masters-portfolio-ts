@@ -1,7 +1,7 @@
 import React from 'react';
 import './_Video.scss';
 
-interface VideoProps {
+export interface VideoProps {
     url: string;
     posterImageUrl?: string;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ProjectSpecs from '../../src/components/ProjectSpecs/ProjectSpecs';
+import ProjectSpecs, { ProjectSpecsProps } from '../../src/components/ProjectSpecs/ProjectSpecs';
 
-const specs = {
+const specs: ProjectSpecsProps = {
     entries: [
         {
             title: 'title1',

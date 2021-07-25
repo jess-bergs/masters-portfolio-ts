@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EmbeddedMedia from '../../src/components/EmbeddedMedia/EmbeddedMedia';
+import EmbeddedMedia, {
+    EmbeddedMediaProps,
+} from '../../src/components/EmbeddedMedia/EmbeddedMedia';
 
-const EmbeddedMediaContent = {
+const EmbeddedMediaContent: EmbeddedMediaProps = {
     url: 'a YouTube url',
 };
 
