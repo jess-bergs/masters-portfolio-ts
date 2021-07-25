@@ -33,7 +33,29 @@ const Hero = () => (
     </div>
 );
 
-const Homepage = () => (
+interface ProjectPreview {
+    title: string;
+    subline: string;
+    previewImageUrl: string;
+}
+
+interface HomepageProps {
+    projects: ProjectPreview[];
+}
+
+const ProjectPreview = ({ title, subline, previewImageUrl }: ProjectPreview) => (
+    <div>
+        <img className="project__image" alt="projectImage" src={previewImageUrl} />
+        <div className="project__overlay">
+            <div className="project__title h3">
+                {title}
+                <div className="project__subtitle h4">{subline}</div>
+            </div>
+        </div>
+    </div>
+);
+
+const Homepage = ({ projects }: HomepageProps) => (
     <div className="homepage__container">
         <section className="homepage__hero ">
             <Hero />
@@ -42,47 +64,10 @@ const Homepage = () => (
         <section className="homepage__projects-section ">
             <div className="projects__container centered-layout">
                 <div className="projects__title h2"> key projects</div>
-
                 <GridLayout>
-                    <div>
-                        <img
-                            className="project__image"
-                            alt="projectImage"
-                            src="https://www.jbergs.eu/res/images/title/lab2_square.jpg"
-                        />
-                        <div className="project__overlay">
-                            <div className="project__title h3">
-                                Goma Glasgow
-                                <div className="project__subtitle h4">Heritage Visualisation </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img
-                            className="project__image"
-                            alt="projectImage"
-                            src="https://www.jbergs.eu/res/images/title/lab2_square.jpg"
-                        />
-                        <div className="project__overlay">
-                            <div className="project__title h3">
-                                Goma Glasgow
-                                <div className="project__subtitle h4">Heritage Visualisation </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img
-                            className="project__image"
-                            alt="projectImage"
-                            src="https://www.jbergs.eu/res/images/title/lab2_square.jpg"
-                        />
-                        <div className="project__overlay">
-                            <div className="project__title h3">
-                                Goma Glasgow
-                                <div className="project__subtitle h4">Heritage Visualisation </div>
-                            </div>
-                        </div>
-                    </div>
+                    {projects.map((project) => (
+                        <ProjectPreview {...project} />
+                    ))}
                 </GridLayout>
             </div>
         </section>
