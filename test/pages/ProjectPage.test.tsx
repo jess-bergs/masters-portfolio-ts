@@ -31,8 +31,8 @@ const renderComponent = () => {
 
 describe('the Project page', () => {
     it('renders the passed hero image', () => {
-        const { getByTestId } = renderComponent();
-        const imageElement = getByTestId('hero-image');
+        const { getByTitle } = renderComponent();
+        const imageElement = getByTitle('hero-image');
         expect(imageElement).toHaveStyle(`background-image: url(${projectPage.heroImageSrc})`);
     });
 

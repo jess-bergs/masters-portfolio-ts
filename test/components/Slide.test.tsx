@@ -5,7 +5,7 @@ import Slide, { SlideProps } from '../../src/components/Slide/Slide';
 
 const slide: SlideProps = {
     caption: 'a caption',
-    content: <img alt="some alt" data-testid="content test-id" />,
+    content: <img alt="some alt" />,
 };
 
 const renderComponent = (customProps?) => render(<Slide {...(customProps || slide)} />);
@@ -27,7 +27,7 @@ describe('the Slide component', () => {
     });
 
     it('includes the slide content', () => {
-        const { getByTestId } = renderComponent();
-        expect(getByTestId('content test-id')).toBeInTheDocument();
+        const { getByAltText } = renderComponent();
+        expect(getByAltText('some alt')).toBeInTheDocument();
     });
 });

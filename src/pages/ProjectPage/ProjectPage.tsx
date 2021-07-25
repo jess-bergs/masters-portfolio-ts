@@ -32,7 +32,7 @@ type HeroImageSource = string;
 const Hero = ({ heroImageSrc }: HeroProps) => (
     <div
         className="hero__image"
-        data-testid="hero-image"
+        title="hero-image"
         style={{ backgroundImage: `url(${heroImageSrc})` }}
     >
         <Logo />
