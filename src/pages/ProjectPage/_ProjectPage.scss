@@ -8,29 +8,6 @@
         padding-bottom: $spacer-large * 1.5;
     }
 
-    &__prt {
-        .nav {
-            font-size: 0.9em;
-            height: 0px;
-
-            & > * {
-                padding-top: 1em;
-            }
-
-            &--left {
-                float: left;
-                padding-left: $spacer-medium;
-            }
-
-            &--right {
-                float: right;
-                padding-right: $spacer-medium;
-            }
-
-            @include link;
-        }
-    }
-
     &__contents {
         margin: $spacer-medium * 1.25 auto 0 auto;
         max-width: 52%;
@@ -38,45 +15,73 @@
             padding-bottom: $spacer-large;
         }
     }
-    &__hero-image {
+}
+
+.hero {
+    &__image {
         background-position: 50% 0;
         background-size: auto $hero-image-height;
         height: $hero-image-height;
         position: relative;
+    }
+}
 
-        .logo {
-            &__container {
-                position: absolute;
-                padding: $spacer-small * 1.25 0 0 $spacer-medium;
-                text-decoration: none;
-                color: $text-colour;
-                text-shadow: 0px 0px 5px rgba($color: $background-colour, $alpha: 0.5);
-            }
+.navigation {
+    &__container {
+        @include link;
+        font-size: 0.9em;
+        height: 0px;
 
-            &__h1 {
-                font-family: 'proxima-nova';
-                font-size: 1.5em;
-                font-weight: 400;
-                letter-spacing: 0.08em;
-                line-height: 1.45em;
-                text-transform: uppercase;
-            }
-
-            &__h2 {
-                font-size: 0.75em;
-                text-transform: uppercase;
-            }
+        & > * {
+            padding-top: 1em;
         }
     }
-    &__footer {
+
+    &__left {
+        float: left;
+        padding-left: $spacer-medium;
+    }
+
+    &__right {
+        float: right;
+        padding-right: $spacer-medium;
+    }
+}
+
+.logo {
+    &__container {
+        position: absolute;
+        padding: $spacer-small * 1.25 0 0 $spacer-medium;
+        text-decoration: none;
+        color: $text-colour;
+        text-shadow: 0px 0px 5px rgba($color: $background-colour, $alpha: 0.5);
+    }
+
+    &__h1 {
+        font-family: 'proxima-nova';
+        font-size: 1.5em;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        line-height: 1.45em;
+        text-transform: uppercase;
+    }
+
+    &__h2 {
+        font-size: 0.75em;
+        text-transform: uppercase;
+    }
+}
+
+.footer {
+    &__container {
         color: $text-colour-muted;
         float: right;
         font-size: 0.7em;
         padding-right: $spacer-large;
-        .footer__logo {
-            height: 0.9em;
-            padding-right: $spacer-tiny * 0.5;
-            width: 0.9em;
-        }
+    }
+    &__logo {
+        height: 0.9em;
+        padding-right: $spacer-tiny * 0.5;
+        width: 0.9em;
     }
 }

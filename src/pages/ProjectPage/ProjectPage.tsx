@@ -5,36 +5,36 @@ import ProjectSpecs, { ProjectSpecsProps } from '../../components/ProjectSpecs/P
 import iconLinkedIn from '../../assets/images/icons/icon_linkedin_neg.svg';
 import './_ProjectPage.scss';
 
+export interface ProjectPageProps {
+    navigationLinks?: NavigationProps;
+    textContent: string;
+    headerContent: ProjectHeaderProps;
+    specsContent: ProjectSpecsProps;
+    heroImageSrc: string;
+}
+
 interface NavigationLink {
     name: string;
     url: string;
 }
 
-interface Navigation {
+interface NavigationProps {
     left: NavigationLink;
     right: NavigationLink;
 }
 
-export interface ProjectPageProps {
-    heroImageSrc: string;
-    navigationLinks?: Navigation;
-    textContent: string;
-    headerContent: ProjectHeaderProps;
-    specsContent: ProjectSpecsProps;
-}
-
-const Navigation = (navigationLinks: Navigation) => {
+const Navigation = (navigationLinks: NavigationProps) => {
     const NAV_Y_OFFSET = 320;
     const curYOffset = useYScrollingPosition();
     const topOffset = curYOffset > NAV_Y_OFFSET && curYOffset - NAV_Y_OFFSET + 10;
 
     return (
-        <span className="nav">
-            <span className="nav--left" style={{ paddingTop: topOffset }}>
+        <span className="navigation__container">
+            <span className="navigation__left" style={{ paddingTop: topOffset }}>
                 &lsaquo; &nbsp;
                 <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
             </span>
-            <span className="nav--right" style={{ paddingTop: topOffset }}>
+            <span className="navigation__right" style={{ paddingTop: topOffset }}>
                 <a href={navigationLinks.right.url}>{navigationLinks.right.name}</a>
                 &nbsp; &rsaquo;
             </span>
@@ -49,6 +49,29 @@ const Logo = () => (
     </a>
 );
 
+interface HeroProps {
+    imageSrc: string;
+}
+
+const Hero = ({ imageSrc }: HeroProps) => (
+    <div
+        className="hero__image"
+        data-testid="hero-image"
+        style={{ backgroundImage: `url(${imageSrc})` }}
+    >
+        <Logo />
+    </div>
+);
+
+const Footer = () => (
+    <div className="footer__container">
+        <a href="https://uk.linkedin.com/in/jbergs">
+            <img className="footer__logo" src={iconLinkedIn} alt="LinkedIn logo" />
+        </a>
+        Jessica Bergs {new Date().getFullYear()} All rights reserved.
+    </div>
+);
+
 const ProjectPage = ({
     heroImageSrc,
     navigationLinks,
@@ -57,27 +80,18 @@ const ProjectPage = ({
     specsContent,
 }: ProjectPageProps) => (
     <div className="project-page__container">
-        <div
-            className="project-page__hero-image"
-            data-testid="hero-image"
-            style={{ backgroundImage: `url(${heroImageSrc})` }}
-        >
-            <Logo />
-        </div>
-        <div className="project-page__prt">
+        <section className="project-page__hero">
+            <Hero imageSrc={heroImageSrc} />
+        </section>
+        <section className="project-page__project-content">
             <Navigation {...navigationLinks} />
             <div className="project-page__contents">
                 <ProjectHeader {...headerContent} />
                 <div className="project-page__text-content">{textContent}</div>
                 <ProjectSpecs {...specsContent} />
             </div>
-            <div className="project-page__footer">
-                <a href="https://uk.linkedin.com/in/jbergs">
-                    <img className="footer__logo" src={iconLinkedIn} alt="LinkedIn logo" />
-                </a>
-                Jessica Bergs {new Date().getFullYear()} All rights reserved.
-            </div>
-        </div>
+            <Footer />
+        </section>
     </div>
 );
 
