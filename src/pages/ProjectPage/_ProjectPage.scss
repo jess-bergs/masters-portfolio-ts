@@ -72,6 +72,12 @@
     }
 }
 
+.project-contents {
+    &__container > * {
+        padding-bottom: $spacer-medium;
+    }
+}
+
 .footer {
     &__container {
         color: $text-colour-muted;

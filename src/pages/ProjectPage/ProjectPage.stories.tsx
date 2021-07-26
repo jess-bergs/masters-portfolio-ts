@@ -1,6 +1,35 @@
 import React from 'react';
 import ProjectPage, { ProjectPageProps } from './ProjectPage';
-import placeholderTexts from '../../../.storybook/story-assets/placeholderTexts.json';
+import Video from '../../components/Video/Video';
+import Slideshow from '../../components/Slideshow/Slideshow';
+import Slide from '../../components/Slide/Slide';
+import EmbeddedMedia from '../../components/EmbeddedMedia/EmbeddedMedia';
+
+const slideshow = (
+    <Slideshow
+        slides={[
+            <Slide
+                content={
+                    <Video
+                        url="./exampleVideo.mp4"
+                        posterImageUrl="./exampleVideoPosterImage.jpg"
+                    />
+                }
+                caption="a caption"
+            />,
+            <Slide
+                caption="a caption"
+                content={<img alt="img content" src="./exampleSlideImage.jpg" />}
+            />,
+            <Slide
+                content={
+                    <EmbeddedMedia url="https://sketchfab.com/models/d5ba8a80db4e4c9d9925fbbab52a03c5/embed" />
+                }
+                caption="a caption"
+            />,
+        ]}
+    />
+);
 
 const projectPage: ProjectPageProps = {
     heroImageSrc: './exampleHeroImage.jpg',
@@ -8,7 +37,14 @@ const projectPage: ProjectPageProps = {
         left: { name: 'Spartathlon', url: 'navLinkLeft' },
         right: { name: 'Goma', url: 'navLinkRight' },
     },
-    projectContents: [placeholderTexts['1000words'], placeholderTexts['1000words']],
+    projectContents: {
+        contents: [
+            <Video url="./exampleVideo.mp4" />,
+            <img src="./exampleSlideImage.jpg" alt="some-alt" />,
+            <div> a content item 3 </div>,
+            slideshow,
+        ],
+    },
     headerContents: {
         title: 'MOCK PROJECT',
         subtitle: 'mock project subline',

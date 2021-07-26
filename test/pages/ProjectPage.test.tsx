@@ -3,6 +3,8 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ProjectPage, { ProjectPageProps } from '../../src/pages/ProjectPage/ProjectPage';
 
+const MockJSXElement = ({ number }) => <div> a content item {number} </div>;
+
 const projectPage: ProjectPageProps = {
     heroImageSrc: 'anImage.jpg',
     navigationLinks: {
@@ -14,7 +16,13 @@ const projectPage: ProjectPageProps = {
         subtitle: 'a subline',
         tags: ['mockTag1', 'mockTag2', 'mockTag3'],
     },
-    projectContents: ['project content text 1', 'project content text 2', 'project content text 3'],
+    projectContents: {
+        contents: [
+            <MockJSXElement number={1} />,
+            <MockJSXElement number={2} />,
+            <MockJSXElement number={3} />,
+        ],
+    },
     specsContents: {
         entries: [
             {
@@ -38,7 +46,7 @@ describe('the Project page', () => {
 
     it('renders the passed contents', () => {
         const { getAllByText } = renderComponent();
-        const elements = getAllByText(/project content text ./);
+        const elements = getAllByText(/a content item ./);
         expect(elements).toHaveLength(3);
     });
 
