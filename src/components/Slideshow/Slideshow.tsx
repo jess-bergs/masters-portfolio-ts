@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
+import Slide, { SlideProps } from '../Slide/Slide';
 import './_Slideshow.scss';
 import '../../../node_modules/react-multi-carousel/lib/styles.css';
 
@@ -23,7 +24,7 @@ const carouselResponsiveBreakpoints = {
 };
 
 export interface SlideshowProps {
-    slides: JSX.Element[];
+    slides: SlideProps[];
 }
 
 const Slideshow = ({ slides }: SlideshowProps) => (
@@ -41,7 +42,7 @@ const Slideshow = ({ slides }: SlideshowProps) => (
             renderDotsOutside
         >
             {slides.map((slide) => (
-                <div>{slide}</div>
+                <Slide {...slide} />
             ))}
         </Carousel>
     </div>

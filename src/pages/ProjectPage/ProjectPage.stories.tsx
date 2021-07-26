@@ -8,25 +8,20 @@ import EmbeddedMedia from '../../components/EmbeddedMedia/EmbeddedMedia';
 const slideshow = (
     <Slideshow
         slides={[
-            <Slide
-                content={
-                    <Video
-                        url="./exampleVideo.mp4"
-                        posterImageUrl="./exampleVideoPosterImage.jpg"
-                    />
-                }
-                caption="a caption"
-            />,
-            <Slide
-                caption="a caption"
-                content={<img alt="img content" src="./exampleSlideImage.jpg" />}
-            />,
-            <Slide
-                content={
+            {
+                content: (
                     <EmbeddedMedia url="https://sketchfab.com/models/d5ba8a80db4e4c9d9925fbbab52a03c5/embed" />
-                }
-                caption="a caption"
-            />,
+                ),
+                caption: 'a caption',
+            },
+            {
+                caption: 'a caption',
+                content: <img alt="img content" src="./exampleSlideImage.jpg" />,
+            },
+            {
+                caption: 'a caption',
+                content: <img alt="img content" src="./exampleSlideImage.jpg" />,
+            },
         ]}
     />
 );
