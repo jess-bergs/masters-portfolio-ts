@@ -8,7 +8,7 @@ const projectPage: ProjectPageProps = {
         left: { name: 'Spartathlon', url: 'navLinkLeft' },
         right: { name: 'Goma', url: 'navLinkRight' },
     },
-    textContent: placeholderTexts['1000words'],
+    projectContents: [placeholderTexts['1000words'], placeholderTexts['1000words']],
     headerContents: {
         title: 'MOCK PROJECT',
         subtitle: 'mock project subline',

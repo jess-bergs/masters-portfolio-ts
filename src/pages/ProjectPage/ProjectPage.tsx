@@ -7,7 +7,7 @@ import './_ProjectPage.scss';
 
 export interface ProjectPageProps {
     navigationLinks?: NavigationProps;
-    textContent: string;
+    projectContents: string[];
     headerContents: ProjectHeaderProps;
     specsContents: ProjectSpecsProps;
     heroImageSrc: HeroImageSource;
@@ -74,11 +74,22 @@ const Footer = () => (
     </div>
 );
 
+interface ProjectContentsProps {
+    contents: string[];
+}
+
+const ProjectContents = ({ contents }: ProjectContentsProps) => (
+    <div>
+        {contents.map((content) => (
+            <div> {content} </div>
+        ))}
+    </div>
+);
 const ProjectPage = ({
     heroImageSrc,
     navigationLinks,
     headerContents,
-    textContent,
+    projectContents,
     specsContents,
 }: ProjectPageProps) => (
     <div className="project-page__container">
@@ -89,7 +100,9 @@ const ProjectPage = ({
             <Navigation {...navigationLinks} />
             <div className="project-page__contents">
                 <ProjectHeader {...headerContents} />
-                <div className="project-page__text-content">{textContent}</div>
+                <div className="project-page__text-content">
+                    <ProjectContents contents={projectContents} />
+                </div>
                 <ProjectSpecs {...specsContents} />
             </div>
             <Footer />

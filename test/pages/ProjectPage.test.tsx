@@ -14,7 +14,7 @@ const projectPage: ProjectPageProps = {
         subtitle: 'a subline',
         tags: ['mockTag1', 'mockTag2', 'mockTag3'],
     },
-    textContent: 'some sample text',
+    projectContents: ['project content text 1', 'project content text 2', 'project content text 3'],
     specsContents: {
         entries: [
             {
@@ -36,10 +36,10 @@ describe('the Project page', () => {
         expect(imageElement).toHaveStyle(`background-image: url(${projectPage.heroImageSrc})`);
     });
 
-    it('renders the passed content text', () => {
-        const { getByText } = renderComponent();
-        const textElement = getByText('some sample text');
-        expect(textElement).toBeInTheDocument();
+    it('renders the passed contents', () => {
+        const { getAllByText } = renderComponent();
+        const elements = getAllByText(/project content text ./);
+        expect(elements).toHaveLength(3);
     });
 
     it('renders the passed navigation links', () => {
