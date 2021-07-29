@@ -4,7 +4,7 @@ import slug from 'slug';
 import Homepage from './pages/Homepage/Homepage';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 import ContentComponentFactory from './utils/ContentComponentFactory';
-
+import CircularArray from './utils/CircularArray';
 import projectPageContentsData from './data/projectPageContentsData.json';
 
 const getProjectRoutePath = (project) => `/${slug(project.headerContents.title)}`;
@@ -28,26 +28,16 @@ const getProjectPageContents = (project) => {
     };
 };
 
-const getPreviousIndexCyclic = (curIndex, arrayLength) =>
-    curIndex - 1 < 0 ? arrayLength - 1 : curIndex - 1;
-const getNextIndexCyclic = (curIndex, arrayLength) => (curIndex + 1) % arrayLength;
-
 const getProjectPageRoutes = (projectsData) =>
     projectsData.map((projectData, index) => {
         const navigationLinks = {
             left: {
-                name: projectsData[getPreviousIndexCyclic(index, projectsData.length)]
-                    .headerContents.title,
-                url: getProjectRoutePath(
-                    projectsData[getPreviousIndexCyclic(index, projectsData.length)],
-                ),
+                name: CircularArray.getPrevious(projectsData, index).headerContents.title,
+                url: getProjectRoutePath(CircularArray.getPrevious(projectsData, index)),
             },
             right: {
-                name: projectsData[getNextIndexCyclic(index, projectsData.length)].headerContents
-                    .title,
-                url: getProjectRoutePath(
-                    projectsData[getNextIndexCyclic(index, projectsData.length)],
-                ),
+                name: CircularArray.getNext(projectsData, index).headerContents.title,
+                url: getProjectRoutePath(CircularArray.getNext(projectsData, index)),
             },
         };
 

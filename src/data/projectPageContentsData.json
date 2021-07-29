@@ -7,7 +7,179 @@
         },
         "heroImageSrc": "https://www.jbergs.eu/res/images/labsquare/lab2_header_SM.jpg",
         "headerContents": {
-            "title": "title",
+            "title": "title1",
+            "subtitle": "subtitle",
+            "tags": [
+                "tag 1",
+                "tag 2",
+                "tag 3"
+            ]
+        },
+        "projectContents": [
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "headline",
+                    "level": 2
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "some text"
+            },
+            {
+                "componentType": "Video",
+                "componentProps": {
+                    "url": "https://www.jbergs.eu/res/video/labsquare/lab2_HMDupdate.mp4"
+                }
+            },
+            {
+                "componentType": "Image",
+                "componentProps": {
+                    "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                    "alt": "alt"
+                }
+            },
+            {
+                "componentType": "EmbeddedMedia",
+                "componentProps": {
+                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM"
+                }
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "image 1",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                            "alt": "alt"
+                        }
+                    },
+                    {
+                        "caption": "image 2",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                            "alt": "alt"
+                        }
+                    }
+                ]
+            }
+        ],
+        "specsContents": {
+            "entries": [
+                {
+                    "title": "spec 1",
+                    "contents": [
+                        {
+                            "text": "content 1"
+                        },
+                        {
+                            "text": "content 2",
+                            "url": "some url"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "preview": {
+            "title": "p-title",
+            "subline": "p-subline",
+            "previewImageUrl": "https://www.jbergs.eu/res/images/title/lab2_square.jpg"
+        },
+        "heroImageSrc": "https://www.jbergs.eu/res/images/labsquare/lab2_header_SM.jpg",
+        "headerContents": {
+            "title": "title2",
+            "subtitle": "subtitle",
+            "tags": [
+                "tag 1",
+                "tag 2",
+                "tag 3"
+            ]
+        },
+        "projectContents": [
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "headline",
+                    "level": 2
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "some text"
+            },
+            {
+                "componentType": "Video",
+                "componentProps": {
+                    "url": "https://www.jbergs.eu/res/video/labsquare/lab2_HMDupdate.mp4"
+                }
+            },
+            {
+                "componentType": "Image",
+                "componentProps": {
+                    "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                    "alt": "alt"
+                }
+            },
+            {
+                "componentType": "EmbeddedMedia",
+                "componentProps": {
+                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM"
+                }
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "image 1",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                            "alt": "alt"
+                        }
+                    },
+                    {
+                        "caption": "image 2",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                            "alt": "alt"
+                        }
+                    }
+                ]
+            }
+        ],
+        "specsContents": {
+            "entries": [
+                {
+                    "title": "spec 1",
+                    "contents": [
+                        {
+                            "text": "content 1"
+                        },
+                        {
+                            "text": "content 2",
+                            "url": "some url"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "preview": {
+            "title": "p-title",
+            "subline": "p-subline",
+            "previewImageUrl": "https://www.jbergs.eu/res/images/title/lab2_square.jpg"
+        },
+        "heroImageSrc": "https://www.jbergs.eu/res/images/labsquare/lab2_header_SM.jpg",
+        "headerContents": {
+            "title": "title3",
             "subtitle": "subtitle",
             "tags": [
                 "tag 1",
