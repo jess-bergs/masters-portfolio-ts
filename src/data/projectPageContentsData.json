@@ -15,6 +15,59 @@
                 "tag 3"
             ]
         },
+        "projectContents": [
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "headline",
+                    "level": 2
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "some text"
+            },
+            {
+                "componentType": "Video",
+                "componentProps": {
+                    "url": "https://www.jbergs.eu/res/video/labsquare/lab2_HMDupdate.mp4"
+                }
+            },
+            {
+                "componentType": "Image",
+                "componentProps": {
+                    "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                    "alt": "alt"
+                }
+            },
+            {
+                "componentType": "EmbeddedMedia",
+                "componentProps": {
+                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM"
+                }
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "image 1",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                            "alt": "alt"
+                        }
+                    },
+                    {
+                        "caption": "image 2",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
+                            "alt": "alt"
+                        }
+                    }
+                ]
+            }
+        ],
         "specsContents": {
             "entries": [
                 {
