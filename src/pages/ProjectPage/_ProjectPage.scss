@@ -97,6 +97,10 @@
 .project-contents {
     &__container > * {
         padding-bottom: $spacer-medium;
+
+        img {
+            width: 100%;
+        }
     }
 }
 
