@@ -40,13 +40,12 @@ const Hero = ({ heroImageSrc }: HeroProps) => (
 );
 
 const Navigation = (navigationLinks: NavigationProps) => {
-    const Y_SCROLL_THRESHOLD = 308;
-    const LOGO_HEIGHT = 85;
+    const Y_SCROLL_THRESHOLD = 300;
     const curYOffset = useYScrollingPosition();
-    const topOffset = curYOffset > Y_SCROLL_THRESHOLD && curYOffset + LOGO_HEIGHT;
+    const useStickyNav = curYOffset > Y_SCROLL_THRESHOLD;
 
     return (
-        <div className="navigation__container" style={{ top: topOffset }}>
+        <div className={`navigation${useStickyNav ? '--sticky' : ''} `}>
             <span className="navigation__left">
                 &lsaquo; &nbsp;
                 <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>

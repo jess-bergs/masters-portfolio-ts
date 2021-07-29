@@ -32,31 +32,37 @@
 }
 
 .navigation {
-    &__container {
-        @include link;
-        font-size: 0.9em;
-        position: static;
-        height: 0px;
-        width: 75%;
-        margin: 0 auto;
-        padding-bottom: $spacer-small;
-        padding-top: $spacer-small * 1.5;
-        & > * {
-            display: inline-flex;
-        }
+    @include link;
+    font-size: 0.9em;
+    height: 0px;
+    margin: 0 auto;
+    padding-bottom: $spacer-small;
+    padding-top: $spacer-small * 1.5;
+    position: static;
+    width: 75%;
+
+    @include mq($from: $breakpoint-desktop) {
+        position: absolute;
+        width: 100%;
+    }
+
+    &--sticky {
+        @extend .navigation;
         @include mq($from: $breakpoint-desktop) {
-            position: absolute;
-            width: 100%;
+            top: 78px;
+            position: fixed;
         }
     }
 
     &__left {
+        display: inline-flex;
         @include mq($from: $breakpoint-desktop) {
             padding-left: $spacer-small * 1.8;
         }
     }
 
     &__right {
+        display: inline-flex;
         float: right;
         text-align: right;
         @include mq($from: $breakpoint-desktop) {
