@@ -1,10 +1,15 @@
+@import '~sass-mq/mq';
 @import '../../style/theme';
+@import '../../style/responsive-breakpoints';
 
 @mixin grid($grid-columns: 1fr 1fr 1fr, $grid-gap: 20px) {
     .grid {
         display: grid;
         grid-gap: $grid-gap;
-        grid-template-columns: $grid-columns;
+        grid-template-columns: 1fr;
+        @include mq($from: $breakpoint-desktop) {
+            grid-template-columns: $grid-columns;
+        }
 
         .grid-item {
             position: relative;
