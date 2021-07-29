@@ -50,6 +50,7 @@ body {
         padding-bottom: $spacer-medium;
     }
     &__container {
+        @include link;
         .project {
             &__title {
                 display: table-cell;
