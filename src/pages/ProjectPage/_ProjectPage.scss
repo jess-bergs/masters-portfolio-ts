@@ -1,4 +1,6 @@
+@import '~sass-mq/mq';
 @import '../../style/theme';
+@import '../../style/responsive-breakpoints';
 
 .project-page {
     &__container {
@@ -9,10 +11,13 @@
     }
 
     &__contents {
-        margin: $spacer-medium * 1.25 auto 0 auto;
-        max-width: 52%;
+        margin: $spacer-small auto 0 auto;
+        max-width: 75%;
         & > * {
             padding-bottom: $spacer-large;
+        }
+        @include mq($from: $breakpoint-desktop) {
+            max-width: 52%;
         }
     }
 }
@@ -30,28 +35,45 @@
     &__container {
         @include link;
         font-size: 0.9em;
+        position: static;
         height: 0px;
-
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: $spacer-small;
+        padding-top: $spacer-small * 1.5;
         & > * {
-            padding-top: 1em;
+            display: inline-flex;
+        }
+        @include mq($from: $breakpoint-desktop) {
+            position: absolute;
+            width: 100%;
         }
     }
 
     &__left {
-        float: left;
-        padding-left: $spacer-medium;
+        @include mq($from: $breakpoint-desktop) {
+            padding-left: $spacer-small * 1.8;
+        }
     }
 
     &__right {
         float: right;
-        padding-right: $spacer-medium;
+        text-align: right;
+        @include mq($from: $breakpoint-desktop) {
+            padding-right: $spacer-small * 1.8;
+        }
     }
 }
 
 .logo {
     &__container {
-        position: absolute;
         padding: $spacer-small * 1.25 0 0 $spacer-medium;
+        @include mq($from: $breakpoint-desktop) {
+            position: fixed;
+        }
+    }
+
+    &__link {
         text-decoration: none;
         color: $text-colour;
         text-shadow: 0px 0px 5px rgba($color: $background-colour, $alpha: 0.5);

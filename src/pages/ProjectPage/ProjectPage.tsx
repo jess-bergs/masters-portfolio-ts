@@ -40,29 +40,32 @@ const Hero = ({ heroImageSrc }: HeroProps) => (
 );
 
 const Navigation = (navigationLinks: NavigationProps) => {
-    const NAV_Y_OFFSET = 320;
+    const Y_SCROLL_THRESHOLD = 308;
+    const LOGO_HEIGHT = 85;
     const curYOffset = useYScrollingPosition();
-    const topOffset = curYOffset > NAV_Y_OFFSET && curYOffset - NAV_Y_OFFSET + 10;
+    const topOffset = curYOffset > Y_SCROLL_THRESHOLD && curYOffset + LOGO_HEIGHT;
 
     return (
-        <span className="navigation__container">
-            <span className="navigation__left" style={{ paddingTop: topOffset }}>
+        <div className="navigation__container" style={{ top: topOffset }}>
+            <span className="navigation__left">
                 &lsaquo; &nbsp;
                 <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
             </span>
-            <span className="navigation__right" style={{ paddingTop: topOffset }}>
+            <span className="navigation__right">
                 <a href={navigationLinks.right.url}>{navigationLinks.right.name}</a>
                 &nbsp; &rsaquo;
             </span>
-        </span>
+        </div>
     );
 };
 
 const Logo = () => (
-    <a href="/" className="logo__container" style={{ top: useYScrollingPosition() }}>
-        <div className="logo__h1"> Jessica Bergs</div>
-        <div className="logo__h2">Master's portfolio </div>
-    </a>
+    <div className="logo__container">
+        <a href="/" className="logo__link" style={{ top: useYScrollingPosition() }}>
+            <div className="logo__h1"> Jessica Bergs</div>
+            <div className="logo__h2">Master's portfolio </div>
+        </a>
+    </div>
 );
 
 const Footer = () => (
