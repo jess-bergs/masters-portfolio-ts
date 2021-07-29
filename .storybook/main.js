@@ -1,7 +1,7 @@
 const webpack = require('../webpack.config.js');
 
 module.exports = {
-    addons: ['@storybook/addon-backgrounds'],
+    addons: ['@storybook/addon-backgrounds', '@storybook/addon-viewport'],
     stories: ['../src/**/*.stories.tsx'],
     webpackFinal: (config) => {
         return {

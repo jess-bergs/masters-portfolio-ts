@@ -1,5 +1,7 @@
+
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 export const parameters = {
-    layout: 'fullscreen',
     backgrounds: {
         default: 'neutral',
         values: [
@@ -8,5 +10,10 @@ export const parameters = {
             { name: 'contrast', value: '#ff00aa' },
         ],
     },
-
+    viewport: {
+        viewports: INITIAL_VIEWPORTS
+    },
+    layout: 'fullscreen'
 }
+
+
