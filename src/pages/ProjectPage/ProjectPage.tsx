@@ -70,10 +70,11 @@ const Logo = () => (
 
 const Footer = () => (
     <div className="footer__container">
+        &#169; {new Date().getFullYear()} Jessica Bergs {'   '}
         <a href="https://uk.linkedin.com/in/jbergs">
             <img className="footer__icon" src={iconLinkedIn} alt="LinkedIn logo" />
         </a>
-        Jessica Bergs {new Date().getFullYear()} All rights reserved.
+        . All rights reserved.
     </div>
 );
 

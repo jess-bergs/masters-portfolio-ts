@@ -105,7 +105,8 @@ const Homepage = ({ projects }: HomepageProps) => (
                     </div>
                     <div className="about__copyright">
                         <div className="copyright__text">
-                            &#169; {new Date().getFullYear()} Jessica Bergs All rights reserved.
+                            &#169; {new Date().getFullYear()} Jessica Bergs <br /> All rights
+                            reserved.
                         </div>
                     </div>
                 </GridLayout>
