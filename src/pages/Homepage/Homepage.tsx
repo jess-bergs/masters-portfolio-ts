@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GridLayout from '../../layouts/GridLayout/GridLayout';
 import iconEmail from '../../assets/images/icons/icon_email.svg';
 import iconSkype from '../../assets/images/icons/icon_skype.svg';
@@ -37,14 +38,15 @@ interface ProjectPreview {
     title: string;
     subline: string;
     previewImageUrl: string;
+    pagePath: string;
 }
 
 interface HomepageProps {
     projects: ProjectPreview[];
 }
 
-const ProjectPreview = ({ title, subline, previewImageUrl }: ProjectPreview) => (
-    <div>
+const ProjectPreview = ({ title, subline, previewImageUrl, pagePath }: ProjectPreview) => (
+    <Link to={pagePath}>
         <img className="project__image" alt="projectImage" src={previewImageUrl} />
         <div className="project__overlay">
             <div className="project__title h3">
@@ -52,7 +54,7 @@ const ProjectPreview = ({ title, subline, previewImageUrl }: ProjectPreview) => 
                 <div className="project__subtitle h4">{subline}</div>
             </div>
         </div>
-    </div>
+    </Link>
 );
 
 const Homepage = ({ projects }: HomepageProps) => (
