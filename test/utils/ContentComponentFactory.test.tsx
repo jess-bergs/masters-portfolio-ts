@@ -27,17 +27,37 @@ describe('the ContentComponentFactory', () => {
     });
 
     describe('when the component type is a paragraph', () => {
-        it('returns a p component', () => {
-            const componentConfig: ComponentOptions = {
-                componentType: ComponentType.Paragraph,
-                componentProps: 'some text',
-            };
+        describe('when the props contain plain text', () => {
+            it('returns a p component with the text', () => {
+                const componentConfig: ComponentOptions = {
+                    componentType: ComponentType.Paragraph,
+                    componentProps: 'some text',
+                };
 
-            const expectedResult = <p>some text</p>;
+                const expectedResult = <p>some text</p>;
 
-            const result = ContentComponentFactory.create(componentConfig);
+                const result = ContentComponentFactory.create(componentConfig);
 
-            expect(result).toEqual(expectedResult);
+                expect(result).toEqual(expectedResult);
+            });
+        });
+        describe('when the props contain HTML', () => {
+            it('returns a p component with HTML markup', () => {
+                const componentConfig: ComponentOptions = {
+                    componentType: ComponentType.Paragraph,
+                    componentProps: '<b>some text</b>',
+                };
+
+                const expectedResult = (
+                    <p>
+                        <b>some text</b>
+                    </p>
+                );
+
+                const result = ContentComponentFactory.create(componentConfig);
+
+                expect(result).toEqual(expectedResult);
+            });
         });
     });
 

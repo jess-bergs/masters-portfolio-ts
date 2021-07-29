@@ -1,4 +1,6 @@
 import React from 'react';
+import parse from 'html-react-parser';
+
 import Headline, { HeadlineProps } from '../components/Headline/Headline';
 import Video, { VideoProps } from '../components/Video/Video';
 import Slideshow from '../components/Slideshow/Slideshow';
@@ -38,7 +40,7 @@ const ContentComponentFactory = {
             case ComponentType.Headline:
                 return <Headline {...(componentProps as HeadlineProps)} />;
             case ComponentType.Paragraph:
-                return <p>{componentProps as string}</p>;
+                return <p>{parse(componentProps as string)}</p>;
             case ComponentType.Image:
                 return <img alt="" {...(componentProps as ImageProps)} />;
             case ComponentType.Video:
