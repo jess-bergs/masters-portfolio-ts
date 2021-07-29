@@ -1,44 +1,28 @@
 [
     {
         "preview": {
-            "title": "p-title",
-            "subline": "p-subline",
-            "previewImageUrl": "https://www.jbergs.eu/res/images/title/lab2_square.jpg"
+            "title": "Goma Glasgow",
+            "subline": "Heritage Visualisation",
+            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/goma_square.jpg"
         },
-        "heroImageSrc": "https://www.jbergs.eu/res/images/labsquare/lab2_header_SM.jpg",
+        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/goma_header_GR.jpg",
         "headerContents": {
-            "title": "title1",
-            "subtitle": "subtitle",
+            "title": "Goma Glasgow",
+            "subtitle": "Interactive Heritage Visualisation",
             "tags": [
-                "tag 1",
-                "tag 2",
-                "tag 3"
+                "3D modelling & scanning",
+                "RT3D",
+                "Unity physically-based shading"
             ]
         },
         "projectContents": [
             {
-                "componentType": "Headline",
-                "componentProps": {
-                    "text": "headline",
-                    "level": 2
-                }
+                "componentType": "Paragraph",
+                "componentProps": "The aim of this project was to create an interactive 3D visualisation of the front part of Glasgow’s <a href='https://en.wikipedia.org/wiki/Gallery_of_Modern_Art,_Glasgow'>Gallery of Modern Art</a> (GoMA) by using a combination of conventional 3D modelling and photogrammetry-based reproduction techniques."
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "some text"
-            },
-            {
-                "componentType": "Video",
-                "componentProps": {
-                    "url": "https://www.jbergs.eu/res/video/labsquare/lab2_HMDupdate.mp4"
-                }
-            },
-            {
-                "componentType": "Image",
-                "componentProps": {
-                    "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                    "alt": "alt"
-                }
+                "componentProps": "The reconstructed parts comprise the facade of the Gallery’s 1780 Royal exchange building and forefront <a href='https://en.wikipedia.org/wiki/Equestrian_statue_of_the_Duke_of_Wellington,_Glasgow'> equestrian statue of the Duke of Wellington</a>. The final models were staged in Unity together with low-poly models of the surrounding Glaswegian cityscape (Google Maps models)."
             },
             {
                 "componentType": "EmbeddedMedia",
@@ -47,22 +31,121 @@
                 }
             },
             {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "From High-Res 3D Scan to Game Art Asset",
+                    "level": 2
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "While the facade's and statue's general geometry was reproduced using conventional 3D modelling techniques, the reconstruction of more filigree parts, e.g. the bronze plates on the statue's socket, was realised using a photogrammetry-based 3D scanning workflow."
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "Photogrammety techniques allow to reproduce real-world objects from a series of photographs to create 3D models of stunning detail. However, the resulting model meshes are often too large to be used in real-time 3D (RT3D) visualisations: a high-res photogrammetry mesh can easily exceed 1m vertices, but RT3D engines such as Unity can only import meshes of up to 64K vertices. A photogrammetry mesh therefore first needs to be downsampled to a fraction of its original resolution in order to be usable in a Unity project. Yet a brute-force mesh reduction at this scale would also result in the loss of the model's valuable details."
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "For converting the plates and socket scans for Unity, the below workflow was developed that allowed to reduce the scans' high-res meshes to the required size while at the same time preserving as much of their rich artistic detail as possible:"
+            },
+            {
                 "componentType": "Slideshow",
                 "componentProps": [
                     {
-                        "caption": "image 1",
+                        "caption": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan).",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                            "alt": "alt"
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0006_Ebene%201.jpg",
+                            "alt": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan)."
                         }
                     },
                     {
-                        "caption": "image 2",
+                        "caption": "The resulting high-res mesh counts about 1.1m vertices.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                            "alt": "alt"
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0005_Gruppe%202.jpg",
+                            "alt": "The resulting high-res mesh counts about 1.1m vertices."
+                        }
+                    },
+                    {
+                        "caption": "The texture is rendered at 4k resolution.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0004_Ebene%204.jpg",
+                            "alt": "The texture is rendered at 4k resolution."
+                        }
+                    },
+                    {
+                        "caption": "A close-up view of high-res mesh and texture result (12x zoom) reveals the model's high level of detail.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg",
+                            "alt": "A close-up view of high-res mesh and texture result (12x zoom) reveals the model's high level of detail."
+                        }
+                    },
+                    {
+                        "caption": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab).",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0002_Ebene%202.jpg",
+                            "alt": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab)."
+                        }
+                    },
+                    {
+                        "caption": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). \nThe map is then filtered for noise and artifacts.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0001_Gruppe%203%20Kopie.jpg",
+                            "alt": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). \nThe map is then filtered for noise and artifacts."
+                        }
+                    },
+                    {
+                        "caption": "The texture UVs of the high-res mesh are transferred to the low-res version. As a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0000_Ebene%203.jpg",
+                            "alt": "The texture UVs of the high-res mesh are transferred to the low-res version. As a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in."
+                        }
+                    },
+                    {
+                        "caption": "The finished low-res bronze plate (20K vertices, 4K texture map, 2K normal map)",
+                        "componentType": "EmbeddedMedia",
+                        "componentProps": {
+                            "url": "https://sketchfab.com/models/d5ba8a80db4e4c9d9925fbbab52a03c5/embed"
+                        }
+                    }
+                ]
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "The workflow was used to create the statue's four bronze plates, the GoMA's entrance doors and the Corinthian pillar capitals"
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "The statue's East-facing bronze plate",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_plate3.jpg",
+                            "alt": "Close-up of east-facing plate"
+                        }
+                    },
+                    {
+                        "caption": "The building's gold-painted entrance doors",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_doors.jpg",
+                            "alt": "The gold-painted entrance doors"
+                        }
+                    },
+                    {
+                        "caption": "The columns' Corinthian captials",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_pillarcapital.jpg",
+                            "alt": "The columns' Corinthian captials"
                         }
                     }
                 ]
@@ -71,14 +154,63 @@
         "specsContents": {
             "entries": [
                 {
-                    "title": "spec 1",
+                    "title": "Platform",
                     "contents": [
                         {
-                            "text": "content 1"
+                            "text": "standalone application (Win / Mac)"
+                        }
+                    ]
+                },
+                {
+                    "title": "Key methods",
+                    "contents": [
+                        {
+                            "text": "photogrammetry"
                         },
                         {
-                            "text": "content 2",
-                            "url": "some url"
+                            "text": "mesh resolution reduction with detail transfer"
+                        },
+                        {
+                            "text": "physically-based shading "
+                        }
+                    ]
+                },
+                {
+                    "title": "Software used",
+                    "contents": [
+                        {
+                            "text": "Unity3D 5.0"
+                        },
+                        {
+                            "text": "Agisoft Photoscan"
+                        },
+                        {
+                            "text": "3Ds Max"
+                        },
+                        {
+                            "text": "Mudbox"
+                        },
+                        {
+                            "text": "Meshlab"
+                        },
+                        {
+                            "text": "Quixel Suite"
+                        },
+                        {
+                            "text": "Adobe Suite"
+                        }
+                    ]
+                },
+                {
+                    "title": "References",
+                    "contents": [
+                        {
+                            "text": "Glasgow Google Maps models (Stephen Dunlop)",
+                            "link": "https://3dwarehouse.sketchup.com/user.html?id=1375918354338648496230605"
+                        },
+                        {
+                            "text": "'Warmblood Horse & Rider' 3D model (Autodesk)",
+                            "link": "http://www.123dapp.com/123C-3D-Model/Warmblood-Horse--Rider--Neutral-Pose/817063"
                         }
                     ]
                 }
@@ -87,68 +219,125 @@
     },
     {
         "preview": {
-            "title": "p-title",
-            "subline": "p-subline",
-            "previewImageUrl": "https://www.jbergs.eu/res/images/title/lab2_square.jpg"
+            "title": "Spartathlon",
+            "subline": "Health serious game",
+            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/spartathlon_square.jpg"
         },
-        "heroImageSrc": "https://www.jbergs.eu/res/images/labsquare/lab2_header_SM.jpg",
+        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/sparta_header_SM.jpg",
         "headerContents": {
-            "title": "title2",
-            "subtitle": "subtitle",
+            "title": "Spartathlon",
+            "subtitle": "A step-by-step adventure",
             "tags": [
-                "tag 1",
-                "tag 2",
-                "tag 3"
+                "Health serious game",
+                "Unity 2D",
+                "IOT",
+                "Unity Native Android plugin"
             ]
         },
         "projectContents": [
             {
+                "componentType": "Paragraph",
+                "componentProps": "Spartathlon is a serious game that aims to motivate users of fitness trackers to reach their daily step goal. Get engaged in an adventure in which you can only progress as much as you have walked during the day. Reaching your daily step goal gets you to the game's next story point – and to the next challenge! "
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "In the game, you follow in the footsteps of legendary Athenian messenger Pheidippides (490 B.C.) who is sent to Sparta to ask for the help of the Spartan army against the threatening Persian invasion. The problem: Pheidippides actually cannot remember directions very well. Hence, for getting to Sparta, he will need to ask the locals he meets on the way for help. However, not everyone who offers to help Pheidippides is trustworthy or will do so without requesting a favour in return."
+            },
+            {
+                "componentType": "Image",
+                "componentProps": {
+                    "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/spart_keyvis.jpg",
+                    "alt": "key visual with map screen and Fitbit pedometer"
+                }
+            },
+            {
                 "componentType": "Headline",
                 "componentProps": {
-                    "text": "headline",
+                    "test": "Prototype Development",
                     "level": 2
                 }
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "some text"
+                "componentProps": "The game prototype of Spartathlon was developed using Unity 4.6 for Android 5.0 and Fitbit fitness trackers. The game uses a native Android plugin for handling the required user data requests to the Fitbit web API."
             },
             {
-                "componentType": "Video",
-                "componentProps": {
-                    "url": "https://www.jbergs.eu/res/video/labsquare/lab2_HMDupdate.mp4"
-                }
-            },
-            {
-                "componentType": "Image",
-                "componentProps": {
-                    "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                    "alt": "alt"
-                }
-            },
-            {
-                "componentType": "EmbeddedMedia",
-                "componentProps": {
-                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM"
-                }
+                "componentType": "Paragraph",
+                "componentProps": "The prototype features two example levels, the first of which is demonstrated in the slideshow:"
             },
             {
                 "componentType": "Slideshow",
                 "componentProps": [
                     {
-                        "caption": "image 1",
+                        "caption": "Start a new game or resume where you left off last time.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                            "alt": "alt"
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_1.jpg",
+                            "alt": "Start a new game or resume where you left off last time."
                         }
                     },
                     {
-                        "caption": "image 2",
+                        "caption": "Log in to your Fitbit account and grant data access permission ",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                            "alt": "alt"
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_fitbit.jpg",
+                            "alt": "Log in to your Fitbit account and grant data access permission "
+                        }
+                    },
+                    {
+                        "caption": "Your journey starts at Athens. Your first destination is one day's footmarch away (which equals your daily step goal).",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_2.jpg",
+                            "alt": "Your journey starts at Athens. Your first destination is one day's footmarch away (which equals your daily step goal)."
+                        }
+                    },
+                    {
+                        "caption": "For finding out about the next bit of the way, Pheidippides will need to ask some locals.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_4.jpg",
+                            "alt": "For finding out about the next bit of the way, Pheidippides will need to ask some locals."
+                        }
+                    },
+                    {
+                        "caption": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_5.jpg",
+                            "alt": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing."
+                        }
+                    },
+                    {
+                        "caption": "However, the fisherman will first want to test your fishing skills:",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_6.jpg",
+                            "alt": "However, the fisherman will first want to test your fishing skills:"
+                        }
+                    },
+                    {
+                        "caption": "You are given five attempts to catch three golden fishes. Be careful not to bring up too many dark ones!",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_7.jpg",
+                            "alt": "You are given five attempts to catch three golden fishes. Be careful not to bring up too many dark ones!"
+                        }
+                    },
+                    {
+                        "caption": "If you did well, the fisherman will take you to Elefsina over the bay. If not, you will have to walk the double distance!",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_8.jpg",
+                            "alt": "If you did well, the fisherman will take you to Elefsina over the bay. If not, you will have to walk the double distance!"
+                        }
+                    },
+                    {
+                        "caption": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_3.jpg",
+                            "alt": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal."
                         }
                     }
                 ]
@@ -157,14 +346,48 @@
         "specsContents": {
             "entries": [
                 {
-                    "title": "spec 1",
+                    "title": "Platform",
                     "contents": [
                         {
-                            "text": "content 1"
+                            "text": "Android 5.0 & Fitbit One"
+                        }
+                    ]
+                },
+                {
+                    "title": "Key methods",
+                    "contents": [
+                        {
+                            "text": "development of custom Fitbit REST API client as a native Android plugin for Unity3D"
                         },
                         {
-                            "text": "content 2",
-                            "url": "some url"
+                            "text": "2D sprite animation with inverse kinematics "
+                        }
+                    ]
+                },
+                {
+                    "title": "Software used",
+                    "contents": [
+                        {
+                            "text": "Unity3D 4.6"
+                        },
+                        {
+                            "text": "Android Studio"
+                        },
+                        {
+                            "text": "Adobe Suite"
+                        }
+                    ]
+                },
+                {
+                    "title": "References",
+                    "contents": [
+                        {
+                            "text": "Sprite & Bones sprite kinematics lib (Earnest Banbury)",
+                            "link": "https://github.com/Banbury/UnitySpritesAndBones"
+                        },
+                        {
+                            "text": "OAuth 1.0 Scribe library (Pablo Fernandez)",
+                            "link": "https://github.com/scribejava/scribejava"
                         }
                     ]
                 }
@@ -173,68 +396,212 @@
     },
     {
         "preview": {
-            "title": "p-title",
-            "subline": "p-subline",
-            "previewImageUrl": "https://www.jbergs.eu/res/images/title/lab2_square.jpg"
+            "title": "Lab<sup>2</sup>",
+            "subline": "cross-reality team-building game – Thesis project –",
+            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/lab2_square.jpg"
         },
-        "heroImageSrc": "https://www.jbergs.eu/res/images/labsquare/lab2_header_SM.jpg",
+        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/lab2_header_SM.jpg",
         "headerContents": {
-            "title": "title3",
-            "subtitle": "subtitle",
+            "title": "Lab<sup>2</sup>",
+            "subtitle": "A collaborative cross-reality game for virtual team building ",
             "tags": [
-                "tag 1",
-                "tag 2",
-                "tag 3"
+                "Multiplayer Serious Game",
+                "Tangible interfaces",
+                "Spatially-tracked virtual reality"
             ]
         },
         "projectContents": [
             {
+                "componentType": "Paragraph",
+                "componentProps": "Lab<sup>2</sup> presents an experimental approach to a team building exercise specifically geared to train virtual, i.e. non-face-to-face, collaboration: <ul><li class='list'><strong> Bonding game framing: </strong> The game-based exercise engages two players in a playful, fun activity which aims to foster social bonds. The game principle of Lab<sup>2</sup> is based on the board game The Amazing Labyrinth&reg; (Kobbert, Ravensburger, 1968) which invites players to a treasure hunt in a movable maze.</li><li class='list'><strong> Collaborative gameplay: </strong> The gameplay design aims at triggering as much of collaborative communication between the players as possible. However, they rely on verbal communication only and cannot see each other’s interface. For winning the game the players have to work together.</li><li class='list'><strong> Cross-reality interfaces: </strong> For mimicking the interdisciplinary collaboration common in virtual teams, the two players take asymmetrical roles. They use each an individual interface that provides them with a role-specific set of game controls and view of the maze. The interfaces were designed towards maximum intuitivity in order to not unnecessarily obstruct the players when playing the game. In achieving this, one interface employs real-world tangibles (a game board with movable tiles), the other immersive virtual reality (through a head-mounted display). The two interfaces are cross-linked in real time.</li></ul>"
+            },
+            {
                 "componentType": "Headline",
                 "componentProps": {
-                    "text": "headline",
+                    "text": "Cross-reality Interfaces & System Architecture",
                     "level": 2
                 }
             },
             {
-                "componentType": "Paragraph",
-                "componentProps": "some text"
-            },
-            {
-                "componentType": "Video",
+                "componentType": "Headline",
                 "componentProps": {
-                    "url": "https://www.jbergs.eu/res/video/labsquare/lab2_HMDupdate.mp4"
-                }
-            },
-            {
-                "componentType": "Image",
-                "componentProps": {
-                    "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                    "alt": "alt"
-                }
-            },
-            {
-                "componentType": "EmbeddedMedia",
-                "componentProps": {
-                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM"
+                    "text": "Tangible game board",
+                    "level": 3
                 }
             },
             {
                 "componentType": "Slideshow",
                 "componentProps": [
                     {
-                        "caption": "image 1",
+                        "caption": "Game board – concept graphic",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                            "alt": "alt"
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/board/board_bland.jpg",
+                            "alt": "Game board – concept graphic"
                         }
                     },
                     {
-                        "caption": "image 2",
+                        "caption": "Game board prototype (plywood, fine-art paper)",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://www.jbergs.eu/res/images/labsquare/board/board_bland.jpg",
-                            "alt": "alt"
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/board/boardreal.jpg",
+                            "alt": "Game board prototype (plywood, fine-art paper)"
+                        }
+                    }
+                ]
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "One player uses a real game board that shows a two-dimensional maze of some fixed and some moveable pathway tiles. The player can re-arrange the maze by using one of three spare tiles."
+            },
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "Spatial VR HMD",
+                    "level": 3
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "The second player is equipped with an untethered head-mounted display (HMD) through which he finds himself inside the very board's 3D maze. The HMD’s position and rotation are tracked by an IR Motion Capture system. As the player moves within the tracking volume and/or rotates his head, the player´s view of the maze updates accordingly in real-time."
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "Head-mounted display – concept graphic",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd/lab2_hmd_keyvis.jpg",
+                            "alt": "Head-mounted display – concept graphic"
+                        }
+                    },
+                    {
+                        "caption": "HMD prototype combining a foam-based Google Cardboard viewer with a smartphone and motion-capture tracker body",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd/lab2_hmd_cardboard.jpg",
+                            "alt": "HMD prototype combining a foam-based Google Cardboard viewer with a smartphone and motion-capture tracker body"
+                        }
+                    },
+                    {
+                        "caption": "The VR-player can explore the maze by actual walking and head rotating.",
+                        "componentType": "Video",
+                        "componentProps": {
+                            "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_HMDupdate.mp4",
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg."
+                        }
+                    }
+                ]
+            },
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "Cross-reality linking",
+                    "level": 3
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "The game board and virtual maze are cross-linked in real time: On the game board, a real-time projection mapping shows the current position of the VR player and other dynamic elements in the 3D-maze. At the same time, the game board's layout is continuously synced with that of the 3D maze: two webcams above the game board track the position and rotation of the single pathway tiles. If a line of tiles is pushed on the board, this movement is reproduced simultaneously in the virtual version of the maze. "
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "The dynamic game elements are projected onto the game board.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink/lab2_crosslink1.jpg",
+                            "alt": "The dynamic game elements are projected onto the game board."
+                        }
+                    },
+                    {
+                        "caption": "As the VR-player moves within the maze, his position & rotation are updated on the board in real time.",
+                        "componentType": "Video",
+                        "componentProps": {
+                            "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_projectionupdate.mp4",
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_projectionupdate_poster.jpg"
+                        }
+                    },
+                    {
+                        "caption": "Tile movements on the game board are reproduced in the virtual maze.",
+                        "componentType": "Video",
+                        "componentProps": {
+                            "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_boardupdate.mp4",
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_bordupdate_poster.jpg"
+                        }
+                    }
+                ]
+            },
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "System architecture",
+                    "level": 3
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "The game's system consists of seven distributed Unity units and one Vicon MoCap server that communicate through a locally hosted multiplayer game server."
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "Simplified system architecture overview",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/system-architecture/lab2_sysarch.png",
+                            "alt": "Simplified system architecture overview"
+                        }
+                    },
+                    {
+                        "caption": "Basic Game Master UI",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/system-architecture/lab2_sysarch_master.jpg",
+                            "alt": "Basic Game Master UI"
+                        }
+                    }
+                ]
+            },
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "Collaborative Gameplay",
+                    "level": 2
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "The players take the roles of two computer scientists who have been locked up in their lab by a malicious AI they have been experimenting on. The only way to free themselves is to retrieve and run the AI's 'Emergency Shutdown Programm'. However, the programme's five code fragments are hidden inside the AI’s maze of registers. In taking on the challenge, the computer scientists have managed to cobble together two interfaces that allow them to access the AI to recover the code. Through their individual interfaces the players take on asymmetric roles: one player uses an HMD to find himself inside the AI's maze of registers (the 3D maze) where he has to search for the code fragments. The other player uses the physical game board to re-arrange the AI's hardware (the game board maze) in order to create pathways to the code fragments. He then directs the VR-player towards them. While playing the game, the players cannot see each other but rely on verbal communication only. Once at a code container, the VR-player can read the necessary information (a number) on its label that the players require for unlocking and downloading the code fragment. The unlocking process involves a joint task that the players have to perform simultaneously. However, the players will also need to be on the alert at all times as the AI will try to fend off the invaders. Each player has limited health resources and an uncareful action might draw on these. If one player runs out of resources, the game is lost for both. Hence, the players sink and swim together. "
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "The players take asymmetric roles in managing the game board and navigating in the maze.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/collaboration/lab2_collab1.jpg",
+                            "alt": "The players take asymmetric roles in managing the game board and navigating in the maze."
+                        }
+                    },
+                    {
+                        "caption": "Collecting a code-piece requires that the players perform a joint task simultaneously.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/collaboration/lab2_collab2.jpg",
+                            "alt": "Collecting a code-piece requires that the players perform a joint task simultaneously."
+                        }
+                    },
+                    {
+                        "caption": "The maze holds many perils but the players can only beat the AI together.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/collaboration/lab2_collab3.jpg",
+                            "alt": "The maze holds many perils but the players can only beat the AI together."
                         }
                     }
                 ]
@@ -243,14 +610,77 @@
         "specsContents": {
             "entries": [
                 {
-                    "title": "spec 1",
+                    "title": "Platforms",
                     "contents": [
                         {
-                            "text": "content 1"
+                            "text": "Desktop application (Mac / Win)"
                         },
                         {
-                            "text": "content 2",
-                            "url": "some url"
+                            "text": "Android 5.0"
+                        },
+                        {
+                            "text": "Arduino UNO"
+                        },
+                        {
+                            "text": "VICON Bonita infrared motion-capture system"
+                        }
+                    ]
+                },
+                {
+                    "title": "Key methods",
+                    "contents": [
+                        {
+                            "text": "P2P/multi-player networking"
+                        },
+                        {
+                            "text": "infrared motion capture"
+                        },
+                        {
+                            "text": "projection mapping"
+                        },
+                        {
+                            "text": "micro-controller programming"
+                        },
+                        {
+                            "text": "feature-based tracking"
+                        }
+                    ]
+                },
+                {
+                    "title": "Software used",
+                    "contents": [
+                        {
+                            "text": "Unity3D 5.1"
+                        },
+                        {
+                            "text": "Exit Games Photon Multiplayer Games Server & Unity Network SDK ",
+                            "link": "https://www.photonengine.com/en/PUN"
+                        },
+                        {
+                            "text": "Vuforia for Unity extension (Qualcomm)",
+                            "link": "https://www.qualcomm.com/products/vuforia"
+                        },
+                        {
+                            "text": "Cardboard SDK for Unity (Google)",
+                            "link": "https://developers.google.com/cardboard/unity/"
+                        },
+                        {
+                            "text": "Vicon Tracker Unity Plugin (Dr. Matthieu Poyade, GSA)"
+                        },
+                        {
+                            "text": "Arduino SDK"
+                        },
+                        {
+                            "text": "Adobe Suite"
+                        }
+                    ]
+                },
+                {
+                    "title": "References",
+                    "contents": [
+                        {
+                            "text": "The Amazing Labyrinth® (Max Kobbert, Ravensburger)",
+                            "link": "https://www.ravensburger.com/uk/games/family-games/labyrinth/index.html"
                         }
                     ]
                 }
