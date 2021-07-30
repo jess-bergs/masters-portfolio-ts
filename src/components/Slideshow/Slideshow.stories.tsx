@@ -1,6 +1,5 @@
 import React from 'react';
 import Slideshow, { SlideshowProps } from './Slideshow';
-import Slide, { SlideProps } from '../Slide/Slide';
 import Video from '../Video/Video';
 import EmbeddedMedia from '../EmbeddedMedia/EmbeddedMedia';
 
@@ -22,7 +21,7 @@ const slides = [
     },
     {
         caption: 'a caption',
-        content: <img alt="img content" src="./exampleSlideImage.jpg" />,
+        content: <Video url="./exampleVideo.mp4" posterImageUrl="./exampleVideoPosterImage.jpg" />,
     },
 ];
 

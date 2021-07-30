@@ -1,10 +1,12 @@
+@import '~sass-mq/mq';
+@import '../../style/responsive-breakpoints';
 @import '../../style/theme';
 
 .slide {
     &__container {
         @include theme();
+        position: relative;
     }
-
     &__content > * {
         display: block; // removes unwanted gap between image and caption div
         font-size: 0; // removes unwanted gap between video and caption div
@@ -13,7 +15,14 @@
 
     &__caption-box {
         background-color: $background-colour;
-        padding: $spacer-small $spacer-medium $spacer-small * 1.25 $spacer-medium;
-        pointer-events: none;
+        font-size: 0.8em;
+        padding: $spacer-tiny $spacer-small $spacer-tiny * 1.2 $spacer-small;
+
+        @include mq($from: $breakpoint-desktop) {
+            background-color: rgba($color: #000000, $alpha: 0.65);
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
     }
 }
