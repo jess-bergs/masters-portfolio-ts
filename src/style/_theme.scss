@@ -17,6 +17,14 @@ $spacer-large: 1.5 * $spacer-medium;
         url('../../assets/fonts/Quicksand-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Quicksand';
+    font-style: bold;
+    font-weight: 600;
+    src: local('Quicksand Bold'), local('Quicksand-Bold'),
+        url('../../assets/fonts/Quicksand-Bold.ttf') format('truetype');
+}
+
 @mixin theme() {
     color: $text-colour;
     font-family: 'Quicksand', 'sans-serif';
