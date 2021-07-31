@@ -18,11 +18,7 @@
         "projectContents": [
             {
                 "componentType": "Paragraph",
-                "componentProps": "The aim of this project was to create an interactive 3D visualisation of the front part of Glasgow’s <a href='https://en.wikipedia.org/wiki/Gallery_of_Modern_Art,_Glasgow'>Gallery of Modern Art</a> (GoMA) by using a combination of conventional 3D modelling and photogrammetry-based reproduction techniques."
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "The reconstructed parts comprise the facade of the Gallery’s 1780 Royal exchange building and forefront <a href='https://en.wikipedia.org/wiki/Equestrian_statue_of_the_Duke_of_Wellington,_Glasgow'> equestrian statue of the Duke of Wellington</a>. The final models were staged in Unity together with low-poly models of the surrounding Glaswegian cityscape (Google Maps models)."
+                "componentProps": "<p>The aim of this project was to create an interactive 3D visualisation of the front part of Glasgow’s <a href='https://en.wikipedia.org/wiki/Gallery_of_Modern_Art,_Glasgow'>Gallery of Modern Art</a> (GoMA) by using a combination of conventional 3D modelling and photogrammetry-based reproduction techniques.</p> <p> The reconstructed parts comprise the facade of the Gallery’s 1780 Royal exchange building and forefront <a href='https://en.wikipedia.org/wiki/Equestrian_statue_of_the_Duke_of_Wellington,_Glasgow'> equestrian statue of the Duke of Wellington</a>. The final models were staged in Unity together with low-poly models of the surrounding Glaswegian cityscape (Google Maps models). </p>"
             },
             {
                 "componentType": "EmbeddedMedia",
@@ -39,15 +35,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "While the facade's and statue's general geometry was reproduced using conventional 3D modelling techniques, the reconstruction of more filigree parts, e.g. the bronze plates on the statue's socket, was realised using a photogrammetry-based 3D scanning workflow."
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "Photogrammety techniques allow to reproduce real-world objects from a series of photographs to create 3D models of stunning detail. However, the resulting model meshes are often too large to be used in real-time 3D (RT3D) visualisations: a high-res photogrammetry mesh can easily exceed 1m vertices, but RT3D engines such as Unity can only import meshes of up to 64K vertices. A photogrammetry mesh therefore first needs to be downsampled to a fraction of its original resolution in order to be usable in a Unity project. Yet a brute-force mesh reduction at this scale would also result in the loss of the model's valuable details."
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "For converting the plates and socket scans for Unity, the below workflow was developed that allowed to reduce the scans' high-res meshes to the required size while at the same time preserving as much of their rich artistic detail as possible:"
+                "componentProps": "<p>While the facade's and statue's general geometry was reproduced using conventional 3D modelling techniques, the reconstruction of more filigree parts, e.g. the bronze plates on the statue's socket, was realised using a photogrammetry-based 3D scanning workflow.</p><p>Photogrammety techniques allow to reproduce real-world objects from a series of photographs to create 3D models of stunning detail. However, the resulting model meshes are often too large to be used in real-time 3D (RT3D) visualisations: a high-res photogrammetry mesh can easily exceed 1m vertices, but RT3D engines such as Unity can only import meshes of up to 64K vertices. A photogrammetry mesh therefore first needs to be downsampled to a fraction of its original resolution in order to be usable in a Unity project. Yet a brute-force mesh reduction at this scale would also result in the loss of the model's valuable details.</p><p>For converting the plates and socket scans for Unity, the below workflow was developed that allowed to reduce the scans' high-res meshes to the required size while at the same time preserving as much of their rich artistic detail as possible:</p>"
             },
             {
                 "componentType": "Slideshow",
@@ -237,11 +225,7 @@
         "projectContents": [
             {
                 "componentType": "Paragraph",
-                "componentProps": "Spartathlon is a serious game that aims to motivate users of fitness trackers to reach their daily step goal. Get engaged in an adventure in which you can only progress as much as you have walked during the day. Reaching your daily step goal gets you to the game's next story point – and to the next challenge! "
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "In the game, you follow in the footsteps of legendary Athenian messenger Pheidippides (490 B.C.) who is sent to Sparta to ask for the help of the Spartan army against the threatening Persian invasion. The problem: Pheidippides actually cannot remember directions very well. Hence, for getting to Sparta, he will need to ask the locals he meets on the way for help. However, not everyone who offers to help Pheidippides is trustworthy or will do so without requesting a favour in return."
+                "componentProps": "<p>Spartathlon is a serious game that aims to motivate users of fitness trackers to reach their daily step goal. Get engaged in an adventure in which you can only progress as much as you have walked during the day. Reaching your daily step goal gets you to the game's next story point – and to the next challenge!</p><p>In the game, you follow in the footsteps of legendary Athenian messenger Pheidippides (490 B.C.) who is sent to Sparta to ask for the help of the Spartan army against the threatening Persian invasion. The problem: Pheidippides actually cannot remember directions very well. Hence, for getting to Sparta, he will need to ask the locals he meets on the way for help. However, not everyone who offers to help Pheidippides is trustworthy or will do so without requesting a favour in return.</p>"
             },
             {
                 "componentType": "Image",
@@ -259,11 +243,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "The game prototype of Spartathlon was developed using Unity 4.6 for Android 5.0 and Fitbit fitness trackers. The game uses a native Android plugin for handling the required user data requests to the Fitbit web API."
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "The prototype features two example levels, the first of which is demonstrated in the slideshow:"
+                "componentProps": "<p>The game prototype of Spartathlon was developed using Unity 4.6 for Android 5.0 and Fitbit fitness trackers. The game uses a native Android plugin for handling the required user data requests to the Fitbit web API.</p><p>The prototype features two example levels, the first of which is demonstrated in the slideshow:</p>"
             },
             {
                 "componentType": "Slideshow",
@@ -413,7 +393,7 @@
         "projectContents": [
             {
                 "componentType": "Paragraph",
-                "componentProps": "Lab\u00B2 presents an experimental approach to a team building exercise specifically geared to train virtual, i.e. non-face-to-face, collaboration: <ul><li class='list'><strong> Bonding game framing: </strong> The game-based exercise engages two players in a playful, fun activity which aims to foster social bonds. The game principle of Lab\u00B2 is based on the board game The Amazing Labyrinth&reg; (Kobbert, Ravensburger, 1968) which invites players to a treasure hunt in a movable maze.</li><li class='list'><strong> Collaborative gameplay: </strong> The gameplay design aims at triggering as much of collaborative communication between the players as possible. However, they rely on verbal communication only and cannot see each other’s interface. For winning the game the players have to work together.</li><li class='list'><strong> Cross-reality interfaces: </strong> For mimicking the interdisciplinary collaboration common in virtual teams, the two players take asymmetrical roles. They use each an individual interface that provides them with a role-specific set of game controls and view of the maze. The interfaces were designed towards maximum intuitivity in order to not unnecessarily obstruct the players when playing the game. In achieving this, one interface employs real-world tangibles (a game board with movable tiles), the other immersive virtual reality (through a head-mounted display). The two interfaces are cross-linked in real time.</li></ul>"
+                "componentProps": "Lab\u00B2 presents an experimental approach to a team building exercise specifically geared to train virtual, i.e. non-face-to-face, collaboration: <ul><li class='list'><strong> Bonding game framing: </strong> The game-based exercise engages two players in a playful, fun activity which aims to foster social bonds. The game principle of Lab\u00B2 is based on the board game The Amazing Labyrinth&reg; (Kobbert, Ravensburger, 1968) which invites players to a treasure hunt in a movable maze.</li><p><li class='list'><strong> Collaborative gameplay: </strong> The gameplay design aims at triggering as much of collaborative communication between the players as possible. However, they rely on verbal communication only and cannot see each other’s interface. For winning the game the players have to work together.</li></p><li class='list'><strong> Cross-reality interfaces: </strong> For mimicking the interdisciplinary collaboration common in virtual teams, the two players take asymmetrical roles. They use each an individual interface that provides them with a role-specific set of game controls and view of the maze. The interfaces were designed towards maximum intuitivity in order to not unnecessarily obstruct the players when playing the game. In achieving this, one interface employs real-world tangibles (a game board with movable tiles), the other immersive virtual reality (through a head-mounted display). The two interfaces are cross-linked in real time.</li></ul>"
             },
             {
                 "componentType": "Headline",
@@ -463,7 +443,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "The second player is equipped with an untethered head-mounted display (HMD) through which he finds himself inside the very board's 3D maze. The HMD’s position and rotation are tracked by an IR Motion Capture system. As the player moves within the tracking volume and/or rotates his head, the player´s view of the maze updates accordingly in real-time."
+                "componentProps": "<p>The second player is equipped with an untethered head-mounted display (HMD) through which he finds himself inside the very board's 3D maze. The HMD’s position and rotation are tracked by an IR Motion Capture system.</p> <p>As the player moves within the tracking volume and/or rotates his head, the player´s view of the maze updates accordingly in real-time.</p>"
             },
             {
                 "componentType": "Slideshow",
@@ -503,7 +483,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "The game board and virtual maze are cross-linked in real time: On the game board, a real-time projection mapping shows the current position of the VR player and other dynamic elements in the 3D-maze. At the same time, the game board's layout is continuously synced with that of the 3D maze: two webcams above the game board track the position and rotation of the single pathway tiles. If a line of tiles is pushed on the board, this movement is reproduced simultaneously in the virtual version of the maze. "
+                "componentProps": "<p>The game board and virtual maze are cross-linked in real time: On the game board, a real-time projection mapping shows the current position of the VR player and other dynamic elements in the 3D-maze. </p><p> At the same time, the game board's layout is continuously synced with that of the 3D maze: two webcams above the game board track the position and rotation of the single pathway tiles. If a line of tiles is pushed on the board, this movement is reproduced simultaneously in the virtual version of the maze.</p>"
             },
             {
                 "componentType": "Slideshow",
@@ -575,7 +555,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "The players take the roles of two computer scientists who have been locked up in their lab by a malicious AI they have been experimenting on. The only way to free themselves is to retrieve and run the AI's 'Emergency Shutdown Programm'. However, the programme's five code fragments are hidden inside the AI’s maze of registers. In taking on the challenge, the computer scientists have managed to cobble together two interfaces that allow them to access the AI to recover the code. Through their individual interfaces the players take on asymmetric roles: one player uses an HMD to find himself inside the AI's maze of registers (the 3D maze) where he has to search for the code fragments. The other player uses the physical game board to re-arrange the AI's hardware (the game board maze) in order to create pathways to the code fragments. He then directs the VR-player towards them. While playing the game, the players cannot see each other but rely on verbal communication only. Once at a code container, the VR-player can read the necessary information (a number) on its label that the players require for unlocking and downloading the code fragment. The unlocking process involves a joint task that the players have to perform simultaneously. However, the players will also need to be on the alert at all times as the AI will try to fend off the invaders. Each player has limited health resources and an uncareful action might draw on these. If one player runs out of resources, the game is lost for both. Hence, the players sink and swim together. "
+                "componentProps": "<p>The players take the roles of two computer scientists who have been locked up in their lab by a malicious AI they have been experimenting on. The only way to free themselves is to retrieve and run the AI's 'Emergency Shutdown Programm'. However, the programme's five code fragments are hidden inside the AI’s maze of registers.</p><p> In taking on the challenge, the computer scientists have managed to cobble together two interfaces that allow them to access the AI to recover the code. Through their individual interfaces the players take on asymmetric roles:</p> one player uses an HMD to find himself inside the AI's maze of registers (the 3D maze) where he has to search for the code fragments. The other player uses the physical game board to re-arrange the AI's hardware (the game board maze) in order to create pathways to the code fragments. He then directs the VR-player towards them. <p>While playing the game, the players cannot see each other but rely on verbal communication only. Once at a code container, the VR-player can read the necessary information (a number) on its label that the players require for unlocking and downloading the code fragment. The unlocking process involves a joint task that the players have to perform simultaneously.</p> However, the players will also need to be on the alert at all times as the AI will try to fend off the invaders. Each player has limited health resources and an uncareful action might draw on these. If one player runs out of resources, the game is lost for both. Hence, the players sink and swim together. "
             },
             {
                 "componentType": "Slideshow",
