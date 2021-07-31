@@ -8,12 +8,10 @@ export default {
     title: 'Components/Slideshow',
 };
 
-const slides = [
+const imageSlides = [
     {
-        content: (
-            <EmbeddedMedia url="https://sketchfab.com/models/d5ba8a80db4e4c9d9925fbbab52a03c5/embed" />
-        ),
         caption: 'a caption',
+        content: <img alt="img content" src="./exampleSlideImage.jpg" />,
     },
     {
         caption: 'a caption',
@@ -21,8 +19,36 @@ const slides = [
     },
     {
         caption: 'a caption',
-        content: <Video url="./exampleVideo.mp4" posterImageUrl="./exampleVideoPosterImage.jpg" />,
+        content: <img alt="img content" src="./exampleSlideImage.jpg" />,
     },
 ];
 
-export const ThreeSlides = () => <Slideshow slides={slides} />;
+const videoSlides = [
+    {
+        content: <Video url="./exampleVideo.mp4" posterImageUrl="./exampleVideoPosterImage.jpg" />,
+        caption: 'a caption',
+    },
+    {
+        content: <Video url="./exampleVideo.mp4" posterImageUrl="./exampleVideoPosterImage.jpg" />,
+        caption: 'a caption',
+    },
+    {
+        content: <Video url="./exampleVideo.mp4" posterImageUrl="./exampleVideoPosterImage.jpg" />,
+        caption: 'a caption',
+    },
+];
+
+const StagerWrapper = ({ children }) => (
+    <div style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}>{children} </div>
+);
+
+export const ImageSlides = () => (
+    <StagerWrapper>
+        <Slideshow slides={imageSlides} />
+    </StagerWrapper>
+);
+export const VideoSlides = () => (
+    <StagerWrapper>
+        <Slideshow slides={videoSlides} />
+    </StagerWrapper>
+);

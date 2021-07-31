@@ -1,27 +1,7 @@
 import React from 'react';
-import Carousel from 'react-multi-carousel';
+import Slider from 'react-slick';
 import Slide, { SlideProps } from '../Slide/Slide';
 import './_Slideshow.scss';
-import '../../../node_modules/react-multi-carousel/lib/styles.css';
-
-const carouselResponsiveBreakpoints = {
-    superLargeDesktop: {
-        breakpoint: { max: 2048, min: 350 },
-        items: 1,
-    },
-    desktop: {
-        breakpoint: { max: 1920, min: 350 },
-        items: 1,
-    },
-    tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 1,
-    },
-    mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-    },
-};
 
 export interface SlideshowProps {
     slides: SlideProps[];
@@ -29,22 +9,23 @@ export interface SlideshowProps {
 
 const Slideshow = ({ slides }: SlideshowProps) => (
     <div className="slideshow__container">
-        <Carousel
-            responsive={carouselResponsiveBreakpoints}
-            showDots
-            swipeable
-            draggable
-            autoPlay
+        <Slider
+            autoplay
+            autoplaySpeed={5000}
+            arrows
+            dots
             infinite
-            autoPlaySpeed={10000}
-            transitionDuration={4000}
-            dotListClass="custom-dot-list-style"
-            renderDotsOutside
+            lazyLoad="progressive"
+            speed={1000}
+            easing="ease"
+            slidesToShow={1}
+            pauseOnDotsHover
+            pauseOnHover
         >
             {slides.map((slide) => (
                 <Slide {...slide} />
             ))}
-        </Carousel>
+        </Slider>
     </div>
 );
 

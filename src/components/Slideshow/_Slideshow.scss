@@ -1,26 +1,83 @@
+@import '~sass-mq/mq';
+@import '../../style/responsive-breakpoints';
 @import '../../style/theme';
+@import '../../../node_modules/slick-carousel/slick/slick.css';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.css';
 
 .slideshow {
     &__container {
-        .react-multiple-carousel__arrow {
-            background-color: rgba($color: $background-colour, $alpha: 0);
-            min-height: 15em;
-            min-width: 6em;
-            border-radius: 100px;
-            &::before {
-                font-size: 4em;
-                text-shadow: 0px 0px 5px $background-colour;
-            }
-        }
-        .custom-dot-list-style .react-multi-carousel-dot {
-            &--active {
-                button {
-                    background-color: $text-colour-muted;
+        &:hover {
+            .slick-prev,
+            .slick-next {
+                @include mq($from: $breakpoint-tablet-portrait) {
+                    opacity: 1;
                 }
             }
-            button {
-                border: none;
-            }
         }
+    }
+}
+
+.slick-dots {
+    bottom: -20px;
+    button ::before {
+        font-size: 20px;
+    }
+
+    li {
+        height: 12px;
+        margin: 0 3px;
+        width: 12px;
+        button::before {
+            font-size: 12px;
+            color: $text-colour-muted;
+            opacity: 1;
+        }
+    }
+    li.slick-active button::before {
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+%arrow {
+    height: 100%;
+    opacity: 0;
+    transition-property: opacity;
+    transition: 0.5s ease;
+    width: 33%;
+    @include mq($from: $breakpoint-tablet-portrait) {
+        opacity: 0.2;
+        top: 43%;
+    }
+    @include mq($from: $breakpoint-desktop) {
+        opacity: 0.3;
+        top: 45%;
+    }
+
+    &:before {
+        color: #fff;
+        text-shadow: 0px 0px 5px rgba($color: $background-colour, $alpha: 1);
+        font-size: 30px;
+        font-weight: 900;
+    }
+}
+
+.slick-prev {
+    @extend %arrow;
+    @include mq($from: $breakpoint-tablet-portrait) {
+        left: -20%;
+        z-index: 1000;
+    }
+    &:before {
+        content: '\27E8';
+    }
+}
+.slick-next {
+    @extend %arrow;
+    @include mq($from: $breakpoint-tablet-portrait) {
+        right: -20%;
+    }
+    &:before {
+        content: '\27E9';
     }
 }
