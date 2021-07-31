@@ -77,11 +77,11 @@
                         }
                     },
                     {
-                        "caption": "A close-up view of high-res mesh and texture result (12x zoom) reveals the model's high level of detail.",
+                        "caption": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail.",
                         "componentType": "Image",
                         "componentProps": {
                             "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg",
-                            "alt": "A close-up view of high-res mesh and texture result (12x zoom) reveals the model's high level of detail."
+                            "alt": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail."
                         }
                     },
                     {
@@ -285,7 +285,7 @@
                         }
                     },
                     {
-                        "caption": "Your journey starts at Athens. Your first destination is one day's footmarch away (which equals your daily step goal).",
+                        "caption": "Your journey starts at Athens. Your first destination is one day's footmarch away (equalling your daily step goal).",
                         "componentType": "Image",
                         "componentProps": {
                             "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_2.jpg",
@@ -317,19 +317,19 @@
                         }
                     },
                     {
-                        "caption": "You are given five attempts to catch three golden fishes. Be careful not to bring up too many dark ones!",
+                        "caption": "He asks you to get him three golden fishes – you are given five attempts.",
                         "componentType": "Image",
                         "componentProps": {
                             "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_7.jpg",
-                            "alt": "You are given five attempts to catch three golden fishes. Be careful not to bring up too many dark ones!"
+                            "alt": "He asks you to get him three golden fishes – you are given five attempts."
                         }
                     },
                     {
-                        "caption": "If you did well, the fisherman will take you to Elefsina over the bay. If not, you will have to walk the double distance!",
+                        "caption": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!",
                         "componentType": "Image",
                         "componentProps": {
                             "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_8.jpg",
-                            "alt": "If you did well, the fisherman will take you to Elefsina over the bay. If not, you will have to walk the double distance!"
+                            "alt": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!"
                         }
                     },
                     {
@@ -477,11 +477,11 @@
                         }
                     },
                     {
-                        "caption": "HMD prototype combining a foam-based Google Cardboard viewer with a smartphone and motion-capture tracker body",
+                        "caption": "Head-mounted display prototype",
                         "componentType": "Image",
                         "componentProps": {
                             "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd/lab2_hmd_cardboard.jpg",
-                            "alt": "HMD prototype combining a foam-based Google Cardboard viewer with a smartphone and motion-capture tracker body"
+                            "alt": "Head-mounted display prototype"
                         }
                     },
                     {
