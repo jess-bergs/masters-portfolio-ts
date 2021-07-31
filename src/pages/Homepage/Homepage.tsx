@@ -60,7 +60,7 @@ const ProjectPreview = ({ title, subline, previewImageUrl, pagePath }: ProjectPr
 
 const Homepage = ({ projects }: HomepageProps) => (
     <div className="homepage__container">
-        <section className="homepage__hero ">
+        <section className="homepage__hero-section ">
             <Hero />
         </section>
 

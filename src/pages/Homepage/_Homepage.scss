@@ -10,6 +10,11 @@ body {
     &__container {
         @include theme;
     }
+
+    &__hero-section {
+        background-color: $background-colour;
+    }
+
     &__projects-section {
         background-color: $background-colour;
         padding: $spacer-medium 0 $spacer-large 0;
