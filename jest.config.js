@@ -6,8 +6,10 @@ module.exports = {
         url: 'http://localhost/',
         pretendToBeVisual: true,
     },
+    setupFilesAfterEnv: ['<rootDir>/test/setupTests.js'],
     moduleNameMapper: {
         '^.+\\.(css|scss|svg)$': '<rootDir>/test/mocks/mockImport.js',
     },
     coverageDirectory: './coverage',
 };
+
