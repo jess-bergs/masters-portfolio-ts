@@ -1,383 +1,8 @@
 [
     {
         "preview": {
-            "title": "GOMA Glasgow",
-            "subline": "Heritage Visualisation",
-            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/goma_square.jpg"
-        },
-        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/goma_header_GR.jpg",
-        "headerContents": {
-            "title": "GOMA Glasgow",
-            "subtitle": "Interactive Heritage Visualisation",
-            "tags": [
-                "3D modelling & scanning",
-                "RT3D",
-                "Unity physically-based shading"
-            ]
-        },
-        "projectContents": [
-            {
-                "componentType": "Paragraph",
-                "componentProps": "<p>The aim of this project was to create an interactive 3D visualisation of the front part of Glasgow’s <a href='https://en.wikipedia.org/wiki/Gallery_of_Modern_Art,_Glasgow'>Gallery of Modern Art</a> (GoMA) by using a combination of conventional 3D modelling and photogrammetry-based reproduction techniques.</p> <p> The reconstructed parts comprise the facade of the Gallery’s 1780 Royal exchange building and forefront <a href='https://en.wikipedia.org/wiki/Equestrian_statue_of_the_Duke_of_Wellington,_Glasgow'> equestrian statue of the Duke of Wellington</a>. The final models were staged in Unity together with low-poly models of the surrounding Glaswegian cityscape (Google Maps models). </p>"
-            },
-            {
-                "componentType": "EmbeddedMedia",
-                "componentProps": {
-                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM"
-                }
-            },
-            {
-                "componentType": "Headline",
-                "componentProps": {
-                    "text": "From High-Res 3D Scan to Game Art Asset",
-                    "level": 2
-                }
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "<p>While the facade's and statue's general geometry was reproduced using conventional 3D modelling techniques, the reconstruction of more filigree parts, e.g. the bronze plates on the statue's socket, was realised using a photogrammetry-based 3D scanning workflow.</p><p>Photogrammety techniques allow to reproduce real-world objects from a series of photographs to create 3D models of stunning detail. However, the resulting model meshes are often too large to be used in real-time 3D (RT3D) visualisations: a high-res photogrammetry mesh can easily exceed 1m vertices, but RT3D engines such as Unity can only import meshes of up to 64K vertices. A photogrammetry mesh therefore first needs to be downsampled to a fraction of its original resolution in order to be usable in a Unity project. Yet a brute-force mesh reduction at this scale would also result in the loss of the model's valuable details.</p><p>For converting the plates and socket scans for Unity, the below workflow was developed that allowed to reduce the scans' high-res meshes to the required size while at the same time preserving as much of their rich artistic detail as possible:</p>"
-            },
-            {
-                "componentType": "Slideshow",
-                "componentProps": [
-                    {
-                        "caption": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan).",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0006_Ebene%201.jpg",
-                            "alt": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan)."
-                        }
-                    },
-                    {
-                        "caption": "The resulting high-res mesh counts about 1.1m vertices.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0005_Gruppe%202.jpg",
-                            "alt": "The resulting high-res mesh counts about 1.1m vertices."
-                        }
-                    },
-                    {
-                        "caption": "The texture is rendered at 4k resolution.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0004_Ebene%204.jpg",
-                            "alt": "The texture is rendered at 4k resolution."
-                        }
-                    },
-                    {
-                        "caption": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg",
-                            "alt": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail."
-                        }
-                    },
-                    {
-                        "caption": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab).",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0002_Ebene%202.jpg",
-                            "alt": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab)."
-                        }
-                    },
-                    {
-                        "caption": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). \nThe map is then filtered for noise and artifacts.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0001_Gruppe%203%20Kopie.jpg",
-                            "alt": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). \nThe map is then filtered for noise and artifacts."
-                        }
-                    },
-                    {
-                        "caption": "The texture UVs of the high-res mesh are transferred to the low-res version. As a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0000_Ebene%203.jpg",
-                            "alt": "The texture UVs of the high-res mesh are transferred to the low-res version. As a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in."
-                        }
-                    },
-                    {
-                        "caption": "The finished low-res bronze plate (20K vertices, 4K texture map, 2K normal map)",
-                        "componentType": "EmbeddedMedia",
-                        "componentProps": {
-                            "url": "https://sketchfab.com/models/d5ba8a80db4e4c9d9925fbbab52a03c5/embed"
-                        }
-                    }
-                ]
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "The workflow was used to create the statue's four bronze plates, the GoMA's entrance doors and the Corinthian pillar capitals"
-            },
-            {
-                "componentType": "Slideshow",
-                "componentProps": [
-                    {
-                        "caption": "The statue's East-facing bronze plate",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_plate3.jpg",
-                            "alt": "Close-up of east-facing plate"
-                        }
-                    },
-                    {
-                        "caption": "The building's gold-painted entrance doors",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_doors.jpg",
-                            "alt": "The gold-painted entrance doors"
-                        }
-                    },
-                    {
-                        "caption": "The columns' Corinthian captials",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_pillarcapital.jpg",
-                            "alt": "The columns' Corinthian captials"
-                        }
-                    }
-                ]
-            }
-        ],
-        "specsContents": {
-            "entries": [
-                {
-                    "title": "Platform",
-                    "contents": [
-                        {
-                            "text": "standalone application (Win / Mac)"
-                        }
-                    ]
-                },
-                {
-                    "title": "Key methods",
-                    "contents": [
-                        {
-                            "text": "photogrammetry"
-                        },
-                        {
-                            "text": "mesh resolution reduction with detail transfer"
-                        },
-                        {
-                            "text": "physically-based shading "
-                        }
-                    ]
-                },
-                {
-                    "title": "Software used",
-                    "contents": [
-                        {
-                            "text": "Unity3D 5.0"
-                        },
-                        {
-                            "text": "Agisoft Photoscan"
-                        },
-                        {
-                            "text": "3Ds Max"
-                        },
-                        {
-                            "text": "Mudbox"
-                        },
-                        {
-                            "text": "Meshlab"
-                        },
-                        {
-                            "text": "Quixel Suite"
-                        },
-                        {
-                            "text": "Adobe Suite"
-                        }
-                    ]
-                },
-                {
-                    "title": "References",
-                    "contents": [
-                        {
-                            "text": "Glasgow Google Maps models (Stephen Dunlop)",
-                            "link": "https://3dwarehouse.sketchup.com/user.html?id=1375918354338648496230605"
-                        },
-                        {
-                            "text": "'Warmblood Horse & Rider' 3D model (Autodesk)",
-                            "link": "http://www.123dapp.com/123C-3D-Model/Warmblood-Horse--Rider--Neutral-Pose/817063"
-                        }
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        "preview": {
-            "title": "Spartathlon",
-            "subline": "Health serious game",
-            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/spartathlon_square.jpg"
-        },
-        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/sparta_header_SM.jpg",
-        "headerContents": {
-            "title": "Spartathlon",
-            "subtitle": "A step-by-step adventure",
-            "tags": [
-                "Health serious game",
-                "Unity 2D",
-                "IOT",
-                "Unity Native Android plugin"
-            ]
-        },
-        "projectContents": [
-            {
-                "componentType": "Paragraph",
-                "componentProps": "<p>Spartathlon is a serious game that aims to motivate users of fitness trackers to reach their daily step goal. Get engaged in an adventure in which you can only progress as much as you have walked during the day. Reaching your daily step goal gets you to the game's next story point – and to the next challenge!</p><p>In the game, you follow in the footsteps of legendary Athenian messenger Pheidippides (490 B.C.) who is sent to Sparta to ask for the help of the Spartan army against the threatening Persian invasion. The problem: Pheidippides actually cannot remember directions very well. Hence, for getting to Sparta, he will need to ask the locals he meets on the way for help. However, not everyone who offers to help Pheidippides is trustworthy or will do so without requesting a favour in return.</p>"
-            },
-            {
-                "componentType": "Image",
-                "componentProps": {
-                    "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/spart_keyvis.jpg",
-                    "alt": "key visual with map screen and Fitbit pedometer"
-                }
-            },
-            {
-                "componentType": "Headline",
-                "componentProps": {
-                    "test": "Prototype Development",
-                    "level": 2
-                }
-            },
-            {
-                "componentType": "Paragraph",
-                "componentProps": "<p>The game prototype of Spartathlon was developed using Unity 4.6 for Android 5.0 and Fitbit fitness trackers. The game uses a native Android plugin for handling the required user data requests to the Fitbit web API.</p><p>The prototype features two example levels, the first of which is demonstrated in the slideshow:</p>"
-            },
-            {
-                "componentType": "Slideshow",
-                "componentProps": [
-                    {
-                        "caption": "Start a new game or resume where you left off last time.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_1.jpg",
-                            "alt": "Start a new game or resume where you left off last time."
-                        }
-                    },
-                    {
-                        "caption": "Log in to your Fitbit account and grant data access permission ",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_fitbit.jpg",
-                            "alt": "Log in to your Fitbit account and grant data access permission "
-                        }
-                    },
-                    {
-                        "caption": "Your journey starts at Athens. Your first destination is one day's footmarch away (equalling your daily step goal).",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_2.jpg",
-                            "alt": "Your journey starts at Athens. Your first destination is one day's footmarch away (which equals your daily step goal)."
-                        }
-                    },
-                    {
-                        "caption": "For finding out about the next bit of the way, Pheidippides will need to ask some locals.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_4.jpg",
-                            "alt": "For finding out about the next bit of the way, Pheidippides will need to ask some locals."
-                        }
-                    },
-                    {
-                        "caption": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_5.jpg",
-                            "alt": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing."
-                        }
-                    },
-                    {
-                        "caption": "However, the fisherman will first want to test your fishing skills:",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_6.jpg",
-                            "alt": "However, the fisherman will first want to test your fishing skills:"
-                        }
-                    },
-                    {
-                        "caption": "He asks you to get him three golden fishes – you are given five attempts.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_7.jpg",
-                            "alt": "He asks you to get him three golden fishes – you are given five attempts."
-                        }
-                    },
-                    {
-                        "caption": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_8.jpg",
-                            "alt": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!"
-                        }
-                    },
-                    {
-                        "caption": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal.",
-                        "componentType": "Image",
-                        "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_3.jpg",
-                            "alt": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal."
-                        }
-                    }
-                ]
-            }
-        ],
-        "specsContents": {
-            "entries": [
-                {
-                    "title": "Platform",
-                    "contents": [
-                        {
-                            "text": "Android 5.0 & Fitbit One"
-                        }
-                    ]
-                },
-                {
-                    "title": "Key methods",
-                    "contents": [
-                        {
-                            "text": "development of custom Fitbit REST API client as a native Android plugin for Unity3D"
-                        },
-                        {
-                            "text": "2D sprite animation with inverse kinematics "
-                        }
-                    ]
-                },
-                {
-                    "title": "Software used",
-                    "contents": [
-                        {
-                            "text": "Unity3D 4.6"
-                        },
-                        {
-                            "text": "Android Studio"
-                        },
-                        {
-                            "text": "Adobe Suite"
-                        }
-                    ]
-                },
-                {
-                    "title": "References",
-                    "contents": [
-                        {
-                            "text": "Sprite & Bones sprite kinematics lib (Earnest Banbury)",
-                            "link": "https://github.com/Banbury/UnitySpritesAndBones"
-                        },
-                        {
-                            "text": "OAuth 1.0 Scribe library (Pablo Fernandez)",
-                            "link": "https://github.com/scribejava/scribejava"
-                        }
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        "preview": {
             "title": "Lab\u00B2",
-            "subline": "cross-reality team-building game – Thesis project –",
+            "subline": "cross-reality team-building game\n– Thesis project –",
             "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/lab2_square.jpg"
         },
         "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/lab2_header_SM.jpg",
@@ -394,6 +19,10 @@
             {
                 "componentType": "Paragraph",
                 "componentProps": "Lab\u00B2 presents an experimental approach to a team building exercise specifically geared to train virtual, i.e. non-face-to-face, collaboration: <ul><li class='list'><strong> Bonding game framing: </strong> The game-based exercise engages two players in a playful, fun activity which aims to foster social bonds. The game principle of Lab\u00B2 is based on the board game The Amazing Labyrinth&reg; (Kobbert, Ravensburger, 1968) which invites players to a treasure hunt in a movable maze.</li><p><li class='list'><strong> Collaborative gameplay: </strong> The gameplay design aims at triggering as much of collaborative communication between the players as possible. However, they rely on verbal communication only and cannot see each other’s interface. For winning the game the players have to work together.</li></p><li class='list'><strong> Cross-reality interfaces: </strong> For mimicking the interdisciplinary collaboration common in virtual teams, the two players take asymmetrical roles. They use each an individual interface that provides them with a role-specific set of game controls and view of the maze. The interfaces were designed towards maximum intuitivity in order to not unnecessarily obstruct the players when playing the game. In achieving this, one interface employs real-world tangibles (a game board with movable tiles), the other immersive virtual reality (through a head-mounted display). The two interfaces are cross-linked in real time.</li></ul>"
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "A research poster on this project was presented at the <a href='http://radar.gsa.ac.uk/4771/'>iLRN Conference 2016, Santa Barbara.</a>"
             },
             {
                 "componentType": "Headline",
@@ -469,7 +98,7 @@
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_HMDupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg."
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg"
                         }
                     }
                 ]
@@ -661,6 +290,381 @@
                         {
                             "text": "The Amazing Labyrinth® (Max Kobbert, Ravensburger)",
                             "link": "https://www.ravensburger.com/uk/games/family-games/labyrinth/index.html"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "preview": {
+            "title": "GOMA Glasgow",
+            "subline": "Heritage Visualisation",
+            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/goma_square.jpg"
+        },
+        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/goma_header_GR.jpg",
+        "headerContents": {
+            "title": "GOMA Glasgow",
+            "subtitle": "Interactive Heritage Visualisation",
+            "tags": [
+                "3D modelling & scanning",
+                "RT3D",
+                "Unity physically-based shading"
+            ]
+        },
+        "projectContents": [
+            {
+                "componentType": "Paragraph",
+                "componentProps": "<p>The aim of this project was to create an interactive 3D visualisation of the front part of Glasgow’s <a href='https://en.wikipedia.org/wiki/Gallery_of_Modern_Art,_Glasgow'>Gallery of Modern Art</a> (GoMA) by using a combination of conventional 3D modelling and photogrammetry-based reproduction techniques.</p> <p> The reconstructed parts comprise the facade of the Gallery’s 1780 Royal exchange building and forefront <a href='https://en.wikipedia.org/wiki/Equestrian_statue_of_the_Duke_of_Wellington,_Glasgow'> equestrian statue of the Duke of Wellington</a>. The final models were staged in Unity3D together with low-poly models of the surrounding Glaswegian cityscape.</p><p>The model can be explored interactively with a first-person controller as demonstrated in the video below:</p>"
+            },
+            {
+                "componentType": "EmbeddedMedia",
+                "componentProps": {
+                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM"
+                }
+            },
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "text": "From High-Res 3D Scan to Game Art Asset",
+                    "level": 2
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "<p>The reconstruction of more filigree parts – e.g. the bronze plates on the statue's socket – was realised using a photogrammetry-based 3D scanning workflow.</p><p>Photogrammety techniques allow to reproduce real-world objects from a series of photographs to create 3D models of stunning detail. However, the resulting models are often too high in resolution to be used in real-time 3D (RT3D) visualisations: a high-res photogrammetry mesh can easily exceed 1m vertices; while RT3D engines such as Unity3D v5.0 can only import meshes with a vertex count of up to 64k. Hence, for a photogrammetry mesh to be usable in Unity, the raw mesh needs to be downsampled to a fraction of its original resolution. Yet a brute-force resampling at this scale would also result in the loss of the model's valuable details.</p><p>For converting the plates and socket scans for Unity, the below workflow was developed that allowed to reduce the scans' high-res meshes to the required size while at the same time preserving as much of their rich artistic detail as possible:</p>"
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan).",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0006_Ebene%201.jpg",
+                            "alt": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan)."
+                        }
+                    },
+                    {
+                        "caption": "The resulting high-res mesh counts about 1.1m vertices.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0005_Gruppe%202.jpg",
+                            "alt": "The resulting high-res mesh counts about 1.1m vertices."
+                        }
+                    },
+                    {
+                        "caption": "The texture is rendered at 4k resolution.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0004_Ebene%204.jpg",
+                            "alt": "The texture is rendered at 4k resolution."
+                        }
+                    },
+                    {
+                        "caption": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg",
+                            "alt": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail."
+                        }
+                    },
+                    {
+                        "caption": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab).",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0002_Ebene%202.jpg",
+                            "alt": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab)."
+                        }
+                    },
+                    {
+                        "caption": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). The map is then filtered for noise and artifacts.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0001_Gruppe%203%20Kopie.jpg",
+                            "alt": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). \nThe map is then filtered for noise and artifacts."
+                        }
+                    },
+                    {
+                        "caption": "The texture UVs of the high-res mesh are transferred to the low-res version. \nAs a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0000_Ebene%203.jpg",
+                            "alt": "The texture UVs of the high-res mesh are transferred to the low-res version. As a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in."
+                        }
+                    },
+                    {
+                        "caption": "The finished low-res bronze plate (20K vertices, 4K texture map, 2K normal map)",
+                        "componentType": "EmbeddedMedia",
+                        "componentProps": {
+                            "url": "https://sketchfab.com/models/d5ba8a80db4e4c9d9925fbbab52a03c5/embed"
+                        }
+                    }
+                ]
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "The workflow was used to create the statue's four bronze plates, the GoMA's entrance doors and the Corinthian pillar capitals:"
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "The statue's East-facing bronze plate",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_plate3.jpg",
+                            "alt": "Close-up of east-facing plate"
+                        }
+                    },
+                    {
+                        "caption": "The building's gold-painted entrance doors",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_doors.jpg",
+                            "alt": "The gold-painted entrance doors"
+                        }
+                    },
+                    {
+                        "caption": "The columns' Corinthian captials",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_pillarcapital.jpg",
+                            "alt": "The columns' Corinthian captials"
+                        }
+                    }
+                ]
+            }
+        ],
+        "specsContents": {
+            "entries": [
+                {
+                    "title": "Platform",
+                    "contents": [
+                        {
+                            "text": "standalone application (Win / Mac)"
+                        }
+                    ]
+                },
+                {
+                    "title": "Key methods",
+                    "contents": [
+                        {
+                            "text": "photogrammetry"
+                        },
+                        {
+                            "text": "mesh resolution reduction with detail transfer"
+                        },
+                        {
+                            "text": "physically-based shading "
+                        }
+                    ]
+                },
+                {
+                    "title": "Software used",
+                    "contents": [
+                        {
+                            "text": "Unity3D 5.0"
+                        },
+                        {
+                            "text": "Agisoft Photoscan"
+                        },
+                        {
+                            "text": "3Ds Max"
+                        },
+                        {
+                            "text": "Mudbox"
+                        },
+                        {
+                            "text": "Meshlab"
+                        },
+                        {
+                            "text": "Quixel Suite"
+                        },
+                        {
+                            "text": "Adobe Suite"
+                        }
+                    ]
+                },
+                {
+                    "title": "References",
+                    "contents": [
+                        {
+                            "text": "Glasgow Google Maps models (Stephen Dunlop)",
+                            "link": "https://3dwarehouse.sketchup.com/user.html?id=1375918354338648496230605"
+                        },
+                        {
+                            "text": "'Warmblood Horse & Rider' 3D model (Autodesk)",
+                            "link": "http://www.123dapp.com/123C-3D-Model/Warmblood-Horse--Rider--Neutral-Pose/817063"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "preview": {
+            "title": "Spartathlon",
+            "subline": "Health serious game",
+            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/spartathlon_square.jpg"
+        },
+        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/sparta_header_SM.jpg",
+        "headerContents": {
+            "title": "Spartathlon",
+            "subtitle": "A step-by-step adventure",
+            "tags": [
+                "Health serious game",
+                "Unity 2D",
+                "IOT",
+                "Unity Native Android plugin"
+            ]
+        },
+        "projectContents": [
+            {
+                "componentType": "Paragraph",
+                "componentProps": "<p>Spartathlon is a serious game that aims to motivate users of fitness trackers to reach their daily step goal. Get engaged in an adventure in which you can only progress as much as you have walked during the day. Reaching your daily step goal gets you to the game's next story point – and to the next challenge!</p><p>In the game, you follow in the footsteps of legendary Athenian messenger Pheidippides (490 B.C.) who is sent to Sparta to ask for the help of the Spartan army against the threatening Persian invasion.</p> <p>The problem: Pheidippides actually cannot remember directions very well. Hence, for getting to Sparta, he will need to ask the locals he meets on the way for help. However, not everyone who offers to help Pheidippides is trustworthy or will do so without requesting a favour in return.</p>"
+            },
+            {
+                "componentType": "Image",
+                "componentProps": {
+                    "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/spart_keyvis.jpg",
+                    "alt": "key visual with map screen and Fitbit pedometer"
+                }
+            },
+            {
+                "componentType": "Headline",
+                "componentProps": {
+                    "test": "Prototype Development",
+                    "level": 2
+                }
+            },
+            {
+                "componentType": "Paragraph",
+                "componentProps": "<p>The game prototype of Spartathlon was developed using Unity 4.6 for Android 5.0 and Fitbit fitness trackers. The game uses a native Android plugin for handling the required user-data requests to the Fitbit API.</p><p>The prototype features two example levels, the first of which is demonstrated in the slideshow:</p>"
+            },
+            {
+                "componentType": "Slideshow",
+                "componentProps": [
+                    {
+                        "caption": "Start a new game or resume where you left off last time.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_1.jpg",
+                            "alt": "Start a new game or resume where you left off last time."
+                        }
+                    },
+                    {
+                        "caption": "Log in to your Fitbit account and grant data access permission ",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_fitbit.jpg",
+                            "alt": "Log in to your Fitbit account and grant data access permission "
+                        }
+                    },
+                    {
+                        "caption": "Your journey starts at Athens. Your first destination is one day's footmarch away (equalling your daily step goal).",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_2.jpg",
+                            "alt": "Your journey starts at Athens. Your first destination is one day's footmarch away (which equals your daily step goal)."
+                        }
+                    },
+                    {
+                        "caption": "For finding out about the next bit of the way, Pheidippides will need to ask some locals.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_4.jpg",
+                            "alt": "For finding out about the next bit of the way, Pheidippides will need to ask some locals."
+                        }
+                    },
+                    {
+                        "caption": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_5.jpg",
+                            "alt": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing."
+                        }
+                    },
+                    {
+                        "caption": "However, the fisherman will first want to test your fishing skills:",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_6.jpg",
+                            "alt": "However, the fisherman will first want to test your fishing skills:"
+                        }
+                    },
+                    {
+                        "caption": "He asks you to get him three golden fishes – you are given five attempts.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_7.jpg",
+                            "alt": "He asks you to get him three golden fishes – you are given five attempts."
+                        }
+                    },
+                    {
+                        "caption": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_8.jpg",
+                            "alt": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!"
+                        }
+                    },
+                    {
+                        "caption": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal.",
+                        "componentType": "Image",
+                        "componentProps": {
+                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_3.jpg",
+                            "alt": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal."
+                        }
+                    }
+                ]
+            }
+        ],
+        "specsContents": {
+            "entries": [
+                {
+                    "title": "Platform",
+                    "contents": [
+                        {
+                            "text": "Android 5.0 & Fitbit One"
+                        }
+                    ]
+                },
+                {
+                    "title": "Key methods",
+                    "contents": [
+                        {
+                            "text": "development of custom Fitbit REST API client as a native Android plugin for Unity3D"
+                        },
+                        {
+                            "text": "2D sprite animation with inverse kinematics "
+                        }
+                    ]
+                },
+                {
+                    "title": "Software used",
+                    "contents": [
+                        {
+                            "text": "Unity3D 4.6"
+                        },
+                        {
+                            "text": "Android Studio"
+                        },
+                        {
+                            "text": "Adobe Suite"
+                        }
+                    ]
+                },
+                {
+                    "title": "References",
+                    "contents": [
+                        {
+                            "text": "Sprite & Bones sprite kinematics lib (Earnest Banbury)",
+                            "link": "https://github.com/Banbury/UnitySpritesAndBones"
+                        },
+                        {
+                            "text": "OAuth 1.0 Scribe library (Pablo Fernandez)",
+                            "link": "https://github.com/scribejava/scribejava"
                         }
                     ]
                 }
