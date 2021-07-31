@@ -45,7 +45,7 @@ const Navigation = (navigationLinks: NavigationProps) => {
     const useStickyNav = curYOffset > Y_SCROLL_THRESHOLD;
 
     return (
-        <div className={`navigation${useStickyNav ? '--sticky' : ''} `}>
+        <div className={`navigation__container${useStickyNav ? '--sticky' : ''} `}>
             <span className="navigation__left">
                 &lsaquo; &nbsp;
                 <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
