@@ -57,10 +57,12 @@
     opacity: 0;
     transition-property: opacity;
     transition: 0.5s ease;
-    width: 33%;
+    width: 6%;
+    z-index: 1000;
     @include mq($from: $breakpoint-tablet-portrait) {
         opacity: 0.2;
         top: 43%;
+        width: 10%;
     }
     @include mq($from: $breakpoint-desktop) {
         opacity: 0.3;
@@ -78,8 +80,7 @@
 .slick-prev {
     @extend %arrow;
     @include mq($from: $breakpoint-tablet-portrait) {
-        left: -20%;
-        z-index: 1000;
+        left: -8.5%;
     }
     &:before {
         content: '\27E8';
@@ -88,7 +89,7 @@
 .slick-next {
     @extend %arrow;
     @include mq($from: $breakpoint-tablet-portrait) {
-        right: -20%;
+        right: -8.5%;
     }
     &:before {
         content: '\27E9';

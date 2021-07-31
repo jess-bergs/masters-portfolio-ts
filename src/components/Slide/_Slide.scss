@@ -15,7 +15,7 @@
 
     &__caption-box {
         background-color: $background-colour-off;
-        font-size: 0.8em;
+        font-size: 0.9em;
         padding: $spacer-tiny * 0.8 $spacer-small $spacer-tiny $spacer-small;
 
         @include mq($from: $breakpoint-desktop) {
