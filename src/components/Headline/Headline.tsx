@@ -3,7 +3,7 @@ import './_Headline.scss';
 
 export interface HeadlineProps {
     text: string;
-    level: 1 | 2 | 3 | 4;
+    level: 1 | 2 | 3 | 4 | 5;
 }
 
 const Headline = ({ text, level }: HeadlineProps) => React.createElement(`h${level}`, null, text);

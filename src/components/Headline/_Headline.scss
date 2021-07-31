@@ -5,7 +5,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     @include theme;
     letter-spacing: 0.05em;
     font-style: normal;
@@ -66,6 +67,16 @@ h4 {
 
     @include mq($from: $breakpoint-desktop) {
         font-size: 1.2em;
+        line-height: 1.55em;
+    }
+}
+
+h5 {
+    line-height: 1.55em;
+    font-size: 0.8em;
+
+    @include mq($from: $breakpoint-desktop) {
+        font-size: 1em;
         line-height: 1.55em;
     }
 }
