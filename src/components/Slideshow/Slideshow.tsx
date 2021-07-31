@@ -10,6 +10,7 @@ export interface SlideshowProps {
 const Slideshow = ({ slides }: SlideshowProps) => (
     <div className="slideshow__container">
         <Slider
+            // adaptiveHeight
             autoplay
             autoplaySpeed={5000}
             arrows

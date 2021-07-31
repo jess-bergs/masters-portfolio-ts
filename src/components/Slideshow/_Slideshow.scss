@@ -6,6 +6,8 @@
 
 .slideshow {
     &__container {
+        padding-bottom: $spacer-small * 1.5;
+
         &:hover {
             .slick-prev,
             .slick-next {
@@ -14,18 +16,29 @@
                 }
             }
         }
+        .slick-slider {
+            background-color: $background-colour-off;
+            @include mq($from: $breakpoint-tablet-portrait) {
+                background-color: transparent;
+            }
+        }
     }
 }
 
 .slick-dots {
-    bottom: -20px;
+    bottom: -22px;
+
+    @include mq($from: $breakpoint-desktop) {
+        bottom: -26px;
+    }
+
     button ::before {
         font-size: 20px;
     }
 
     li {
         height: 12px;
-        margin: 0 3px;
+        margin: 0 5px;
         width: 12px;
         button::before {
             font-size: 12px;
