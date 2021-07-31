@@ -1,5 +1,71 @@
+@import '~sass-mq/mq';
+@import '../../style/responsive-breakpoints';
 @import '../../style/theme';
 
-.headline {
+h1,
+h2,
+h3,
+h4 {
     @include theme;
+    letter-spacing: 0.05em;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+h1 {
+    letter-spacing: 0.07em;
+    font-family: 'proxima-nova';
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 1.05em;
+    padding-bottom: 0.15em;
+
+    @include mq($from: $breakpoint-tablet-portrait) {
+        font-size: 4em;
+        line-height: 1.25em;
+        padding-bottom: 0;
+    }
+}
+
+h2 {
+    line-height: 1.3em;
+    font-size: 1.4em;
+    @include mq($from: $breakpoint-tablet-portrait) {
+        font-size: 1.65em;
+        line-height: 1.2em;
+    }
+    @include mq($from: $breakpoint-desktop) {
+        font-size: 1.55em;
+        line-height: 1.1em;
+    }
+}
+
+h3 {
+    line-height: 1.45em;
+    font-size: 1.4em;
+    @include mq($from: $breakpoint-tablet-portrait) {
+        font-size: 1.55em;
+        line-height: 1.2em;
+    }
+    @include mq($from: $breakpoint-desktop) {
+        font-size: 1.55em;
+        line-height: 1.2em;
+    }
+    @include mq($from: $breakpoint-desktop-wide) {
+        font-size: 1.65em;
+        line-height: 1.2em;
+    }
+}
+
+h4 {
+    line-height: 1.55em;
+    font-size: 1em;
+
+    @include mq($from: $breakpoint-desktop) {
+        font-size: 1.2em;
+        line-height: 1.55em;
+    }
 }
