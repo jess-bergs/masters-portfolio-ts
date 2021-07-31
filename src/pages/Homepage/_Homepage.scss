@@ -1,6 +1,6 @@
 @import '~sass-mq/mq';
-@import '../../style/theme';
 @import '../../style/responsive-breakpoints';
+@import '../../style/theme';
 
 body {
     margin: 0;
@@ -22,7 +22,7 @@ body {
 
 .hero {
     &__container {
-        height: 475px;
+        height: 500px;
         position: relative;
         width: 100%;
     }
@@ -45,6 +45,14 @@ body {
     &__title {
         width: auto;
         float: left;
+
+        hr {
+            background: $text-colour;
+            border: none;
+            color: $text-colour;
+            height: 2.3px;
+            margin: 1.2em 0;
+        }
     }
 }
 
@@ -61,6 +69,10 @@ body {
                 text-align: center;
                 vertical-align: middle;
                 width: 100%;
+
+                h3 {
+                    line-height: 1.8em;
+                }
             }
             &__overlay {
                 display: table;
@@ -85,10 +97,11 @@ body {
 
 .about {
     &__container {
-        .h3 {
-            padding-bottom: $spacer-small;
-        }
         color: $background-colour;
+        h3 {
+            padding-bottom: $spacer-small;
+            color: $background-colour;
+        }
         .copyright__text {
             float: right;
             text-align: right;
@@ -109,65 +122,11 @@ body {
 .centered-layout {
     margin-left: auto;
     margin-right: auto;
-    width: 85%;
+    width: 80%;
     @include mq($from: $breakpoint-tablet-portrait) {
-        width: 65%;
+        width: 70%;
     }
     @include mq($from: $breakpoint-desktop) {
-        width: 77%;
+        width: 73%;
     }
-}
-
-.h1 {
-    font-family: 'proxima-nova';
-    font-size: 3em;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    line-height: 1.1em;
-    @include mq($from: $breakpoint-tablet-portrait) {
-        font-size: 4em;
-    }
-    @include mq($from: $breakpoint-desktop) {
-        font-size: 4.5em;
-    }
-}
-
-.h2 {
-    font-size: 1.8em;
-    line-height: 1.3em;
-    text-transform: uppercase;
-    @include mq($from: $breakpoint-tablet-portrait) {
-        font-size: 2em;
-    }
-    @include mq($from: $breakpoint-desktop) {
-        font-size: 2.1em;
-        line-height: 1.5em;
-    }
-}
-
-.h3 {
-    font-size: 1.4em;
-    line-height: 1.45em;
-    text-transform: uppercase;
-    @include mq($from: $breakpoint-tablet-portrait) {
-        font-size: 1.7em;
-    }
-    @include mq($from: $breakpoint-desktop) {
-        font-size: 1.75em;
-    }
-}
-
-.h4 {
-    font-size: 0.8em;
-    line-height: 1.55em;
-    text-transform: uppercase;
-}
-
-hr {
-    background: $text-colour;
-    border: none;
-    color: $text-colour;
-    height: 2.3px;
-    margin: 12px 0;
 }

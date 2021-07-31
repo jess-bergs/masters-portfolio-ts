@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Headline from '../../components/Headline/Headline';
 import GridLayout from '../../layouts/GridLayout/GridLayout';
 import iconEmail from '../../assets/images/icons/icon_email.svg';
 import iconSkype from '../../assets/images/icons/icon_skype.svg';
@@ -21,13 +22,11 @@ const Hero = () => (
         <div className="hero__overlay">
             <div className="hero__overlay-content centered-layout">
                 <div className="hero__title">
-                    <div className="title h1"> Jessica Bergs</div>
-                    <div className="title h2">Master's portfolio</div>
+                    <Headline text="Jessica Bergs" level={1} />
+                    <Headline text="Master's portfolio" level={2} />
                     <hr />
-                    <div className="title h3">
-                        M.Sc. Visualisation: Serious Games Development <br /> The Glasgow School of
-                        Art
-                    </div>
+                    <Headline text="M.Sc. Visualisation: Serious Games Development " level={4} />
+                    <Headline text="The Glasgow School of Art" level={4} />
                 </div>
             </div>
         </div>
@@ -49,9 +48,11 @@ const ProjectPreview = ({ title, subline, previewImageUrl, pagePath }: ProjectPr
     <Link to={pagePath}>
         <img className="project__image" alt="projectImage" src={previewImageUrl} />
         <div className="project__overlay">
-            <div className="project__title h3">
-                {title}
-                <div className="project__subtitle h4">{subline}</div>
+            <div className="project__title">
+                <Headline text={title} level={3} />
+                <div className="project__subtitle">
+                    <Headline text={subline} level={4} />
+                </div>
             </div>
         </div>
     </Link>
@@ -65,7 +66,9 @@ const Homepage = ({ projects }: HomepageProps) => (
 
         <section className="homepage__projects-section ">
             <div className="projects__container centered-layout">
-                <div className="projects__title h2"> key projects</div>
+                <div className="projects__title">
+                    <Headline text="key projects" level={2} />
+                </div>
                 <GridLayout>
                     {projects.map((project) => (
                         <ProjectPreview {...project} />
@@ -78,7 +81,9 @@ const Homepage = ({ projects }: HomepageProps) => (
             <div className="about__container centered-layout">
                 <GridLayout>
                     <div className="about__keywords">
-                        <div className="keywords__title h3">Keywords</div>
+                        <div className="keywords__title">
+                            <Headline text="keywords" level={3} />
+                        </div>
                         <div className="keywords__text">
                             Spatial virtual reality, collaborative games, tangible interfaces, 3D
                             reconstruction, 3D modelling, IoT wearables, health games, mobile
@@ -86,7 +91,9 @@ const Homepage = ({ projects }: HomepageProps) => (
                         </div>
                     </div>
                     <div className="about__contact">
-                        <div className="contact__title h3">Contact</div>
+                        <div className="contact__title">
+                            <Headline text="Contact" level={3} />
+                        </div>
                         <div className="contact__icons">
                             <a href="mailto:info(at)jbergs.eu">
                                 <img className="contact__icon" src={iconEmail} alt="email-icon" />
