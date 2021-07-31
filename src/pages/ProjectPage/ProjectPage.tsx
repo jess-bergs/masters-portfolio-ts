@@ -107,9 +107,7 @@ const ProjectPage = ({
             <Navigation {...navigationLinks} />
             <div className="project-page__contents">
                 <ProjectHeader {...headerContents} />
-                <div className="project-page__text-content">
-                    <ProjectContents {...projectContents} />
-                </div>
+                <ProjectContents {...projectContents} />
                 <ProjectSpecs {...specsContents} />
             </div>
             <Footer />

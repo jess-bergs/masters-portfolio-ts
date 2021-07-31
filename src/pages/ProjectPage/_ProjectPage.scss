@@ -11,13 +11,34 @@
     }
 
     &__contents {
-        margin: $spacer-small auto 0 auto;
+        margin: $spacer-medium auto;
         max-width: 75%;
-        & > * {
-            padding-bottom: $spacer-large;
-        }
+
         @include mq($from: $breakpoint-desktop) {
             max-width: 52%;
+        }
+
+        .project-contents__container {
+            margin: $spacer-medium 0 $spacer-large 0;
+
+            & > * {
+                margin-bottom: $spacer-medium * 1.25;
+            }
+            h2 {
+                margin-top: $spacer-tiny;
+                margin-bottom: -$spacer-small * 1.25;
+            }
+            p > p {
+                @include link;
+                font-size: 1em;
+                letter-spacing: 0.01em;
+                line-height: 1.45em;
+                margin: 0;
+                padding-bottom: $spacer-tiny;
+            }
+            img {
+                width: 100%;
+            }
         }
     }
 }
@@ -93,16 +114,6 @@
         h3 {
             font-family: 'proxima-nova';
             font-weight: 400;
-        }
-    }
-}
-
-.project-contents {
-    &__container > * {
-        padding-bottom: $spacer-medium;
-
-        img {
-            width: 100%;
         }
     }
 }
