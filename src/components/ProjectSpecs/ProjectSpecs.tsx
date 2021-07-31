@@ -1,5 +1,5 @@
-import { entries } from 'lodash';
 import React from 'react';
+import Headline from '../Headline/Headline';
 import './_ProjectSpecs.scss';
 
 interface Content {
@@ -32,7 +32,9 @@ const Entry = (entry: Entry) => (
 
 const ProjectSpecs = ({ entries }: ProjectSpecsProps) => (
     <div className="project-specs__container">
-        <div className="project-specs__title">PROJECT SPECS</div>
+        <div className="project-specs__title">
+            <Headline text="PROJECT SPECS" level={2} />
+        </div>
         <div className="project-specs__entries">
             {entries.map((entry) => (
                 <Entry {...entry} />

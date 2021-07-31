@@ -5,8 +5,6 @@
         @include theme();
     }
     &__title {
-        font-size: 1.5625em;
-        text-transform: uppercase;
         margin-bottom: $spacer-small;
     }
     &__container {
