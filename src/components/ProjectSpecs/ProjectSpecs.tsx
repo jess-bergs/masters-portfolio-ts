@@ -18,7 +18,7 @@ export interface ProjectSpecsProps {
 
 const Entry = (entry: Entry) => (
     <div className="entry__container">
-        <span className="entry__title">{entry.title}: </span>
+        <span className="entry__title">{`${entry.title}:`} </span>
         <span className="entry__contents">
             {entry.contents.map((content, index) => (
                 <span className="entry__content">
