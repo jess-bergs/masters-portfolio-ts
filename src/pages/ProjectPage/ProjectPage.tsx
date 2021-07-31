@@ -2,6 +2,7 @@ import React from 'react';
 import { useYScrollingPosition } from './hooks';
 import ProjectHeader, { ProjectHeaderProps } from '../../components/ProjectHeader/ProjectHeader';
 import ProjectSpecs, { ProjectSpecsProps } from '../../components/ProjectSpecs/ProjectSpecs';
+import Headline from '../../components/Headline/Headline';
 import iconLinkedIn from '../../assets/images/icons/icon_linkedin_neg.svg';
 import './_ProjectPage.scss';
 
@@ -61,8 +62,10 @@ const Navigation = (navigationLinks: NavigationProps) => {
 const Logo = () => (
     <div className="logo__container">
         <a href="/" className="logo__link" style={{ top: useYScrollingPosition() }}>
-            <div className="logo__h1"> Jessica Bergs</div>
-            <div className="logo__h2">Master's portfolio </div>
+            <div className="logo__title">
+                <Headline text="Jessica Bergs" level={3} />
+                <Headline text="Master's portfolio" level={5} />
+            </div>
         </a>
     </div>
 );
