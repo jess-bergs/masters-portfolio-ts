@@ -24,12 +24,14 @@
             & > * {
                 margin-bottom: $spacer-medium * 1.25;
             }
+
             h2,
             h3,
             h4 {
-                margin-top: $spacer-tiny;
                 margin-bottom: -$spacer-small * 1.5;
+                margin-top: $spacer-tiny;
             }
+
             p {
                 @include link;
                 font-size: 0.95em;
@@ -37,11 +39,13 @@
                 letter-spacing: 0.02em;
                 margin: 0;
             }
+
             p > p,
             li {
-                padding-bottom: $spacer-tiny;
                 line-height: 1.55em;
+                padding-bottom: $spacer-tiny;
             }
+
             img {
                 width: 100%;
             }
@@ -62,7 +66,7 @@
     &__container {
         @include link;
         font-size: 0.9em;
-        height: 0px;
+        height: 0;
         margin: 0 auto;
         padding-bottom: $spacer-small;
         padding-top: $spacer-small * 1.5;
@@ -77,11 +81,12 @@
         &--sticky {
             @extend .navigation__container;
             @include mq($from: $breakpoint-desktop) {
-                top: 78px;
                 position: fixed;
+                top: 78px;
             }
         }
     }
+
     &__left {
         display: inline-flex;
         @include mq($from: $breakpoint-desktop) {
@@ -108,11 +113,11 @@
     }
 
     &__link {
-        text-decoration: none;
         color: $text-colour;
-        text-shadow: 0px 0px 4px rgba($color: $background-colour, $alpha: 0.9);
+        text-decoration: none;
+        text-shadow: 0 0 4px rgba($color: $background-colour, $alpha: 0.9);
         @include mq($from: $breakpoint-desktop) {
-            text-shadow: 0px 0px 5px rgba($color: $background-colour, $alpha: 0.7);
+            text-shadow: 0 0 5px rgba($color: $background-colour, $alpha: 0.7);
         }
     }
 
@@ -131,6 +136,7 @@
         font-size: 0.7em;
         padding-right: $spacer-large;
     }
+
     &__icon {
         height: 0.9em;
         padding-right: $spacer-tiny * 0.5;

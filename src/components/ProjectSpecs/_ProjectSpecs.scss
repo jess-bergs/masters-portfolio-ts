@@ -4,22 +4,26 @@
     &__container {
         @include theme();
     }
+
     &__title {
         margin-bottom: $spacer-small * 1.2;
     }
+
     &__container {
         .entry {
             &__container {
                 font-size: 1em;
-                line-height: 1.45em;
                 letter-spacing: 0.01em;
+                line-height: 1.45em;
                 padding-bottom: $spacer-tiny;
             }
+
             &__title {
-                text-transform: uppercase;
                 letter-spacing: 0.04em;
                 margin-bottom: $spacer-small * 1.5;
+                text-transform: uppercase;
             }
+
             &__content {
                 @include link;
                 letter-spacing: 0.01em;

@@ -7,17 +7,18 @@
         @include theme();
         h1 {
             font-family: 'Quicksand';
+            font-weight: 400;
             letter-spacing: 0.05em;
             margin-bottom: 0.025em;
-            font-weight: 400;
         }
 
         h2 {
             font-family: 'Quicksand';
         }
+
         hr {
             background: $text-colour;
-            border: none;
+            border: 0;
             color: $text-colour;
             height: 2.3px;
             margin: 1.2em 0;

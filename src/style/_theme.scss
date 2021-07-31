@@ -1,7 +1,7 @@
 $hero-image-height: 360px;
 $background-colour: #050005;
 $background-colour-off: #0b0b10;
-$text-colour: white;
+$text-colour: #fff;
 $text-colour-muted: #9999a5;
 $spacer-tiny: 9px;
 $spacer-small: 15px;
@@ -45,9 +45,11 @@ $spacer-large: 1.5 * $spacer-medium;
         &:visited {
             color: $text-colour-muted;
         }
+
         &:hover {
             color: $text-colour;
         }
+
         &:active {
             color: $text-colour;
         }

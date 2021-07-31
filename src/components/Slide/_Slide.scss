@@ -7,6 +7,7 @@
         @include theme();
         position: relative;
     }
+
     &__content > * {
         display: block; // removes unwanted gap between image and caption div
         font-size: 0; // removes unwanted gap between video and caption div
@@ -26,6 +27,7 @@
             width: 100%;
         }
     }
+
     &__caption-text {
         padding: $spacer-tiny * 0.8 $spacer-small $spacer-tiny $spacer-small;
         white-space: pre-wrap;

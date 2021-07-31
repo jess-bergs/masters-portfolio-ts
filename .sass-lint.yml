@@ -1,0 +1,15 @@
+files:
+    include:
+        - 'packages/*.s+(a|c)ss'
+    exclude:
+        - node_modules
+rules:
+    class-name-format:
+        - 2
+        - convention: hyphenatedbem
+    quotes:
+        - 0
+    nesting-depth:
+        - 4
+    indentation:
+        - 4
