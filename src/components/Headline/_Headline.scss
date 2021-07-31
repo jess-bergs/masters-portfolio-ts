@@ -14,6 +14,7 @@ h5 {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+    white-space: pre-wrap;
 }
 
 h1 {
@@ -35,28 +36,17 @@ h2 {
     line-height: 1.3em;
     font-size: 1.4em;
     @include mq($from: $breakpoint-tablet-portrait) {
-        font-size: 1.65em;
-        line-height: 1.2em;
-    }
-    @include mq($from: $breakpoint-desktop) {
-        font-size: 1.55em;
-        line-height: 1.1em;
+        font-size: 1.7em;
+        line-height: 1.35em;
     }
 }
 
 h3 {
     line-height: 1.45em;
     font-size: 1.4em;
-    @include mq($from: $breakpoint-tablet-portrait) {
-        font-size: 1.55em;
-        line-height: 1.2em;
-    }
-    @include mq($from: $breakpoint-desktop) {
-        font-size: 1.55em;
-        line-height: 1.2em;
-    }
+
     @include mq($from: $breakpoint-desktop-wide) {
-        font-size: 1.65em;
+        font-size: 1.55em;
         line-height: 1.2em;
     }
 }
