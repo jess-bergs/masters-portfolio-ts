@@ -24,9 +24,11 @@
             & > * {
                 margin-bottom: $spacer-medium * 1.25;
             }
-            h2 {
+            h2,
+            h3,
+            h4 {
                 margin-top: $spacer-tiny;
-                margin-bottom: -$spacer-small * 1.25;
+                margin-bottom: -$spacer-small * 1.2;
             }
             p > p {
                 @include link;
