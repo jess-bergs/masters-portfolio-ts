@@ -119,7 +119,7 @@ body {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     line-height: 1.1em;
-    @include mq($from: $breakpoint-tablet-potrait) {
+    @include mq($from: $breakpoint-tablet-portrait) {
         font-size: 4em;
     }
     @include mq($from: $breakpoint-desktop) {
@@ -131,7 +131,7 @@ body {
     font-size: 1.8em;
     line-height: 1.3em;
     text-transform: uppercase;
-    @include mq($from: $breakpoint-tablet-potrait) {
+    @include mq($from: $breakpoint-tablet-portrait) {
         font-size: 2em;
     }
     @include mq($from: $breakpoint-desktop) {
@@ -144,7 +144,7 @@ body {
     font-size: 1.4em;
     line-height: 1.45em;
     text-transform: uppercase;
-    @include mq($from: $breakpoint-tablet-potrait) {
+    @include mq($from: $breakpoint-tablet-portrait) {
         font-size: 1.7em;
     }
     @include mq($from: $breakpoint-desktop) {
