@@ -8,7 +8,8 @@
         h1 {
             font-family: 'Quicksand';
             letter-spacing: 0.05em;
-            padding-bottom: 0.065em;
+            margin-bottom: 0.025em;
+            font-weight: 400;
         }
 
         h2 {
@@ -25,7 +26,7 @@
 
     &__tags {
         color: $text-colour-muted;
-        font-size: 1.05em;
+        font-size: 1em;
         font-style: italic;
         font-weight: 100;
         letter-spacing: 0.05em;

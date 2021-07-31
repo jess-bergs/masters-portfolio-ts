@@ -28,15 +28,19 @@
             h3,
             h4 {
                 margin-top: $spacer-tiny;
-                margin-bottom: -$spacer-small * 1.2;
+                margin-bottom: -$spacer-small * 1.5;
             }
-            p > p {
+            p {
                 @include link;
-                font-size: 1em;
-                letter-spacing: 0.01em;
-                line-height: 1.45em;
+                font-size: 0.95em;
+                font-weight: 400;
+                letter-spacing: 0.02em;
                 margin: 0;
+            }
+            p > p,
+            li {
                 padding-bottom: $spacer-tiny;
+                line-height: 1.55em;
             }
             img {
                 width: 100%;
