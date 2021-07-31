@@ -1,25 +1,40 @@
+@import '~sass-mq/mq';
+@import '../../style/responsive-breakpoints';
 @import '../../style/theme';
 
 .project-header {
-    &__container > * {
+    &__container {
         @include theme();
-        text-transform: uppercase;
-    }
+        h1 {
+            font-family: 'Quicksand';
+            letter-spacing: 0.05em;
+            padding-bottom: 0.065em;
+        }
 
-    &__title {
-        font-size: 3.4375em;
-        margin-bottom: $spacer-small;
-    }
-
-    &__subtitle {
-        font-size: 1.5625em;
-        margin-bottom: $spacer-small;
+        h2 {
+            font-family: 'Quicksand';
+        }
+        hr {
+            background: $text-colour;
+            border: none;
+            color: $text-colour;
+            height: 2.3px;
+            margin: 1.2em 0;
+        }
     }
 
     &__tags {
         color: $text-colour-muted;
-        font-size: 0.90625em;
+        font-family: 'proxima-nova';
+        font-size: 1em;
         font-style: italic;
+        font-weight: 100;
+        letter-spacing: 0.05em;
+        line-height: 1.55em;
         margin-top: $spacer-small;
+        text-transform: uppercase;
+        @include mq($from: $breakpoint-tablet-portrait) {
+            font-size: 1.1em;
+        }
     }
 }

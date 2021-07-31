@@ -1,4 +1,5 @@
 import React from 'react';
+import Headline from '../Headline/Headline';
 import './_ProjectHeader.scss';
 
 export interface ProjectHeaderProps {
@@ -11,8 +12,8 @@ const TAG_SEPARATOR = ' // ';
 
 const ProjectHeader = ({ title, subtitle, tags }: ProjectHeaderProps) => (
     <div className="project-header__container">
-        <div className="project-header__title">{title}</div>
-        <div className="project-header__subtitle">{subtitle}</div>
+        <Headline text={title} level={1} />
+        <Headline text={subtitle} level={2} />
         <hr className="project-header__h-line" />
         <div className="project-header__tags">
             {tags.map((tag, index) => (
