@@ -1,7 +1,17 @@
 @import '~sass-mq/mq';
 @import '../../style/theme';
 @import '../../style/responsive-breakpoints';
-
+//preload
+body::before {
+    content: url('https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/sparta_header_SM.jpg')
+        url('https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/lab2_header_SM.jpg')
+        url('https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/goma_header_GR.jpg');
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    z-index: -1;
+}
 .project-page {
     &__container {
         @include theme();
@@ -123,7 +133,7 @@
 
     &__title {
         h3 {
-            font-family: 'proxima-nova';
+            font-family: 'proxima-nova', 'Quicksand', sans-serif;
             font-weight: 400;
         }
     }

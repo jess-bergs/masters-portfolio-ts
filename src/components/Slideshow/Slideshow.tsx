@@ -10,14 +10,12 @@ export interface SlideshowProps {
 const Slideshow = ({ slides }: SlideshowProps) => (
     <div className="slideshow__container">
         <Slider
-            // adaptiveHeight
             autoplay
-            autoplaySpeed={5000}
+            autoplaySpeed={8000}
             arrows
             dots
             infinite
-            lazyLoad="progressive"
-            speed={1000}
+            speed={1300}
             easing="ease"
             slidesToShow={1}
             pauseOnDotsHover
