@@ -134,11 +134,15 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+
     @include mq($from: $breakpoint-tablet-portrait) {
         width: 70%;
     }
 
     @include mq($from: $breakpoint-desktop) {
-        width: 73%;
+        width: 75%;
+    }
+    @include mq($from: $breakpoint-desktop-wide) {
+        width: 67%;
     }
 }
