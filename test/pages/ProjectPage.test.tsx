@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import ProjectPage, { ProjectPageProps } from '../../src/pages/ProjectPage/ProjectPage';
 
@@ -34,7 +35,11 @@ const projectPage: ProjectPageProps = {
 };
 
 const renderComponent = () => {
-    return render(<ProjectPage {...projectPage} />);
+    return render(
+        <Router>
+            <ProjectPage {...projectPage} />{' '}
+        </Router>,
+    );
 };
 
 describe('the Project page', () => {
@@ -54,7 +59,7 @@ describe('the Project page', () => {
         const { getByText } = renderComponent();
         expect(getByText(/navNameLeft/)).toBeInTheDocument();
         expect(getByText(/navNameRight/)).toBeInTheDocument();
-        expect(getByText(/navNameLeft/).closest('a')).toHaveAttribute('href', 'navLinkLeft');
-        expect(getByText(/navNameRight/).closest('a')).toHaveAttribute('href', 'navLinkRight');
+        expect(getByText(/navNameLeft/).closest('a')).toHaveAttribute('href', '/navLinkLeft');
+        expect(getByText(/navNameRight/).closest('a')).toHaveAttribute('href', '/navLinkRight');
     });
 });

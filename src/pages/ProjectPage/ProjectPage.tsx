@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useYScrollingPosition } from './hooks';
 import ProjectHeader, { ProjectHeaderProps } from '../../components/ProjectHeader/ProjectHeader';
 import ProjectSpecs, { ProjectSpecsProps } from '../../components/ProjectSpecs/ProjectSpecs';
@@ -49,10 +50,10 @@ const Navigation = (navigationLinks: NavigationProps) => {
         <div className={`navigation__container${useStickyNav ? '--sticky' : ''} `}>
             <span className="navigation__left">
                 &lsaquo; &nbsp;
-                <a href={navigationLinks.left.url}>{navigationLinks.left.name}</a>
+                <Link to={navigationLinks.left.url}>{navigationLinks.left.name}</Link>
             </span>
             <span className="navigation__right">
-                <a href={navigationLinks.right.url}>{navigationLinks.right.name}</a>
+                <Link to={navigationLinks.right.url}>{navigationLinks.right.name}</Link>
                 &nbsp; &rsaquo;
             </span>
         </div>
@@ -61,12 +62,12 @@ const Navigation = (navigationLinks: NavigationProps) => {
 
 const Logo = () => (
     <div className="logo__container">
-        <a href="/" className="logo__link" style={{ top: useYScrollingPosition() }}>
+        <Link to="/" className="logo__link" style={{ top: useYScrollingPosition() }}>
             <div className="logo__title">
                 <Headline text="Jessica Bergs" level={3} />
                 <Headline text="Master's portfolio" level={5} />
             </div>
-        </a>
+        </Link>
     </div>
 );
 
