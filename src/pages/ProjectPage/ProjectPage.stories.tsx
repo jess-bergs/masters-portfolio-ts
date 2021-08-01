@@ -1,8 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ProjectPage, { ProjectPageProps } from './ProjectPage';
 import Video from '../../components/Video/Video';
 import Slideshow from '../../components/Slideshow/Slideshow';
-import Slide from '../../components/Slide/Slide';
 import EmbeddedMedia from '../../components/EmbeddedMedia/EmbeddedMedia';
 
 const slideshow = (
@@ -72,4 +72,8 @@ export default {
     title: 'Pages/ProjectPage',
 };
 
-export const Default = () => <ProjectPage {...projectPage} />;
+export const Default = () => (
+    <Router>
+        <ProjectPage {...projectPage} />
+    </Router>
+);
