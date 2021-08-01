@@ -11,9 +11,9 @@ const Video = ({ url, posterImageUrl }: VideoProps) => (
         <video
             title="video"
             className="video__wrapper"
+            controls
             poster={posterImageUrl}
             preload="auto"
-            autoPlay
             loop
         >
             <source title="video-source" src={url} type="video/mp4" />
