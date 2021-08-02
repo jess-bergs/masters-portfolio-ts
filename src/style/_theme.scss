@@ -12,7 +12,6 @@ $spacer-large: 1.5 * $spacer-medium;
 
 @font-face {
     font-family: 'Quicksand';
-    font-style: normal;
     font-weight: 400;
     src: local('Quicksand Regular'), local('Quicksand-Regular'),
         url('../../assets/fonts/Quicksand-Regular.ttf') format('truetype');
@@ -20,7 +19,6 @@ $spacer-large: 1.5 * $spacer-medium;
 
 @font-face {
     font-family: 'Quicksand';
-    font-style: bold;
     font-weight: 600;
     src: local('Quicksand Bold'), local('Quicksand-Bold'),
         url('../../assets/fonts/Quicksand-Bold.ttf') format('truetype');
@@ -28,7 +26,6 @@ $spacer-large: 1.5 * $spacer-medium;
 
 @font-face {
     font-family: 'Quicksand';
-    font-style: normal;
     font-weight: 100;
     src: local('Quicksand Light'), local('Quicksand-Light'),
         url('../../assets/fonts/Quicksand-Light.ttf') format('truetype');
