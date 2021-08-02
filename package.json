@@ -2,7 +2,7 @@
   "name": "masters-portfolio-ts",
   "version": "1.0.0",
   "description": "Master's portfolio – TS version",
-  "main": "./src/index.js",
+  "main": "./src/index.tsx",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
     "build": "npm t && npm run lint && webpack --mode production",
