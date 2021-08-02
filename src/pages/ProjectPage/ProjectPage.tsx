@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import { useYScrollingPosition } from './hooks';
 import ProjectHeader, { ProjectHeaderProps } from '../../components/ProjectHeader/ProjectHeader';
 import ProjectSpecs, { ProjectSpecsProps } from '../../components/ProjectSpecs/ProjectSpecs';
@@ -13,6 +14,7 @@ export interface ProjectPageProps {
     headerContents: ProjectHeaderProps;
     specsContents: ProjectSpecsProps;
     heroImageSrc: HeroImageSource;
+    metaTagOgImageUrl?: string;
 }
 
 interface NavigationLink {
@@ -93,14 +95,26 @@ const ProjectContents = ({ contents }: ProjectContentsProps) => (
     </div>
 );
 
+interface MetaTagsProps {
+    ogImage: string;
+}
+
+const MetaTags = ({ ogImage }: MetaTagsProps) => (
+    <Helmet>
+        <meta property="og:image" content={ogImage} />
+    </Helmet>
+);
+
 const ProjectPage = ({
     heroImageSrc,
     navigationLinks,
     headerContents,
     projectContents,
     specsContents,
+    metaTagOgImageUrl,
 }: ProjectPageProps) => (
     <div className="project-page__container">
+        <MetaTags ogImage={metaTagOgImageUrl} />
         <section className="project-page__hero">
             <Hero heroImageSrc={heroImageSrc} />
         </section>

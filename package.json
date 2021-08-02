@@ -2,7 +2,7 @@
   "name": "masters-portfolio-ts",
   "version": "1.0.0",
   "description": "Master's portfolio – TS version",
-  "main": "./dist/main.js",
+  "main": "./src/index.tsx",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
     "build": "npm t && npm run lint && webpack --mode production",
@@ -31,6 +31,7 @@
     "path-browserify": "^1.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-multi-carousel": "^2.6.3",
     "react-router-dom": "^5.2.0",
     "react-slick": "^0.28.1",
