@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import slug from 'slug';
 import Homepage from './pages/Homepage/Homepage';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
@@ -57,14 +57,16 @@ const getProjectPageRoutes = (projectsData) =>
 const App = () => (
     <div className="app__container">
         <Router>
-            {getProjectPageRoutes(projectPageContentsData).map((page) => page)}
-            <Route
-                exact
-                path="/"
-                component={() => (
-                    <Homepage projects={getHomepageProjectPreviews(projectPageContentsData)} />
-                )}
-            />
+            <Switch>
+                {getProjectPageRoutes(projectPageContentsData).map((page) => page)}
+                <Route
+                    exact
+                    path="/"
+                    component={() => (
+                        <Homepage projects={getHomepageProjectPreviews(projectPageContentsData)} />
+                    )}
+                />
+            </Switch>
         </Router>
     </div>
 );
