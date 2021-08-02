@@ -117,6 +117,7 @@ body {
         .copyright__text {
             float: right;
             text-align: right;
+            right: 0;
             @include mq($from: $breakpoint-desktop) {
                 bottom: 0;
                 position: absolute;
