@@ -1,13 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import ProjectPage, { ProjectPageProps } from '../../src/pages/ProjectPage/ProjectPage';
+import getMetaTag from '../test-utils/getMetaTag';
 
 const MockJSXElement = ({ number }) => <div> a content item {number} </div>;
 
 const projectPage: ProjectPageProps = {
     heroImageSrc: 'anImage.jpg',
+    metaTagOgImageUrl: 'some image url',
     navigationLinks: {
         left: { name: 'navNameLeft', url: 'navLinkLeft' },
         right: { name: 'navNameRight', url: 'navLinkRight' },
@@ -61,5 +63,10 @@ describe('the Project page', () => {
         expect(getByText(/navNameRight/)).toBeInTheDocument();
         expect(getByText(/navNameLeft/).closest('a')).toHaveAttribute('href', '/navLinkLeft');
         expect(getByText(/navNameRight/).closest('a')).toHaveAttribute('href', '/navLinkRight');
+    });
+
+    it('sets the passed og-image url in the og:image meta tag', async () => {
+        renderComponent();
+        await waitFor(() => expect(getMetaTag('og:image')).toEqual(projectPage.metaTagOgImageUrl));
     });
 });
