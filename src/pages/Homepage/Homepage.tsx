@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Headline from '../../components/Headline/Headline';
 import GridLayout from '../../layouts/GridLayout/GridLayout';
 import iconEmail from '../../assets/images/icons/icon_email.svg';
@@ -61,8 +62,19 @@ const ProjectPreview = ({ title, subline, previewImageUrl, pagePath }: ProjectPr
     </Link>
 );
 
+const MediaPreloader = () => (
+    <Helmet>
+        <link
+            rel="preload"
+            as="image"
+            href="https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/video/titlemov_poster.jpg"
+        />
+    </Helmet>
+);
+
 const Homepage = ({ projects }: HomepageProps) => (
     <div className="homepage__container">
+        <MediaPreloader />
         <section className="homepage__hero-section ">
             <Hero />
         </section>
