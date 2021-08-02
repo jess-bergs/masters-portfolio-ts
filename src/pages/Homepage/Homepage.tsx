@@ -15,9 +15,12 @@ const Hero = () => (
             muted
             loop
             id="hero_video"
-            poster="https://www.jbergs.eu/res/images_originalSize/title/video/titlemov_poster.jpg"
+            poster="https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/video/titlemov_poster.jpg"
         >
-            <source src="https://www.jbergs.eu/res/video/title/titlemov.mp4" type="video/mp4" />
+            <source
+                src="https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/title/titlemov.mp4"
+                type="video/mp4"
+            />
         </video>
         <div className="hero__overlay">
             <div className="hero__overlay-content centered-layout">
