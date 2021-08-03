@@ -16,10 +16,10 @@ const Hero = () => (
             muted
             loop
             id="hero_video"
-            poster="https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/video/titlemov_poster.jpg"
+            poster="https://d39hr3ghz5orka.cloudfront.net/images/title/video/titlemov_poster.jpg"
         >
             <source
-                src="https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/title/titlemov.mp4"
+                src="https://d39hr3ghz5orka.cloudfront.net/video/title/titlemov.mp4"
                 type="video/mp4"
             />
         </video>
@@ -67,7 +67,7 @@ const MediaPreloader = () => (
         <link
             rel="preload"
             as="image"
-            href="https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/video/titlemov_poster.jpg"
+            href="https://d39hr3ghz5orka.cloudfront.net/images/title/video/titlemov_poster.jpg"
         />
     </Helmet>
 );

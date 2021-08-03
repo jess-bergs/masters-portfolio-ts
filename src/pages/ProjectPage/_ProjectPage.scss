@@ -3,9 +3,9 @@
 @import '../../style/responsive-breakpoints';
 //preload
 body::before {
-    content: url('https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/sparta_header_SM.jpg')
-        url('https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/lab2_header_SM.jpg')
-        url('https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/goma_header_GR.jpg');
+    content: url('https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/sparta_header_SM.jpg')
+        url('https://d39hr3ghz5orka.cloudfront.net/images/labsquare/lab2_header_SM.jpg')
+        url('https://d39hr3ghz5orka.cloudfront.net/images/goma/goma_header_GR.jpg');
     height: 0;
     overflow: hidden;
     position: absolute;
