@@ -99,7 +99,8 @@
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_HMDupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg"
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg",
+                            "autoPlay": true
                         }
                     }
                 ]
@@ -131,7 +132,8 @@
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_projectionupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_projectionupdate_poster.jpg"
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_projectionupdate_poster.jpg",
+                            "autoPlay": true
                         }
                     },
                     {
@@ -139,7 +141,8 @@
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_boardupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_bordupdate_poster.jpg"
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_bordupdate_poster.jpg",
+                            "autoPlay": true
                         }
                     }
                 ]
