@@ -6,6 +6,7 @@ import Video, { VideoProps } from '../../src/components/Video/Video';
 const videoContent: VideoProps = {
     url: 'a video url',
     posterImageUrl: 'a poster image url',
+    autoPlay: true,
 };
 
 const renderComponent = (customProps?) => {
@@ -29,6 +30,24 @@ describe('the Video component', () => {
         it('no poster is rendered', () => {
             const { queryByTitle } = renderComponent({ url: 'a video url' });
             expect(queryByTitle('video')).not.toHaveAttribute('poster');
+        });
+    });
+
+    describe('the autplay flag', () => {
+        describe('when the flag is passed', () => {
+            it('the video controls dont show and the video is set to autoplay', () => {
+                const { queryByTitle } = renderComponent();
+                expect(queryByTitle('video')).not.toHaveAttribute('controls');
+                expect(queryByTitle('video')).toHaveAttribute('autoPlay', '');
+            });
+        });
+
+        describe('when the flag is not passed', () => {
+            it('the video controls show and the video is set to not autoplay', () => {
+                const { queryByTitle } = renderComponent({ ...videoContent, autoPlay: false });
+                expect(queryByTitle('video')).toHaveAttribute('controls');
+                expect(queryByTitle('video')).not.toHaveAttribute('autoPlay');
+            });
         });
     });
 });
