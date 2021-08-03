@@ -27,10 +27,10 @@
 }
 
 .slick-dots {
-    bottom: -22px;
+    bottom: -29px;
 
     @include mq($from: $breakpoint-desktop) {
-        bottom: -26px;
+        bottom: -30px;
     }
 
     button ::before {
