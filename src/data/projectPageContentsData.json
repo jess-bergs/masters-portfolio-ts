@@ -3,10 +3,10 @@
         "preview": {
             "title": "Lab\u00B2",
             "subline": "cross-reality\n team-building game\n– Thesis project –",
-            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/lab2_square.jpg"
+            "previewImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/title/lab2_square.jpg"
         },
-        "metaTagOgImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/linkedin-previews/linkedin_preview_lab2.jpg",
-        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/lab2_header_SM.jpg",
+        "metaTagOgImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/linkedin-previews/linkedin_preview_lab2.jpg",
+        "heroImageSrc": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/lab2_header_SM.jpg",
         "headerContents": {
             "title": "Lab\u00B2",
             "subtitle": "A collaborative cross-reality game for virtual team building ",
@@ -46,7 +46,7 @@
                         "caption": "Game board – concept graphic",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/board/board_bland.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/board/board_bland.jpg",
                             "alt": "Game board – concept graphic"
                         }
                     },
@@ -54,7 +54,7 @@
                         "caption": "Game board prototype (plywood, fine-art paper)",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/board/boardreal.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/board/boardreal.jpg",
                             "alt": "Game board prototype (plywood, fine-art paper)"
                         }
                     }
@@ -82,7 +82,7 @@
                         "caption": "Head-mounted display – concept graphic",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd/lab2_hmd_keyvis.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/hmd/lab2_hmd_keyvis.jpg",
                             "alt": "Head-mounted display – concept graphic"
                         }
                     },
@@ -90,7 +90,7 @@
                         "caption": "Head-mounted display prototype",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd/lab2_hmd_cardboard.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/hmd/lab2_hmd_cardboard.jpg",
                             "alt": "Head-mounted display prototype"
                         }
                     },
@@ -98,8 +98,8 @@
                         "caption": "The VR-player can explore the maze by actual walking and head rotating.",
                         "componentType": "Video",
                         "componentProps": {
-                            "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_HMDupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg",
+                            "url": "https://d39hr3ghz5orka.cloudfront.net/video/labsquare/lab2_HMDupdate.mp4",
+                            "posterImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg",
                             "autoPlay": true
                         }
                     }
@@ -123,7 +123,7 @@
                         "caption": "The dynamic game elements are projected onto the game board.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink/lab2_crosslink1.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/crosslink/lab2_crosslink1.jpg",
                             "alt": "The dynamic game elements are projected onto the game board."
                         }
                     },
@@ -131,8 +131,8 @@
                         "caption": "As the VR-player moves within the maze, his position & rotation are updated on the board in real time.",
                         "componentType": "Video",
                         "componentProps": {
-                            "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_projectionupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_projectionupdate_poster.jpg",
+                            "url": "https://d39hr3ghz5orka.cloudfront.net/video/labsquare/lab2_projectionupdate.mp4",
+                            "posterImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/crosslink-mov/lab2_projectionupdate_poster.jpg",
                             "autoPlay": true
                         }
                     },
@@ -140,8 +140,8 @@
                         "caption": "Tile movements on the game board are reproduced in the virtual maze.",
                         "componentType": "Video",
                         "componentProps": {
-                            "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_boardupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_bordupdate_poster.jpg",
+                            "url": "https://d39hr3ghz5orka.cloudfront.net/video/labsquare/lab2_boardupdate.mp4",
+                            "posterImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/crosslink-mov/lab2_bordupdate_poster.jpg",
                             "autoPlay": true
                         }
                     }
@@ -165,7 +165,7 @@
                         "caption": "Simplified system architecture overview",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/system-architecture/lab2_sysarch.png",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/system-architecture/lab2_sysarch.png",
                             "alt": "Simplified system architecture overview"
                         }
                     },
@@ -173,7 +173,7 @@
                         "caption": "Basic Game Master UI",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/system-architecture/lab2_sysarch_master.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/system-architecture/lab2_sysarch_master.jpg",
                             "alt": "Basic Game Master UI"
                         }
                     }
@@ -197,7 +197,7 @@
                         "caption": "The players take asymmetric roles in managing the game board and navigating in the maze.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/collaboration/lab2_collab1.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/collaboration/lab2_collab1.jpg",
                             "alt": "The players take asymmetric roles in managing the game board and navigating in the maze."
                         }
                     },
@@ -205,7 +205,7 @@
                         "caption": "Collecting a code-piece requires that the players perform a joint task simultaneously.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/collaboration/lab2_collab2.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/collaboration/lab2_collab2.jpg",
                             "alt": "Collecting a code-piece requires that the players perform a joint task simultaneously."
                         }
                     },
@@ -213,7 +213,7 @@
                         "caption": "The maze holds many perils but the players can only beat the AI together.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/collaboration/lab2_collab3.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/labsquare/collaboration/lab2_collab3.jpg",
                             "alt": "The maze holds many perils but the players can only beat the AI together."
                         }
                     }
@@ -304,10 +304,10 @@
         "preview": {
             "title": "GOMA Glasgow",
             "subline": "Heritage Visualisation",
-            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/goma_square.jpg"
+            "previewImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/title/goma_square.jpg"
         },
-        "metaTagOgImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/linkedin-previews/linkedin_preview_goma.jpg",
-        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/goma_header_GR.jpg",
+        "metaTagOgImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/linkedin-previews/linkedin_preview_goma.jpg",
+        "heroImageSrc": "https://d39hr3ghz5orka.cloudfront.net/images/goma/goma_header_GR.jpg",
         "headerContents": {
             "title": "GOMA Glasgow",
             "subtitle": "Interactive Heritage Visualisation",
@@ -325,8 +325,8 @@
             {
                 "componentType": "Video",
                 "componentProps": {
-                    "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/goma/GoMA__UnityDemo.mp4",
-                    "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/video-poster/video-poster-goma_withArrow.jpg"
+                    "url": "https://d39hr3ghz5orka.cloudfront.net/video/goma/GoMA__UnityDemo.mp4",
+                    "posterImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/goma/video-poster/video-poster-goma_withArrow.jpg"
                 }
             },
             {
@@ -347,7 +347,7 @@
                         "caption": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan).",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0006_Ebene%201.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0006_Ebene%201.jpg",
                             "alt": "A photogrammetric analysis of 38 photos produces a high-res point cloud of ca. 10m points (Agisoft Photoscan)."
                         }
                     },
@@ -355,7 +355,7 @@
                         "caption": "The resulting high-res mesh counts about 1.1m vertices.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0005_Gruppe%202.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0005_Gruppe%202.jpg",
                             "alt": "The resulting high-res mesh counts about 1.1m vertices."
                         }
                     },
@@ -363,7 +363,7 @@
                         "caption": "The texture is rendered at 4k resolution.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0004_Ebene%204.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0004_Ebene%204.jpg",
                             "alt": "The texture is rendered at 4k resolution."
                         }
                     },
@@ -371,7 +371,7 @@
                         "caption": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg",
                             "alt": "A close-up view of high-res mesh and texture result (x12 zoom) reveals the model's high level of detail."
                         }
                     },
@@ -379,7 +379,7 @@
                         "caption": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab).",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0002_Ebene%202.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0002_Ebene%202.jpg",
                             "alt": "The original point cloud is used to reconstruct a low-res version of the mesh of ca. 20k vertices via Poisson Surface Reconstruction (Meshlab)."
                         }
                     },
@@ -387,7 +387,7 @@
                         "caption": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). The map is then filtered for noise and artifacts.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0001_Gruppe%203%20Kopie.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0001_Gruppe%203%20Kopie.jpg",
                             "alt": "The details of the high-res mesh are transferred to the low-res version as a normal map (using Mudbox). \nThe map is then filtered for noise and artifacts."
                         }
                     },
@@ -395,7 +395,7 @@
                         "caption": "The texture UVs of the high-res mesh are transferred to the low-res version. \nAs a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/workflow/goma_workflow__0000_Ebene%203.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0000_Ebene%203.jpg",
                             "alt": "The texture UVs of the high-res mesh are transferred to the low-res version. As a finishing step, the texture undergoes some post-processing, i.e. stitching artifacts are retouched and blank spots are filled in."
                         }
                     },
@@ -404,7 +404,7 @@
                         "componentType": "EmbeddedMedia",
                         "componentProps": {
                             "url": "https://sketchfab.com/models/d5ba8a80db4e4c9d9925fbbab52a03c5/embed",
-                            "posterImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/embedded-media-posters/iframe-poster-sketchfab-plate.jpg"
+                            "posterImageSrc": "https://d39hr3ghz5orka.cloudfront.net/images/goma/embedded-media-posters/iframe-poster-sketchfab-plate.jpg"
                         }
                     }
                 ]
@@ -420,7 +420,7 @@
                         "caption": "The statue's East-facing bronze plate",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_plate3.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/objects/goma_plate3.jpg",
                             "alt": "Close-up of east-facing plate"
                         }
                     },
@@ -428,7 +428,7 @@
                         "caption": "The building's gold-painted entrance doors",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_doors.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/objects/goma_doors.jpg",
                             "alt": "The gold-painted entrance doors"
                         }
                     },
@@ -436,7 +436,7 @@
                         "caption": "The columns' Corinthian captials",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/objects/goma_pillarcapital.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/goma/objects/goma_pillarcapital.jpg",
                             "alt": "The columns' Corinthian captials"
                         }
                     }
@@ -513,10 +513,10 @@
         "preview": {
             "title": "Spartathlon",
             "subline": "Health serious game",
-            "previewImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/title/spartathlon_square.jpg"
+            "previewImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/title/spartathlon_square.jpg"
         },
-        "metaTagOgImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/linkedin-previews/linkedin_preview_spartathlon.jpg",
-        "heroImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/sparta_header_SM.jpg",
+        "metaTagOgImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/linkedin-previews/linkedin_preview_spartathlon.jpg",
+        "heroImageSrc": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/sparta_header_SM.jpg",
         "headerContents": {
             "title": "Spartathlon",
             "subtitle": "A step-by-step adventure",
@@ -535,7 +535,7 @@
             {
                 "componentType": "Image",
                 "componentProps": {
-                    "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/spart_keyvis.jpg",
+                    "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/spart_keyvis.jpg",
                     "alt": "key visual with map screen and Fitbit pedometer"
                 }
             },
@@ -557,7 +557,7 @@
                         "caption": "Start a new game or resume where you left off last time.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_1.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_1.jpg",
                             "alt": "Start a new game or resume where you left off last time."
                         }
                     },
@@ -565,7 +565,7 @@
                         "caption": "Log in to your Fitbit account and grant data access permission ",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_fitbit.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_fitbit.jpg",
                             "alt": "Log in to your Fitbit account and grant data access permission "
                         }
                     },
@@ -573,7 +573,7 @@
                         "caption": "Your journey starts at Athens. Your first destination is one day's footmarch away (equalling your daily step goal).",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_2.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_2.jpg",
                             "alt": "Your journey starts at Athens. Your first destination is one day's footmarch away (which equals your daily step goal)."
                         }
                     },
@@ -581,7 +581,7 @@
                         "caption": "For finding out about the next bit of the way, Pheidippides will need to ask some locals.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_4.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_4.jpg",
                             "alt": "For finding out about the next bit of the way, Pheidippides will need to ask some locals."
                         }
                     },
@@ -589,7 +589,7 @@
                         "caption": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_5.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_5.jpg",
                             "alt": "In Skaramagas, an old fisherman offers Pheidippides to take him along in his boat – if he helps him fishing."
                         }
                     },
@@ -597,7 +597,7 @@
                         "caption": "However, the fisherman will first want to test your fishing skills:",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_6.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_6.jpg",
                             "alt": "However, the fisherman will first want to test your fishing skills:"
                         }
                     },
@@ -605,7 +605,7 @@
                         "caption": "He asks you to get him three golden fishes – you are given five attempts.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_7.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_7.jpg",
                             "alt": "He asks you to get him three golden fishes – you are given five attempts."
                         }
                     },
@@ -613,7 +613,7 @@
                         "caption": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_8.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_8.jpg",
                             "alt": "If you did well, the fisherman will take you across the bay to Elefsina. Otherwise, you'll need to walk double the distance!"
                         }
                     },
@@ -621,7 +621,7 @@
                         "caption": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal.",
                         "componentType": "Image",
                         "componentProps": {
-                            "src": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/spartathlon/app-demo/spart_3.jpg",
+                            "src": "https://d39hr3ghz5orka.cloudfront.net/images/spartathlon/app-demo/spart_3.jpg",
                             "alt": "Use the menu to sync your freshly walked steps from your fitness tracker or to customise your daily step goal."
                         }
                     }
