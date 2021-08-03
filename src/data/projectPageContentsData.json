@@ -99,7 +99,8 @@
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_HMDupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg"
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/hmd-mov/lab2_HMDupdate_poster.jpg",
+                            "autoPlay": true
                         }
                     }
                 ]
@@ -131,7 +132,8 @@
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_projectionupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_projectionupdate_poster.jpg"
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_projectionupdate_poster.jpg",
+                            "autoPlay": true
                         }
                     },
                     {
@@ -139,7 +141,8 @@
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/labsquare/lab2_boardupdate.mp4",
-                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_bordupdate_poster.jpg"
+                            "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/labsquare/crosslink-mov/lab2_bordupdate_poster.jpg",
+                            "autoPlay": true
                         }
                     }
                 ]
@@ -320,10 +323,10 @@
                 "componentProps": "<p>The aim of this project was to create an interactive 3D visualisation of the front part of Glasgow’s <a href='https://en.wikipedia.org/wiki/Gallery_of_Modern_Art,_Glasgow'>Gallery of Modern Art</a> (GoMA) by using a combination of conventional 3D modelling and photogrammetry-based reproduction techniques.</p> <p> The reconstructed parts comprise the facade of the Gallery’s 1780 Royal exchange building and forefront <a href='https://en.wikipedia.org/wiki/Equestrian_statue_of_the_Duke_of_Wellington,_Glasgow'> equestrian statue of the Duke of Wellington</a>. The final models were staged in Unity3D together with low-poly models of the surrounding Glaswegian cityscape.</p><p>The model can be explored interactively with a first-person controller as demonstrated in the video below:</p>"
             },
             {
-                "componentType": "EmbeddedMedia",
+                "componentType": "Video",
                 "componentProps": {
-                    "url": "https://www.youtube.com/embed/5h5-iIPu7bM",
-                    "posterImageSrc": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/embedded-media-posters/iframe-poster-unity-yt-video.jpg"
+                    "url": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/video/goma/GoMA__UnityDemo.mp4",
+                    "posterImageUrl": "https://masters-portfolio-assets.s3.eu-central-1.amazonaws.com/images/goma/video-poster/video-poster-goma_withArrow.jpg"
                 }
             },
             {
