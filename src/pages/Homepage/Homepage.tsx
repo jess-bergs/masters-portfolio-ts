@@ -50,12 +50,14 @@ interface HomepageProps {
 
 const ProjectPreview = ({ title, subline, previewImageUrl, pagePath }: ProjectPreview) => (
     <Link to={pagePath}>
-        <img className="project__image" alt="projectImage" src={previewImageUrl} />
-        <div className="project__overlay">
-            <div className="project__title">
-                <Headline text={title} level={3} />
-                <div className="project__subtitle">
-                    <Headline text={subline} level={4} />
+        <div className="project__container">
+            <img className="project__image" alt="projectImage" src={previewImageUrl} />
+            <div className="project__overlay">
+                <div className="project__title">
+                    <Headline text={title} level={3} />
+                    <div className="project__subtitle">
+                        <Headline text={subline} level={4} />
+                    </div>
                 </div>
             </div>
         </div>

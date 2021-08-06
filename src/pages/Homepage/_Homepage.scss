@@ -71,6 +71,10 @@ body {
     &__container {
         @include link;
         .project {
+            &__container {
+                aspect-ratio: 1.13; // <-- for Grid Layout box sizing
+            }
+
             &__title {
                 display: table-cell;
                 height: 100%;
