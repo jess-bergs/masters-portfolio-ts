@@ -73,7 +73,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "<p>The second player is equipped with an untethered head-mounted display (HMD) through which he finds himself inside the very board's 3D maze. The HMD’s position and rotation are tracked by an IR Motion Capture system.</p> <p>As the player moves within the tracking volume and/or rotates his head, the player´s view of the maze updates accordingly in real-time.</p>"
+                "componentProps": "<p>The second player is equipped with an untethered head-mounted display (HMD) placing him/her inside a 3D version of the board's maze. The HMD’s position and rotation are tracked by an IR Motion Capture system.</p> <p>As the player moves within the tracking space, the player´s view of the maze updates in real-time.</p>"
             },
             {
                 "componentType": "Slideshow",
@@ -95,7 +95,7 @@
                         }
                     },
                     {
-                        "caption": "The VR-player can explore the maze by actual walking and head rotating.",
+                        "caption": "The VR player exploring the maze.",
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://d39hr3ghz5orka.cloudfront.net/video/labsquare/lab2_HMDupdate.mp4",
@@ -114,7 +114,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "<p>The game board and virtual maze are cross-linked in real time: On the game board, a real-time projection mapping shows the current position of the VR player and other dynamic elements in the 3D-maze. </p><p> At the same time, the game board's layout is continuously synced with that of the 3D maze: two webcams above the game board track the position and rotation of the single pathway tiles. If a line of tiles is pushed on the board, this movement is reproduced simultaneously in the virtual version of the maze.</p>"
+                "componentProps": "<p>The game board and virtual maze are cross-linked in real time: on the game board, a real-time projection mapping shows the current position of the VR player and other dynamic elements in the 3D-maze. </p><p> At the same time, the game board's layout is continuously synced with that of the 3D maze: two webcams above the game board track the position and rotation of the single pathway tiles. If a line of tiles is pushed on the board, this movement is reproduced simultaneously in the virtual version of the maze.</p>"
             },
             {
                 "componentType": "Slideshow",
@@ -128,7 +128,7 @@
                         }
                     },
                     {
-                        "caption": "As the VR-player moves within the maze, his position & rotation are updated on the board in real time.",
+                        "caption": "The VR player's position & rotation are updated on the board in real time.",
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://d39hr3ghz5orka.cloudfront.net/video/labsquare/lab2_projectionupdate.mp4",
@@ -137,7 +137,7 @@
                         }
                     },
                     {
-                        "caption": "Tile movements on the game board are reproduced in the virtual maze.",
+                        "caption": "Moving a tile on the board simultaneously changes the virtual maze.",
                         "componentType": "Video",
                         "componentProps": {
                             "url": "https://d39hr3ghz5orka.cloudfront.net/video/labsquare/lab2_boardupdate.mp4",
@@ -188,7 +188,7 @@
             },
             {
                 "componentType": "Paragraph",
-                "componentProps": "<p>The players take the roles of two computer scientists who have been locked up in their lab by a malicious AI they have been experimenting on. The only way to free themselves is to retrieve and run the AI's 'Emergency Shutdown Programm'. However, the programme's five code fragments are hidden inside the AI’s maze of registers.</p><p> In taking on the challenge, the computer scientists have managed to cobble together two interfaces that allow them to access the AI to recover the code. Through their individual interfaces the players take on asymmetric roles:</p> one player uses an HMD to find himself inside the AI's maze of registers (the 3D maze) where he has to search for the code fragments. The other player uses the physical game board to re-arrange the AI's hardware (the game board maze) in order to create pathways to the code fragments. He then directs the VR-player towards them. <p>While playing the game, the players cannot see each other but rely on verbal communication only. Once at a code container, the VR-player can read the necessary information (a number) on its label that the players require for unlocking and downloading the code fragment. The unlocking process involves a joint task that the players have to perform simultaneously.</p> However, the players will also need to be on the alert at all times as the AI will try to fend off the invaders. Each player has limited health resources and an uncareful action might draw on these. If one player runs out of resources, the game is lost for both. Hence, the players sink and swim together. "
+                "componentProps": "<p>The players take the roles of two computer scientists who have been locked up in their lab by a malicious AI they have been experimenting on. The only way to free themselves is to retrieve and run the AI's 'Emergency Shutdown Programm'. However, the programme's five code fragments are hidden inside the very AI’s maze of registers.</p><p> In taking on the challenge, the computer scientists have managed to cobble together two interfaces that allow them to access the AI to recover the code. Through their individual interfaces the players take on asymmetric roles:</p> One player uses an HMD to find himself inside the AI's maze of registers (the 3D maze) where s/he has to search for the code fragments. The other player uses the physical game board to re-arrange the AI's hardware (the game board maze) in order to create pathways to the code fragments. S/he then directs the VR-player towards them. <p>While playing the game, the players cannot see each other but rely on verbal communication only. Once at a code container, the VR-player can read the necessary information (a number) on its label that the players require for unlocking and downloading the code fragment. The unlocking process involves a joint task that the players have to perform simultaneously.</p> However, the players will also need to be on the alert at all times as the AI will try to fend off the invaders. Each player has limited health resources and an uncareful action might draw on these. If one player runs out of resources, the game is lost for both. Hence, the players sink and swim together. "
             },
             {
                 "componentType": "Slideshow",
@@ -302,14 +302,14 @@
     },
     {
         "preview": {
-            "title": "GOMA Glasgow",
+            "title": "GoMA Glasgow",
             "subline": "Heritage Visualisation",
             "previewImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/title/goma_square.jpg"
         },
         "metaTagOgImageUrl": "https://d39hr3ghz5orka.cloudfront.net/images/linkedin-previews/linkedin_preview_goma.jpg",
         "heroImageSrc": "https://d39hr3ghz5orka.cloudfront.net/images/goma/goma_header_GR.jpg",
         "headerContents": {
-            "title": "GOMA Glasgow",
+            "title": "GoMA Glasgow",
             "subtitle": "Interactive Heritage Visualisation",
             "tags": [
                 "3D modelling & scanning",
