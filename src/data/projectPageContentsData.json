@@ -10,11 +10,7 @@
         "headerContents": {
             "title": "Lab\u00B2",
             "subtitle": "A collaborative cross-reality game for virtual team building ",
-            "tags": [
-                "Multiplayer Serious Game",
-                "Tangible interfaces",
-                "Spatially-tracked virtual reality"
-            ]
+            "tags": ["Multiplayer Serious Game", "Tangible interfaces", "Spatially-tracked VR"]
         },
         "projectContents": [
             {
@@ -311,11 +307,7 @@
         "headerContents": {
             "title": "GoMA Glasgow",
             "subtitle": "Interactive Heritage Visualisation",
-            "tags": [
-                "3D modelling & scanning",
-                "RT3D",
-                "Unity physically-based shading"
-            ]
+            "tags": ["3D modelling & scanning", "RT3D", "Unity physically-based shading"]
         },
         "projectContents": [
             {
@@ -520,12 +512,7 @@
         "headerContents": {
             "title": "Spartathlon",
             "subtitle": "A step-by-step adventure",
-            "tags": [
-                "Health serious game",
-                "Unity 2D",
-                "IOT",
-                "Unity Native Android plugin"
-            ]
+            "tags": ["Health serious game", "Unity 2D", "IOT", "Unity Native Android plugin"]
         },
         "projectContents": [
             {
