@@ -26,7 +26,7 @@ const Hero = () => (
         <div className="hero__overlay">
             <div className="hero__overlay-content centered-layout">
                 <div className="hero__title">
-                    <Headline text="Jessica Bergs" level={1} />
+                    <Headline text="Jess Bergs" level={1} />
                     <Headline text="Master's portfolio" level={2} />
                     <hr />
                     <Headline text="M.Sc. Visualisation: Serious Games Development " level={4} />

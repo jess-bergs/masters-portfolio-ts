@@ -67,7 +67,7 @@ body::before {
 .hero {
     &__image {
         background-position: 50% 0;
-        background-size: auto $hero-image-height;
+        background-size: auto $hero-image-height + 1px;
         height: $hero-image-height;
         position: relative;
     }
