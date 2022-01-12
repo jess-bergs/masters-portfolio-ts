@@ -66,8 +66,8 @@ const Logo = () => (
     <div className="logo__container">
         <Link to="/" className="logo__link" style={{ top: useYScrollingPosition() }}>
             <div className="logo__title">
-                <Headline text="Jessica Bergs" level={3} />
-                <Headline text="Master's portfolio" level={5} />
+                <Headline text="Jess Bergs" level={2} />
+                <Headline text="Master's portfolio" level={6} />
             </div>
         </Link>
     </div>
