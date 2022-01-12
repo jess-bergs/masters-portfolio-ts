@@ -31,7 +31,7 @@
 
     &__tags {
         color: $text-colour-muted;
-        font-size: 1em;
+        font-size: 0.92em;
         font-style: italic;
         font-weight: 400;
         letter-spacing: 0.05em;
@@ -39,7 +39,7 @@
         margin-top: $spacer-small;
         text-transform: uppercase;
         @include mq($from: $breakpoint-tablet-portrait) {
-            font-size: 1.1em;
+            font-size: 1em;
         }
     }
 }
