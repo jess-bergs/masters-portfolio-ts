@@ -7,7 +7,7 @@
         display: grid;
         grid-gap: $grid-gap;
         grid-template-columns: 1fr;
-        @include mq($from: $breakpoint-desktop) {
+        @include mq($from: $breakpoint-tablet-portrait) {
             grid-template-columns: $grid-columns;
         }
 
