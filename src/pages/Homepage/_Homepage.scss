@@ -28,9 +28,16 @@ body {
 
 .hero {
     &__container {
-        height: 500px;
+        height: 350px;
         position: relative;
         width: 100%;
+        overflow: hidden;
+        @include mq($from: $breakpoint-tablet-portrait) {
+            height: 400px;
+        }
+        @include mq($from: $breakpoint-desktop) {
+            height: 500px;
+        }
     }
 
     &__video {
@@ -39,7 +46,7 @@ body {
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: auto;
+        display: block;
     }
 
     &__overlay {
@@ -142,7 +149,7 @@ body {
     width: 80%;
 
     @include mq($from: $breakpoint-tablet-portrait) {
-        width: 70%;
+        width: 80%;
     }
 
     @include mq($from: $breakpoint-desktop) {
