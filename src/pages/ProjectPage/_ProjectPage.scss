@@ -70,6 +70,13 @@ body::before {
         background-size: auto $hero-image-height + 1px;
         height: $hero-image-height;
         position: relative;
+        background-repeat: no-repeat;
+
+        @include mq($from: 2880px) {
+            // max background image size
+            background-size: auto 100vw / 2880 * 538 +0.1;
+            height: 100vw / 2880 * 538; // preserve scaling factor for height; deducted from
+        }
     }
 }
 
