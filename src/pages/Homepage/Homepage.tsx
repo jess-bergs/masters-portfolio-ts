@@ -6,6 +6,7 @@ import GridLayout from '../../layouts/GridLayout/GridLayout';
 import iconEmail from '../../assets/images/icons/icon_email.svg';
 import iconSkype from '../../assets/images/icons/icon_skype.svg';
 import iconLinkedin from '../../assets/images/icons/icon_linkedin.svg';
+import iconGH from '../../assets/images/icons/github.svg';
 import './_Homepage.scss';
 
 const Hero = () => (
@@ -122,8 +123,8 @@ const Homepage = ({ projects }: HomepageProps) => (
                                     alt="linkedin-icon"
                                 />
                             </a>
-                            <a href="skype:jessica_bergs?chat">
-                                <img className="contact__icon" src={iconSkype} alt="skype-icon" />
+                            <a href="https://github.com/j-bergs">
+                                <img className="contact__icon" src={iconGH} alt="gh-icon" />
                             </a>
                         </div>
                     </div>
