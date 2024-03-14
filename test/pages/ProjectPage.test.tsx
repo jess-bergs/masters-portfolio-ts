@@ -11,8 +11,8 @@ const projectPage: ProjectPageProps = {
     heroImageSrc: 'anImage.jpg',
     metaTagOgImageUrl: 'some image url',
     navigationLinks: {
-        left: { name: 'navNameLeft', url: 'navLinkLeft' },
-        right: { name: 'navNameRight', url: 'navLinkRight' },
+        previous: { name: 'navNameLeft', url: 'navLinkLeft' },
+        next: { name: 'navNameRight', url: 'navLinkRight' },
     },
     headerContents: {
         title: 'a title',

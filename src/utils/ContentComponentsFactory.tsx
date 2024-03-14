@@ -34,7 +34,7 @@ export interface ComponentOptions {
     [otherProps: string]: any;
 }
 
-const ContentComponentFactory = {
+const ContentComponentsFactory = {
     create: ({ componentType, componentProps }: ComponentOptions): JSX.Element => {
         switch (componentType) {
             case ComponentType.Headline:
@@ -50,7 +50,7 @@ const ContentComponentFactory = {
                 const transformedContent = slidesComponentConfigs.map(
                     ({ caption, componentType, componentProps }) => ({
                         caption,
-                        content: ContentComponentFactory.create({ componentType, componentProps }),
+                        content: ContentComponentsFactory.create({ componentType, componentProps }),
                     }),
                 );
                 return <Slideshow slides={transformedContent} />;
@@ -64,4 +64,4 @@ const ContentComponentFactory = {
     },
 };
 
-export default ContentComponentFactory;
+export default ContentComponentsFactory;

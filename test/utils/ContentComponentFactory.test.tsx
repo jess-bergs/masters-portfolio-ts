@@ -1,16 +1,16 @@
 import React from 'react';
 
-import ContentComponentFactory, {
+import ContentComponentsFactory, {
     ComponentType,
     ComponentOptions,
-} from '../../src/utils/ContentComponentFactory';
+} from '../../src/utils/ContentComponentsFactory';
 import * as _ from 'lodash';
 import Headline from '../../src/components/Headline/Headline';
 import Video from '../../src/components/Video/Video';
 import Slideshow from '../../src/components/Slideshow/Slideshow';
 import EmbeddedMedia from '../../src/components/EmbeddedMedia/EmbeddedMedia';
 
-describe('the ContentComponentFactory', () => {
+describe('the ContentComponentsFactory', () => {
     describe('when the component type is a Headline', () => {
         it('returns a Headline component', () => {
             const componentConfig: ComponentOptions = {
@@ -20,7 +20,7 @@ describe('the ContentComponentFactory', () => {
 
             const expectedResult = <Headline text="some text" level={2} />;
 
-            const result = ContentComponentFactory.create(componentConfig);
+            const result = ContentComponentsFactory.create(componentConfig);
 
             expect(result).toEqual(expectedResult);
         });
@@ -36,7 +36,7 @@ describe('the ContentComponentFactory', () => {
 
                 const expectedResult = <p>some text</p>;
 
-                const result = ContentComponentFactory.create(componentConfig);
+                const result = ContentComponentsFactory.create(componentConfig);
 
                 expect(result).toEqual(expectedResult);
             });
@@ -54,7 +54,7 @@ describe('the ContentComponentFactory', () => {
                     </p>
                 );
 
-                const result = ContentComponentFactory.create(componentConfig);
+                const result = ContentComponentsFactory.create(componentConfig);
 
                 expect(result).toEqual(expectedResult);
             });
@@ -70,7 +70,7 @@ describe('the ContentComponentFactory', () => {
 
             const expectedResult = <Video url="some url" />;
 
-            const result = ContentComponentFactory.create(componentConfig);
+            const result = ContentComponentsFactory.create(componentConfig);
 
             expect(result).toEqual(expectedResult);
         });
@@ -85,7 +85,7 @@ describe('the ContentComponentFactory', () => {
 
             const expectedResult = <img src="some src" alt="some alt" />;
 
-            const result = ContentComponentFactory.create(componentConfig);
+            const result = ContentComponentsFactory.create(componentConfig);
 
             expect(result).toEqual(expectedResult);
         });
@@ -115,7 +115,7 @@ describe('the ContentComponentFactory', () => {
                 />
             );
 
-            const result = ContentComponentFactory.create(componentConfig);
+            const result = ContentComponentsFactory.create(componentConfig);
             expect(result).toEqual(expectedResult);
         });
     });
@@ -129,7 +129,7 @@ describe('the ContentComponentFactory', () => {
 
             const expectedResult = <EmbeddedMedia url="some url" />;
 
-            const result = ContentComponentFactory.create(componentConfig);
+            const result = ContentComponentsFactory.create(componentConfig);
 
             expect(result).toEqual(expectedResult);
         });

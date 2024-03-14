@@ -1,23 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import slug from 'slug';
-import Homepage from './pages/Homepage/Homepage';
+import HomepageContainer from './pages/Homepage/HomepageContainer';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
-import ContentComponentFactory from './utils/ContentComponentFactory';
-import CircularArray from './utils/CircularArray';
-import projectPageContentsData from './data/projectPageContentsData.json';
+import ContentComponentsFactory from './utils/ContentComponentsFactory';
+import circularIterator from './utils/CircularIterator';
+import projectsContents from './data/projectPageContentsData.json';
 
-const getProjectRoutePath = (project) => `/${slug(project.headerContents.title)}`;
+const getProjectRouteSlug = (project) => `/${slug(project.headerContents.title)}`;
 
-const getHomepageProjectPreviews = (projects) =>
-    projects.map((project) => ({
-        ...project.preview,
-        pagePath: getProjectRoutePath(project),
-    }));
-
-const getProjectPageContents = (project) => {
+const fetchProjectPageContents = (project) => {
     const projectContents = {
-        contents: project.projectContents.map((item) => ContentComponentFactory.create(item)),
+        contents: project.projectContents.map((item) => ContentComponentsFactory.create(item)),
     };
     const { headerContents, specsContents, heroImageSrc } = project;
     return {
@@ -27,26 +21,27 @@ const getProjectPageContents = (project) => {
         heroImageSrc,
     };
 };
-
-const getProjectPageRoutes = (projectsData) =>
-    projectsData.map((projectData, index) => {
+const generateProjectPageRoutes = (projectsData) =>
+    projectsData.map((curProject, index) => {
+        const prevProject = circularIterator.getPrevious(projectsData, index);
+        const nextProject = circularIterator.getNext(projectsData, index);
         const navigationLinks = {
-            left: {
-                name: CircularArray.getPrevious(projectsData, index).headerContents.title,
-                url: getProjectRoutePath(CircularArray.getPrevious(projectsData, index)),
+            previous: {
+                name: prevProject.headerContents.title,
+                url: getProjectRouteSlug(prevProject),
             },
-            right: {
-                name: CircularArray.getNext(projectsData, index).headerContents.title,
-                url: getProjectRoutePath(CircularArray.getNext(projectsData, index)),
+            next: {
+                name: nextProject.headerContents.title,
+                url: getProjectRouteSlug(nextProject),
             },
         };
 
         return (
             <Route
-                path={getProjectRoutePath(projectData)}
+                path={getProjectRouteSlug(curProject)}
                 component={() => (
                     <ProjectPage
-                        {...getProjectPageContents(projectData)}
+                        {...fetchProjectPageContents(curProject)}
                         navigationLinks={navigationLinks}
                     />
                 )}
@@ -58,14 +53,8 @@ const App = () => (
     <div className="app__container">
         <Router>
             <Switch>
-                {getProjectPageRoutes(projectPageContentsData).map((page) => page)}
-                <Route
-                    exact
-                    path="/"
-                    component={() => (
-                        <Homepage projects={getHomepageProjectPreviews(projectPageContentsData)} />
-                    )}
-                />
+                {generateProjectPageRoutes(projectsContents).map((projectPage) => projectPage)}
+                <Route exact path="/" component={() => <HomepageContainer />} />
             </Switch>
         </Router>
     </div>
