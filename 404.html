@@ -1,32 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <title>Jessica Bergs || Master's portfolio</title>
+        <script>
+            // Check if the URL contains a path
+            if (window.location.href.indexOf('?') > -1) {
+              // Use the original path to redirect
+              var path = window.location.href.split('?')[1];
+              window.location.href = '/' + path;
+            }
+          </script>
         <meta charset="utf-8" />
-        <title>Redirect</title>
-        <script type="text/javascript">
-            var pathSegmentsToKeep = 0; // 0 if using custom domain; otherwise 1
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Jessica Bergs || Master's portfolio" />
 
-            var l = window.location;
-            l.replace(
-                l.protocol +
-                    '//' +
-                    l.hostname +
-                    (l.port ? ':' + l.port : '') +
-                    l.pathname
-                        .split('/')
-                        .slice(0, 1 + pathSegmentsToKeep)
-                        .join('/') +
-                    '/?/' +
-                    l.pathname
-                        .slice(1)
-                        .split('/')
-                        .slice(pathSegmentsToKeep)
-                        .join('/')
-                        .replace(/&/g, '~and~') +
-                    (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-                    l.hash,
-            );
-        </script>
+        <meta property="og:title" content="Jessica Bergs || Master's portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="450" />
+
+        <meta
+            property="og:image:url"
+            content="https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg"
+        />
+        <meta
+            property="og:image:secure_url"
+            content="https://d39hr3ghz5orka.cloudfront.net/images/goma/workflow/goma_workflow__0003_Gruppe%203.jpg"
+        />
+        <meta property="og:image:type" content="image/jpeg" />
+
+        <link rel="preload" as="style" href="https://use.typekit.net/ozl1rin.css" />
+
+        <link
+            rel="preload"
+            as="image"
+            href="https://d39hr3ghz5orka.cloudfront.net/images/title/video/titlemov_poster.jpg"
+        />
+        <link rel="preload" as="font" href="fonts/0738679df4cf4e566f60343830da7bfa.ttf" />
+
     </head>
-    <body><script type="text/javascript" src="main.js"></script></body>
+
+    <body>
+
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+    <script type="text/javascript" src="main.js"></script></body>
 </html>
