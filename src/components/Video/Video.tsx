@@ -13,6 +13,7 @@ const Video = ({ url, posterImageUrl, autoPlay = false }: VideoProps) => {
         preload: 'auto',
         loop: true,
         autoPlay,
+        muted: autoPlay,
         controls: !autoPlay,
     };
     return (
