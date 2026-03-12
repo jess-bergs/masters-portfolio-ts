@@ -35,10 +35,11 @@ describe('the Video component', () => {
 
     describe('the autplay flag', () => {
         describe('when the flag is passed', () => {
-            it('the video controls dont show and the video is set to autoplay', () => {
+            it('the video controls dont show and the video is set to autoplay and muted', () => {
                 const { queryByTitle } = renderComponent();
                 expect(queryByTitle('video')).not.toHaveAttribute('controls');
                 expect(queryByTitle('video')).toHaveAttribute('autoPlay', '');
+                expect(queryByTitle('video')).toHaveAttribute('muted', '');
             });
         });
 
@@ -47,6 +48,7 @@ describe('the Video component', () => {
                 const { queryByTitle } = renderComponent({ ...videoContent, autoPlay: false });
                 expect(queryByTitle('video')).toHaveAttribute('controls');
                 expect(queryByTitle('video')).not.toHaveAttribute('autoPlay');
+                expect(queryByTitle('video')).not.toHaveAttribute('muted');
             });
         });
     });
