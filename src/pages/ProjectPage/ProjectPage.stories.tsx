@@ -29,8 +29,8 @@ const slideshow = (
 const projectPage: ProjectPageProps = {
     heroImageSrc: './exampleHeroImage.jpg',
     navigationLinks: {
-        left: { name: 'Spartathlon', url: 'navLinkLeft' },
-        right: { name: 'Goma', url: 'navLinkRight' },
+        previous: { name: 'Spartathlon', url: 'navLinkLeft' },
+        next: { name: 'Goma', url: 'navLinkRight' },
     },
     projectContents: {
         contents: [

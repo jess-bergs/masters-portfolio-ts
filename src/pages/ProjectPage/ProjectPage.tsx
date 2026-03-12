@@ -23,8 +23,8 @@ interface NavigationLink {
 }
 
 interface NavigationProps {
-    left: NavigationLink;
-    right: NavigationLink;
+    previous: NavigationLink;
+    next: NavigationLink;
 }
 
 interface HeroProps {
@@ -52,10 +52,10 @@ const Navigation = (navigationLinks: NavigationProps) => {
         <div className={`navigation__container${useStickyNav ? '--sticky' : ''} `}>
             <span className="navigation__left">
                 &lsaquo; &nbsp;
-                <Link to={navigationLinks.left.url}>{navigationLinks.left.name}</Link>
+                <Link to={navigationLinks.previous.url}>{navigationLinks.previous.name}</Link>
             </span>
             <span className="navigation__right">
-                <Link to={navigationLinks.right.url}>{navigationLinks.right.name}</Link>
+                <Link to={navigationLinks.next.url}>{navigationLinks.next.name}</Link>
                 &nbsp; &rsaquo;
             </span>
         </div>
