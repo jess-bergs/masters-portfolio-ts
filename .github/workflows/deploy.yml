@@ -25,6 +25,11 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
+      - name: Use HTTPS for GitHub git dependencies
+        run: |
+          git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+          git config --global url."https://github.com/".insteadOf git@github.com:
+
       - run: npm ci
 
       - run: npx webpack --mode production
